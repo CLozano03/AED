@@ -1,7 +1,7 @@
 package aed.individual1;
 
 public class ArrayCheckSumUtils {
-	// a no es null, podria tener tamaño 0, n>0
+	// a no es null, podria tener tamanno 0, n>0
 	  public static int[] arrayCheckSum(int[] arr, int n) {
 	    /*
 	     * El tamanno de mi nuevo array sera la longitud de arr mas las veces que pasa
@@ -16,21 +16,17 @@ public class ArrayCheckSumUtils {
 	    for(int i = 0; i < arr.length; i++){
 	      //Primero agrego el elemento de arr a la lista
 	      resultado[contadorRes++] = arr[i];
-	      //contadorRes++;
 	      checkSum += arr[i];
 
-	      //Compruebo si se annade el checkSum ya sea porque se ha llegado al final del array o porque se ha llegado a un multiplo de n
+	      /*Compruebo si se annade el checkSum ya sea porque se ha llegado al final del array o
+		  porque se ha llegado a un multiplo de n*/
 	      if((i+1)%n == 0 || i == arr.length-1){
-	        
 	        //annado mi variable checkSum a resultado en su posicion
 	        resultado[contadorRes++] = checkSum;
-	        //contadorRes++;
-	        //reseteo variables
+	        //reseteo checkSum
 	        checkSum = 0;
 	      }
-	      
-	    }
-
+		}
 	    return resultado;
 	  }
 }
