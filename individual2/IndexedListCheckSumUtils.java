@@ -5,7 +5,7 @@ import es.upm.aedlib.indexedlist.*;
 public class IndexedListCheckSumUtils {
 
   // a no es null, podria tener tamanno 0, n>0
-  public static ArrayIndexedList<Integer> indexedListCheckSum(ArrayIndexedList<Integer> list, int n) {
+  public static IndexedList<Integer> indexedListCheckSum(IndexedList<Integer> list, int n) {
 
     ArrayIndexedList<Integer> resultado = new ArrayIndexedList<Integer>();
 
@@ -21,21 +21,18 @@ public class IndexedListCheckSumUtils {
       // Compruebo si se annade el checkSum ya sea porque se ha llegado al final del
       // array o porque se ha llegado a un multiplo de n
       if ((i + 1) % n == 0 || i == list.size() - 1) {
-
         // annado mi variable checkSum a resultado en su posicion
         resultado.add(contadorRes, checkSum);
         contadorRes++;
         // reseteo variables
         checkSum = 0;
       }
-
     }
 
     return resultado;
   }
 
   // list no es null, podria tener tamanno 0, n>0
-
   public static boolean checkIndexedListCheckSum(ArrayIndexedList<Integer> list, int n) {
     boolean todosCumplen = true;
     int checkSum = 0;
