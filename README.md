@@ -1,3 +1,7 @@
+# Algoritmos y estructuras de datos
+
+### Individual1
+
 Se pide implementar el método
 public static int[] arrayCheckSum(int[] arr, int n)
 dentro la clase ArrayCheckSumUtils (en el paquete
