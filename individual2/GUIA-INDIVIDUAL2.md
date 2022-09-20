@@ -3,7 +3,7 @@
 ### Tarea 1: 
 Se pide implementar el método
 `public static IndexedList<Integer> indexedListCheckSum(IndexedList<Integer> list, int n)`
-dentro la clase `IndexedListCheckSumUtils` que recibe una lista indexada de enteros `list` y
+dentro la clase **IndexedListCheckSumUtils** que recibe una lista indexada de enteros `list` y
 un `int n`.
 
 - El método devuelve una lista indexada nueva, que contiene los mismos datos que list, pero que después de cada *n* elementos de la lista original añade un elemento *checksum*.
