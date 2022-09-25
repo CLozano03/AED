@@ -136,19 +136,36 @@ public class MiHotel implements Hotel {
   /**
    * Metodo auxiliar generico para insertar un elemento en una lista atendiendo al
    * orden especificado por @param cmp 
+   * 
+   * 2 3 4 5 6 8 9 10    7  2  13
+   * 
    */
   private static <E> void insertar(E e, IndexedList<E> l, Comparator<E> cmp) {
-    int pos = (int)(l.size()/2);
+    int pos = (int)((l.size()-1)/2);
     boolean stop = false;
     
-      while(!stop && (pos != 1 || pos != l.size())){
-        if ((cmp.compare(l.get(pos - 1), e) <= 0) && cmp.compare(l.get(pos), e) >= 0){
+      while(!stop){
+        if ((pos != 0 /* necesario para que no salte Out of bounds? */ && cmp.compare(l.get(pos - 1), e) <= 0) && cmp.compare(l.get(pos), e) >= 0){
+          //annado el elemento
           stop = true;
           l.add(pos, e);  
         } else if (cmp.compare(l.get(pos), e) > 0){
-          pos = (int)(pos/2);
+          //ajuste cuando hay que annadir en primera pos
+          if(pos == 0){
+            l.add(pos, e);
+            stop = true;
+          } else {
+            pos = (int)(pos/2);
+          }
+          
         } else {
-          pos = l.size() - (int)(l.size() - pos)/2;
+          //ajuste cuando hay que annadir en ultima
+          if(pos == l.size()){
+            l.add(pos+1, e);
+          } else{
+            pos = l.size() - (int)(l.size() - pos)/2;
+          }
+          
         }
       }    
   }
