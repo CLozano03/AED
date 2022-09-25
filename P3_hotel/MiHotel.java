@@ -40,9 +40,11 @@ public class MiHotel implements Hotel {
     
     // habitacion.getReserva() que es una lista con reserva que es concreta
     //Tenemos que buscar en la lista de reservas la reserva con la fecha de E/S mas proxima a la de @param reserva
-    if(reserva.compareTo(habitacion.getReservas(). get(i)) < 0){
+    
+    
+    /* if(reserva.compareTo(habitacion.getReservas(). get(i)) < 0){
       
-    }
+    } */
     
     
     return habitacionDisponible;
@@ -97,9 +99,9 @@ public class MiHotel implements Hotel {
     
     for (int i = 0; i < habitaciones.size(); i++) {
       //Hay que implementar la 
-      if(){
+      /* if(){
         insertar(habitaciones.get(i), aLimpiar, new CompNHabitacion());
-      }
+      } */
     }
 
     return aLimpiar;
@@ -137,37 +139,41 @@ public class MiHotel implements Hotel {
    * Metodo auxiliar generico para insertar un elemento en una lista atendiendo al
    * orden especificado por @param cmp 
    * 
-   * 2 3 4 5 6 8 9 10    7  2  13
+   * 0 1 5  6
    * 
    */
   private static <E> void insertar(E e, IndexedList<E> l, Comparator<E> cmp) {
-    int pos = (int)((l.size()-1)/2);
+    int pos = (int)((l.size())/2);
     boolean stop = false;
-    
-      while(!stop){
-        if ((pos != 0 /* necesario para que no salte Out of bounds? */ && cmp.compare(l.get(pos - 1), e) <= 0) && cmp.compare(l.get(pos), e) >= 0){
-          //annado el elemento
-          stop = true;
-          l.add(pos, e);  
-        } else if (cmp.compare(l.get(pos), e) > 0){
-          //ajuste cuando hay que annadir en primera pos
-          if(pos == 0){
-            l.add(pos, e);
+      if(l.size() == 0){
+        l.add(0, e);
+      } else {
+        while(!stop){
+          if ((pos != 0 /* && pos != l.size() */ && cmp.compare(l.get(pos - 1), e) <= 0) && cmp.compare(l.get(pos), e) >= 0){
+            //annado el elemento
             stop = true;
+            l.add(pos, e);  
+          } else if (cmp.compare(l.get(pos), e) > 0){
+            //ajuste cuando hay que aniadir en primera pos
+            if(pos == 0){
+              l.add(pos, e);
+              stop = true;
+            } else {
+              pos = (int)(pos/2);
+            }
           } else {
-            pos = (int)(pos/2);
+            //ajuste cuando hay que aniadir en ultima
+            if(pos == l.size()-1){
+              l.add(pos+1, e);
+              stop = true;
+            } else{
+              pos = l.size() - (int)(l.size() - pos)/2;
+            }
+            
           }
-          
-        } else {
-          //ajuste cuando hay que annadir en ultima
-          if(pos == l.size()){
-            l.add(pos+1, e);
-          } else{
-            pos = l.size() - (int)(l.size() - pos)/2;
-          }
-          
         }
-      }    
+      }
+          
   }
 
   private static Habitacion buscarHabitacion(Habitacion h, IndexedList<Habitacion> l, Comparator<Habitacion> cmp){
@@ -211,8 +217,37 @@ public class MiHotel implements Hotel {
 
     @Override
     public int compare(Habitacion o1, Habitacion o2) {
-      return o1.getNombre().compareTo(o2.getNombre());
+        if(Integer.parseInt(o1.getNombre())> Integer.parseInt(o2.getNombre())){
+          return 1;
+        } else if (Integer.parseInt(o1.getNombre()) < Integer.parseInt(o2.getNombre())){
+          return -1;
+        } else {
+          return 0;
+        }
     }
 
+  }
+  
+  //Mini tester para insertar
+  public static void main(String[] args){
+    //Test insertar method
+    IndexedList<Habitacion> l = new ArrayIndexedList<Habitacion>();
+    l.add(0, new Habitacion("1", 5));
+    l.add(1, new Habitacion("5", 5));  
+
+    insertar(new Habitacion("0", 5), l, new CompNHabitacion());
+    insertar(new Habitacion("6", 5), l, new CompNHabitacion());
+
+    insertar(new Habitacion("5", 5), l, new CompNHabitacion());
+    insertar(new Habitacion("7", 5), l, new CompNHabitacion());
+
+    insertar(new Habitacion("4", 5), l, new CompNHabitacion());
+
+    insertar(new Habitacion("78", 5), l, new CompNHabitacion());
+
+    //print list
+    for (int i = 0; i < l.size(); i++) {
+      System.out.println(l.get(i).getNombre());
+    }
   }
 }
