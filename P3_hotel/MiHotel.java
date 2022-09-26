@@ -23,7 +23,7 @@ public class MiHotel implements Hotel {
 
   @Override
   public void anadirHabitacion(Habitacion habitacion) throws IllegalArgumentException {
-    if (buscar(habitacion, habitaciones, new CompNHabitacion()) != -1) {
+    if (buscarHabitacion(habitacion, habitaciones) != -1) {
       throw new IllegalArgumentException();
     } else {
       insertar(habitacion, habitaciones, new CompNHabitacion());
@@ -31,22 +31,23 @@ public class MiHotel implements Hotel {
   }
 
   @Override
-  public boolean reservaHabitacion(Reserva reserva) {
-    String nombreHabitacion = reserva.getHabitacion();
-    Habitacion habitacion = habitaciones.get(Integer.parseInt(nombreHabitacion));
+  public boolean reservaHabitacion(Reserva reserva) throws IllegalArgumentException {
+    Habitacion habitacion = new Habitacion(reserva.getHabitacion(), 0);
     boolean reservada = false;
-    String entrada = reserva.getDiaEntrada();
-    String salida = reserva.getDiaSalida();
+
     // Compruebo que la habitacion existe en MiHotel
-    if (habitacion != null) {
+    if (buscarHabitacion(habitacion, habitaciones) == -1) {
+      throw new IllegalArgumentException();
+    } else {
       // Antes de reservarla, compruebo que esta disponible en las fechas
-      if (habitacionDisponible(habitacion, entrada, salida)) { // funcion auxiliar que comprueba si esta disponible
+      if (habitacionDisponible(habitacion, reserva.getDiaEntrada(), reserva.getDiaSalida())) { // funcion auxiliar que
+                                                                                               // comprueba si esta
+                                                                                               // disponible
         insertar(reserva, habitacion.getReservas(), new CompFEntrada()); // cmp no se que poner
         reservada = true;
       }
-    } else {
-      throw new IllegalArgumentException();
     }
+
     return reservada;
   }
 
@@ -79,19 +80,23 @@ public class MiHotel implements Hotel {
 
   @Override
   public boolean cancelarReserva(Reserva reserva) {
-    int nombreHabitacion = Integer.parseInt(reserva.getHabitacion());
-    Habitacion habitacion = habitaciones.get(nombreHabitacion);
-    boolean cancelable = false;
+    Habitacion habitacion = new Habitacion(reserva.getHabitacion(),0);
+    boolean cancelable= false;
 
-    for (int i = 0; i < habitacion.getReservas().size() && !cancelable; i++) {
-      cancelable = habitacion.getReservas().get(i).equals(reserva);
+    // Compruebo que la habitacion existe en MiHotel
+    if(buscarHabitacion(habitacion, habitaciones) == -1){
+      throw new IllegalArgumentException();
+    } else {
 
-      if (cancelable) {
-        // borro elemento
-        habitacion.getReservas().removeElementAt(i);
-      }
+      for (int i = 0; i < habitacion.getReservas().size() && !cancelable; i++) {
+        cancelable = habitacion.getReservas().get(i).hashCode() == reserva.hashCode();
+
+        if (cancelable) {
+          // borro elemento
+          habitacion.getReservas().removeElementAt(i);
+        }
+      }   
     }
-
     return cancelable;
   }
 
@@ -143,27 +148,28 @@ public class MiHotel implements Hotel {
 
   @Override
   public IndexedList<Habitacion> habitacionesParaLimpiar(String hoyDia) {
-    //Creo instancia de reserva para usar con el comparator
+    // Creo instancia de reserva para usar con el comparator
     Reserva hoyDiaReserva = new Reserva("", "", hoyDia, hoyDia);
-    
+
     // lista a devolver
     IndexedList<Habitacion> aLimpiar = new ArrayIndexedList<Habitacion>();
 
-    //Comparadores a usar
+    // Comparadores a usar
     CompNHabitacion cmpNHabitacion = new CompNHabitacion();
     CompFEntrada cmpFEntrada = new CompFEntrada();
     CompFSalida cmpFSalida = new CompFSalida();
 
     for (int i = 0; i < habitaciones.size(); i++) {
       Habitacion punteroHabitacion = habitaciones.get(i);
-      for (int j = 0; j < punteroHabitacion.getReservas().size(); j++){
+      for (int j = 0; j < punteroHabitacion.getReservas().size(); j++) {
         Reserva punteroReserva = punteroHabitacion.getReservas().get(j);
 
         // entrada antes que hoyDia y salida despues o igual a hoyDia.
-        if (cmpFEntrada.compare(punteroReserva, hoyDiaReserva) < 0 && cmpFSalida.compare(punteroReserva, hoyDiaReserva) >= 0){
+        if (cmpFEntrada.compare(punteroReserva, hoyDiaReserva) < 0
+            && cmpFSalida.compare(punteroReserva, hoyDiaReserva) >= 0) {
           insertar(punteroHabitacion, aLimpiar, cmpNHabitacion);
         }
-      }    
+      }
     }
 
     return aLimpiar;
@@ -172,7 +178,10 @@ public class MiHotel implements Hotel {
   @Override
   public Reserva reservaDeHabitacion(String nombreHabitacion, String dia) throws IllegalArgumentException {
 
-    if (habitaciones.get(Integer.parseInt(nombreHabitacion)) == null) {
+    Habitacion habitacion = new Habitacion(nombreHabitacion, 0);
+
+    // Compruebo que la habitacion existe en MiHotel
+    if (buscarHabitacion(habitacion, habitaciones) == -1) {
 
       throw new IllegalArgumentException("Habitacion inexistente");
 
@@ -180,7 +189,6 @@ public class MiHotel implements Hotel {
 
       Reserva reserva = new Reserva(nombreHabitacion, "", dia, "");
       boolean encontrado = false;
-      Habitacion habitacion = habitaciones.get(Integer.parseInt(nombreHabitacion));
 
       for (int i = 0; i < habitacion.getReservas().size() && !encontrado; i++) {
         if (habitacion.getReservas().get(i).compareTo(reserva) <= 0) {
@@ -235,57 +243,53 @@ public class MiHotel implements Hotel {
 
   }
 
-  private static <E> int buscar(E e, IndexedList<E> l, Comparator<E> cmp) {
-    int medio;
-    int min = 0;
-    int max = l.size() - 1;
-    boolean encontrado = false;
+  private static int buscarHabitacion(Habitacion h, IndexedList<Habitacion> l) {
 
-    while(!encontrado && (min != max)){
+    if (l.isEmpty()) {
+      return -1;
+    } else {
 
-      medio = (int) ((min + max) / 2);
-      if(cmp.compare(l.get(medio), e) == 0){
-        encontrado = true;
-        return medio;
-      } else if (cmp.compare(e, l.get(medio)) < 0){ // e < medio
-        max = medio - 1;
-      } else {                                      // e > medio
-        min = medio + 1;
+      int min = 0;
+      int max = l.size() - 1;
+      int medio = (int) ((min + max) / 2);
+      boolean encontrado = false;
+
+      Comparator<Habitacion> cmp = new CompNHabitacion();
+
+      while (!encontrado && (min != max)) {
+        // Caso para cuando la posicion del medio es la que buscamos
+        if (cmp.compare(h, l.get(medio)) == 0) {
+          encontrado = true;
+          return medio;
+        }
+        if (cmp.compare(h, l.get(medio)) < 0) { // e < medio
+          max = medio - 1;
+        } else { // e > medio
+          min = medio + 1;
+        }
+        medio = (int) ((min + max) / 2);
+
+        if (h.hashCode() == l.get(medio).hashCode()) {
+          encontrado = true;
+          return medio;
+        }
+
       }
+      return -1; // no encontrado
     }
-    return -1; 
+    // 0 1 5 6 8 10 15 78 7
 
-    /*  mid = (low + high)/2
-                   if (x == arr[mid])
-                   return mid
-   
-                   else if (x > arr[mid]) // x is on the right side
-                       low = mid + 1
-   
-                   else                  // x is on the left side
-                       high = mid - 1
-    */
-
-    /* while (!encontrado && (pos != 0 || pos != l.size() - 1)) {
-      if (e.hashCode() == l.get(pos).hashCode()) {
-        encontrado = true;
-        index = pos;
-      } else if (cmp.compare(l.get(pos), e) > 0) {
-        pos = (int) (pos / 2);
-        if (pos == 0 && e.hashCode() == l.get(pos).hashCode()) {
-          encontrado = true;
-          index = pos;
-        }
-      } else {
-        pos = l.size() - (int) (l.size() - pos) / 2;
-
-        if (pos == l.size() - 1 && e.hashCode() == l.get(pos).hashCode()) {
-          encontrado = true;
-          index = pos;
-        }
-
-      }
-    }*/
+    /*
+     * mid = (low + high)/2
+     * if (x == arr[mid])
+     * return mid
+     * 
+     * else if (x > arr[mid]) // x is on the right side
+     * low = mid + 1
+     * 
+     * else // x is on the left side
+     * high = mid - 1
+     */
 
   }
   // --------------------------------------------------------------------------------------------
@@ -367,31 +371,43 @@ public class MiHotel implements Hotel {
   public static void main(String[] args) {
     // Test insertar method
     IndexedList<Habitacion> l = new ArrayIndexedList<Habitacion>();
-    l.add(0, new Habitacion("1", 5));
-    l.add(1, new Habitacion("5", 5));
-
-    insertar(new Habitacion("0", 5), l, new CompNHabitacion());
-    insertar(new Habitacion("6", 5), l, new CompNHabitacion());
+    l.add(0, new Habitacion("0", 5));
+    l.add(1, new Habitacion("1", 5));
 
     insertar(new Habitacion("5", 5), l, new CompNHabitacion());
-    insertar(new Habitacion("7", 5), l, new CompNHabitacion());
+    insertar(new Habitacion("6", 5), l, new CompNHabitacion());
 
-    insertar(new Habitacion("4", 5), l, new CompNHabitacion());
+    insertar(new Habitacion("15", 5), l, new CompNHabitacion());
+    insertar(new Habitacion("10", 5), l, new CompNHabitacion());
+
+    insertar(new Habitacion("8", 5), l, new CompNHabitacion());
 
     insertar(new Habitacion("78", 5), l, new CompNHabitacion());
 
-
     // print list
-    for (int i = 0; i < l.size(); i++) {
-      System.out.print(l.get(i).getNombre() + " ");   
-    } 
-    System.out.println();
+    /*
+     * for (int i = 0; i < l.size(); i++) {
+     * System.out.print(l.get(i).getNombre() + " ");
+     * }
+     * System.out.println();
+     * 
+     * // Test buscar method
+     * System.out.println(buscarHabitacion(new Habitacion("5", 5), l));
+     * System.out.println(buscarHabitacion(new Habitacion("0", 5), l));
+     * System.out.println(buscarHabitacion(new Habitacion("78", 5), l));
+     * System.out.println(buscarHabitacion(new Habitacion("100", 5), l));
+     */
+    MiHotel h = new MiHotel();
 
-    // Test buscar method
-    System.out.println(buscar(new Habitacion("5", 5), l, new CompNHabitacion()));
-    System.out.println(buscar(new Habitacion("6", 5), l, new CompNHabitacion()));
-    System.out.println(buscar(new Habitacion("2", 5), l, new CompNHabitacion()));
-    System.out.println(buscar(new Habitacion("17", 5), l, new CompNHabitacion()));
+    h.anadirHabitacion(new Habitacion("1", 5));
+    h.anadirHabitacion(new Habitacion("2", 5));
+    h.anadirHabitacion(new Habitacion("3", 5));
+    h.anadirHabitacion(new Habitacion("4", 5));
+    // print list
+    for (int i = 0; i < h.habitaciones.size(); i++) {
+      System.out.println(h.habitaciones.get(i).getNombre() + " ");
+    }
+    h.anadirHabitacion(new Habitacion("3", 10));
 
   }
 }
