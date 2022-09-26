@@ -23,7 +23,7 @@ public class MiHotel implements Hotel {
 
   @Override
   public void anadirHabitacion(Habitacion habitacion) throws IllegalArgumentException {
-    if(habitaciones.get(Integer.parseInt(habitacion.getNombre())) != null){
+    if (buscar(habitacion, habitaciones, new CompNHabitacion()) != -1) {
       throw new IllegalArgumentException();
     } else {
       insertar(habitacion, habitaciones, new CompNHabitacion());
@@ -40,9 +40,9 @@ public class MiHotel implements Hotel {
     // Compruebo que la habitacion existe en MiHotel
     if (habitacion != null) {
       // Antes de reservarla, compruebo que esta disponible en las fechas
-      if (habitacionDisponible(habitacion, entrada, salida)) { //funcion auxiliar que comprueba si esta disponible
-       insertar(reserva,habitacion.getReservas(), new CompFEntrada()); // cmp no se que poner
-       reservada = true;
+      if (habitacionDisponible(habitacion, entrada, salida)) { // funcion auxiliar que comprueba si esta disponible
+        insertar(reserva, habitacion.getReservas(), new CompFEntrada()); // cmp no se que poner
+        reservada = true;
       }
     } else {
       throw new IllegalArgumentException();
@@ -51,29 +51,31 @@ public class MiHotel implements Hotel {
   }
 
   private boolean habitacionDisponible(Habitacion hab, String diaEntrada, String diaSalida) {
-    //Compruebo si la hab que quiero esta disponible en diaEntrada y diaSalida incluido
-    //buscar(hab,disponibilidadHabitaciones(diaEntrada, diaSalida),cmp);
+    // Compruebo si la hab que quiero esta disponible en diaEntrada y diaSalida
+    // incluido
+    // buscar(hab,disponibilidadHabitaciones(diaEntrada, diaSalida),cmp);
     IndexedList<Habitacion> listaHabDisponibles = new ArrayIndexedList<Habitacion>();
     listaHabDisponibles = disponibilidadHabitaciones(diaEntrada, diaSalida);
     boolean encontrada = false;
-    // Busco en la lista mi habitacion, para ver si esta disponible entre esas fechas inclusive
+    // Busco en la lista mi habitacion, para ver si esta disponible entre esas
+    // fechas inclusive
     for (int i = 0; i < listaHabDisponibles.size() && !encontrada; i++) {
       if (listaHabDisponibles.get(i).getNombre() == (hab.getNombre())) {
         encontrada = true;
       }
     }
     return encontrada;
-    
+
     // habitacion.getReserva() que es una lista con reserva que es concreta
-    //Tenemos que buscar en la lista de reservas la reserva con la fecha de E/S mas proxima a la de @param reserva
-    
-    
-    /* if(reserva.compareTo(habitacion.getReservas(). get(i)) < 0){
-      
-    } */
+    // Tenemos que buscar en la lista de reservas la reserva con la fecha de E/S mas
+    // proxima a la de @param reserva
+
+    /*
+     * if(reserva.compareTo(habitacion.getReservas(). get(i)) < 0){
+     * 
+     * }
+     */
   }
-
-
 
   @Override
   public boolean cancelarReserva(Reserva reserva) {
@@ -86,8 +88,7 @@ public class MiHotel implements Hotel {
 
       if (cancelable) {
         // borro elemento
-        habitaciones.get(nombreHabitacion).getReservas().set(i, null);
-
+        habitacion.getReservas().removeElementAt(i);
       }
     }
 
@@ -96,30 +97,29 @@ public class MiHotel implements Hotel {
 
   @Override
   public IndexedList<Habitacion> disponibilidadHabitaciones(String diaEntrada, String diaSalida) {
-    
-    Reserva reservaDuda = new Reserva("", "", diaEntrada, diaSalida);
+
+    Reserva posibleReserva = new Reserva("", "", diaEntrada, diaSalida);
     Reserva punteroReserva = new Reserva("", diaSalida, diaSalida, diaSalida);
     Habitacion punteroHabitacion = new Habitacion("", 0);
-    
-    //Comparadores usados
+
+    // Comparadores usados
     CompES cmpES = new CompES();
-    CompFSalida cmpSalida = new CompFSalida();
     CompPrecio cmpPrecio = new CompPrecio();
 
     IndexedList<Habitacion> habitacionesLibres = new ArrayIndexedList<Habitacion>();
 
-    for(int i  = 0; i < habitaciones.size(); i++){
-      
+    for (int i = 0; i < habitaciones.size(); i++) {
+
       punteroHabitacion = habitaciones.get(i);
-      
-      for(int j = 0; j < habitaciones.get(i).getReservas().size(); j++){
-        
+
+      for (int j = 0; j < habitaciones.get(i).getReservas().size(); j++) {
+
         punteroReserva = punteroHabitacion.getReservas().get(j);
-        
-        if(cmpES.compare(punteroReserva, reservaDuda) >= 0){
+
+        if (cmpES.compare(punteroReserva, posibleReserva) >= 0) {
           insertar(punteroHabitacion, habitacionesLibres, cmpPrecio);
         }
-          
+
       }
     }
     return habitacionesLibres;
@@ -127,30 +127,43 @@ public class MiHotel implements Hotel {
 
   @Override
   public IndexedList<Reserva> reservasPorCliente(String dniPasaporte) {
-    IndexedList<Reserva> res = new ArrayIndexedList<Reserva>();
+    IndexedList<Reserva> reservas = new ArrayIndexedList<Reserva>();
 
     for (int i = 0; i < habitaciones.size(); i++) {
       for (int j = 0; i < habitaciones.get(i).getReservas().size(); j++) {
-        if (habitaciones.get(i).getReservas().get(j).getDniPasaporte().equals(dniPasaporte)) {
-          res.add(0, habitaciones.get(i).getReservas().get(j));
+        Reserva punteroReserva = habitaciones.get(i).getReservas().get(j);
+        if (punteroReserva.getDniPasaporte().hashCode() == dniPasaporte.hashCode()) {
+          insertar(punteroReserva, reservas, new CompFEntrada());
         }
       }
     }
-    // !!! Hay que ordenar por precios no reservas
 
     return null;
   }
 
   @Override
   public IndexedList<Habitacion> habitacionesParaLimpiar(String hoyDia) {
-    // Ordenados por nombre de hab
-    IndexedList<Habitacion> aLimpiar = new ArrayIndexedList<Habitacion>();
+    //Creo instancia de reserva para usar con el comparator
+    Reserva hoyDiaReserva = new Reserva("", "", hoyDia, hoyDia);
     
+    // lista a devolver
+    IndexedList<Habitacion> aLimpiar = new ArrayIndexedList<Habitacion>();
+
+    //Comparadores a usar
+    CompNHabitacion cmpNHabitacion = new CompNHabitacion();
+    CompFEntrada cmpFEntrada = new CompFEntrada();
+    CompFSalida cmpFSalida = new CompFSalida();
+
     for (int i = 0; i < habitaciones.size(); i++) {
-      //Hay que implementar la 
-      /* if(){
-        insertar(habitaciones.get(i), aLimpiar, new CompNHabitacion());
-      } */
+      Habitacion punteroHabitacion = habitaciones.get(i);
+      for (int j = 0; j < punteroHabitacion.getReservas().size(); j++){
+        Reserva punteroReserva = punteroHabitacion.getReservas().get(j);
+
+        // entrada antes que hoyDia y salida despues o igual a hoyDia.
+        if (cmpFEntrada.compare(punteroReserva, hoyDiaReserva) < 0 && cmpFSalida.compare(punteroReserva, hoyDiaReserva) >= 0){
+          insertar(punteroHabitacion, aLimpiar, cmpNHabitacion);
+        }
+      }    
     }
 
     return aLimpiar;
@@ -175,7 +188,7 @@ public class MiHotel implements Hotel {
           encontrado = true;
         }
       }
-      if(encontrado){
+      if (encontrado) {
         return reserva;
       } else {
         return null;
@@ -183,131 +196,107 @@ public class MiHotel implements Hotel {
     }
   }
 
-  
   /**
    * Metodo auxiliar generico para insertar un elemento en una lista atendiendo al
-   * orden especificado por @param cmp 
+   * orden especificado por @param cmp
    */
   private static <E> void insertar(E e, IndexedList<E> l, Comparator<E> cmp) {
-    int pos = (int)((l.size())/2);
+    int pos = (int) ((l.size()) / 2);
     boolean stop = false;
-      if(l.size() == 0){
-        l.add(0, e);
-      } else {
-        while(!stop){
-          if ((pos != 0 /* && pos != l.size() */ && cmp.compare(l.get(pos - 1), e) <= 0) && cmp.compare(l.get(pos), e) >= 0){
-            //annado el elemento
+    if (l.size() == 0) {
+      l.add(0, e);
+    } else {
+      while (!stop) {
+        if ((pos != 0 /* && pos != l.size() */ && cmp.compare(l.get(pos - 1), e) <= 0)
+            && cmp.compare(l.get(pos), e) >= 0) {
+          // annado el elemento
+          stop = true;
+          l.add(pos, e);
+        } else if (cmp.compare(l.get(pos), e) > 0) {
+          // ajuste cuando hay que aniadir en primera pos
+          if (pos == 0) {
+            l.add(pos, e);
             stop = true;
-            l.add(pos, e);  
-          } else if (cmp.compare(l.get(pos), e) > 0){
-            //ajuste cuando hay que aniadir en primera pos
-            if(pos == 0){
-              l.add(pos, e);
-              stop = true;
-            } else {
-              pos = (int)(pos/2);
-            }
           } else {
-            //ajuste cuando hay que aniadir en ultima
-            if(pos == l.size()-1){
-              l.add(pos+1, e);
-              stop = true;
-            } else{
-              pos = l.size() - (int)(l.size() - pos)/2;
-            }
-            
+            pos = (int) (pos / 2);
           }
+        } else {
+          // ajuste cuando hay que aniadir en ultima
+          if (pos == l.size() - 1) {
+            l.add(pos + 1, e);
+            stop = true;
+          } else {
+            pos = l.size() - (int) (l.size() - pos) / 2;
+          }
+
         }
       }
-          
+    }
+
   }
 
-  
-  /* private static <E> int buscar(E e, IndexedList<E> l, Comparator<E> cmp){
-    int pos = (int)((l.size())/2);
-    boolean stop = false;
-    
-      if(l.size() == 0){
-        stop = true;
-      } else {
-        while(!stop){
-          if ((pos != 0 && cmp.compare(l.get(pos - 1), e) <= 0) && cmp.compare(l.get(pos), e) >= 0){
-            //annado el elemento
-            stop = true;
-            l.add(pos, e);  
-          } else if (cmp.compare(l.get(pos), e) > 0){
-            //ajuste cuando hay que aniadir en primera pos
-            if(pos == 0){
-              stop = true;
-            } else {
-              pos = (int)(pos/2);
-            }
-          } else {
-            //ajuste cuando hay que aniadir en ultima
-            if(pos == l.size()-1){
-              l.add(pos+1, e);
-              stop = true;
-            } else{
-              pos = l.size() - (int)(l.size() - pos)/2;
-            }
-            
-          }
-        }
-      }
-    
-    
-    
-    
-    
-    
-    
-    /* int pos = (int)l.size()/2;
+  private static <E> int buscar(E e, IndexedList<E> l, Comparator<E> cmp) {
+    int pos = (int) (l.size() / 2);
     boolean encontrado = false;
-    E el = null;
-    
-      while(!encontrado && (pos !=0 || pos != l.size())){
-        if (cmp.compare(l.get(pos), e) == 0) {
+    int index = -1;
+
+    while (!encontrado && (pos != 0 || pos != l.size() - 1)) {
+      if (e.hashCode() == l.get(pos).hashCode()) {
+        encontrado = true;
+        index = pos;
+      } else if (cmp.compare(l.get(pos), e) > 0) {
+        pos = (int) (pos / 2);
+        if (pos == 0 && e.hashCode() == l.get(pos).hashCode()) {
           encontrado = true;
-          el = l.get(pos);
-        } else if (cmp.compare(l.get(pos), e) > 0){
-          pos = (int)(pos/2);
-        } else {
-          pos = l.size() - (l.size() -pos)/2;
+          index = pos;
         }
+      } else {
+        pos = l.size() - (int) (l.size() - pos) / 2;
+
+        if (pos == l.size() - 1 && e.hashCode() == l.get(pos).hashCode()) {
+          encontrado = true;
+          index = pos;
+        }
+
       }
-      return el; 
-  } */
+    }
+    return index;
+
+  }
   // --------------------------------------------------------------------------------------------
   /*
    * Dentro de la clase MiHotel creamos una clase static comparator que nos va a
    * ayudar a ordenar las listas
-   * Vamos a crear tantas clases static como necesitemos
-   * 
-   * !!(Para comparar fecha de salida tambieen, no podemos cambiar el archivo Reserva.java)
-   * Borrar este comentario en un futuro no muy lejano
+   * Vamos a crear tantas clases static como necesitemos para ordenar las listas
    */
 
   static class CompFEntrada implements Comparator<Reserva> {
 
-    public CompFEntrada(){}
-    
+    public CompFEntrada() {
+    }
+
     @Override
     public int compare(Reserva o1, Reserva o2) {
       return o1.getDiaEntrada().compareTo(o2.getDiaEntrada());
     }
-    
+
   }
 
   static class CompFSalida implements Comparator<Reserva> {
-    public CompFSalida(){}
+    public CompFSalida() {
+    }
+
     @Override
     public int compare(Reserva o1, Reserva o2) {
       return o1.getDiaSalida().compareTo(o2.getDiaSalida());
     }
 
   }
+
   static class CompES implements Comparator<Reserva> {
-    public CompES(){}
+    public CompES() {
+    }
+
     @Override
     public int compare(Reserva o1, Reserva o2) {
       return o1.getDiaEntrada().compareTo(o2.getDiaSalida());
@@ -316,28 +305,14 @@ public class MiHotel implements Hotel {
   }
 
   static class CompNHabitacion implements Comparator<Habitacion> {
-    public CompNHabitacion(){}
-
-    @Override
-    public int compare(Habitacion o1, Habitacion o2) {
-        if(Integer.parseInt(o1.getNombre())> Integer.parseInt(o2.getNombre())){
-          return 1;
-        } else if (Integer.parseInt(o1.getNombre()) < Integer.parseInt(o2.getNombre())){
-          return -1;
-        } else {
-          return 0;
-        }
+    public CompNHabitacion() {
     }
 
-  }
-  static class CompPrecio implements Comparator<Habitacion> {
-    public CompPrecio(){}
-
     @Override
     public int compare(Habitacion o1, Habitacion o2) {
-      if(o1.getPrecio() > o2.getPrecio()){
+      if (Integer.parseInt(o1.getNombre()) > Integer.parseInt(o2.getNombre())) {
         return 1;
-      } else if (o1.getPrecio() < o2.getPrecio()){
+      } else if (Integer.parseInt(o1.getNombre()) < Integer.parseInt(o2.getNombre())) {
         return -1;
       } else {
         return 0;
@@ -345,13 +320,30 @@ public class MiHotel implements Hotel {
     }
 
   }
-  
-  //Mini tester para insertar
-  public static void main(String[] args){
-    //Test insertar method
+
+  static class CompPrecio implements Comparator<Habitacion> {
+    public CompPrecio() {
+    }
+
+    @Override
+    public int compare(Habitacion o1, Habitacion o2) {
+      if (o1.getPrecio() > o2.getPrecio()) {
+        return 1;
+      } else if (o1.getPrecio() < o2.getPrecio()) {
+        return -1;
+      } else {
+        return 0;
+      }
+    }
+
+  }
+
+  // Mini tester para insertar
+  public static void main(String[] args) {
+    // Test insertar method
     IndexedList<Habitacion> l = new ArrayIndexedList<Habitacion>();
     l.add(0, new Habitacion("1", 5));
-    l.add(1, new Habitacion("5", 5));  
+    l.add(1, new Habitacion("5", 5));
 
     insertar(new Habitacion("0", 5), l, new CompNHabitacion());
     insertar(new Habitacion("6", 5), l, new CompNHabitacion());
@@ -363,7 +355,7 @@ public class MiHotel implements Hotel {
 
     insertar(new Habitacion("78", 5), l, new CompNHabitacion());
 
-    //print list
+    // print list
     for (int i = 0; i < l.size(); i++) {
       System.out.println(l.get(i).getNombre());
     }
