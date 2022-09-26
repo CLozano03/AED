@@ -236,11 +236,37 @@ public class MiHotel implements Hotel {
   }
 
   private static <E> int buscar(E e, IndexedList<E> l, Comparator<E> cmp) {
-    int pos = (int) (l.size() / 2);
+    int medio;
+    int min = 0;
+    int max = l.size() - 1;
     boolean encontrado = false;
-    int index = -1;
 
-    while (!encontrado && (pos != 0 || pos != l.size() - 1)) {
+    while(!encontrado && (min != max)){
+
+      medio = (int) ((min + max) / 2);
+      if(cmp.compare(l.get(medio), e) == 0){
+        encontrado = true;
+        return medio;
+      } else if (cmp.compare(e, l.get(medio)) < 0){ // e < medio
+        max = medio - 1;
+      } else {                                      // e > medio
+        min = medio + 1;
+      }
+    }
+    return -1; 
+
+    /*  mid = (low + high)/2
+                   if (x == arr[mid])
+                   return mid
+   
+                   else if (x > arr[mid]) // x is on the right side
+                       low = mid + 1
+   
+                   else                  // x is on the left side
+                       high = mid - 1
+    */
+
+    /* while (!encontrado && (pos != 0 || pos != l.size() - 1)) {
       if (e.hashCode() == l.get(pos).hashCode()) {
         encontrado = true;
         index = pos;
@@ -259,8 +285,7 @@ public class MiHotel implements Hotel {
         }
 
       }
-    }
-    return index;
+    }*/
 
   }
   // --------------------------------------------------------------------------------------------
@@ -355,9 +380,18 @@ public class MiHotel implements Hotel {
 
     insertar(new Habitacion("78", 5), l, new CompNHabitacion());
 
+
     // print list
     for (int i = 0; i < l.size(); i++) {
-      System.out.println(l.get(i).getNombre());
-    }
+      System.out.print(l.get(i).getNombre() + " ");   
+    } 
+    System.out.println();
+
+    // Test buscar method
+    System.out.println(buscar(new Habitacion("5", 5), l, new CompNHabitacion()));
+    System.out.println(buscar(new Habitacion("6", 5), l, new CompNHabitacion()));
+    System.out.println(buscar(new Habitacion("2", 5), l, new CompNHabitacion()));
+    System.out.println(buscar(new Habitacion("17", 5), l, new CompNHabitacion()));
+
   }
 }
