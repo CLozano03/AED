@@ -3,15 +3,19 @@ package aed.hotel;
 import es.upm.aedlib.indexedlist.*;
 import java.util.Comparator;
 
-/**
- * Implementa el interfaz Hotel, para realisar y cancelar reservas en un hotel,
- * y para realisar preguntas sobre reservas en vigor.
- */
+import javax.lang.model.util.ElementScanner14;
+
 public class MiHotel implements Hotel {
-  /**
-   * Usa esta estructura para guardar las habitaciones creados.
-   */
+  
   private IndexedList<Habitacion> habitaciones;
+
+  public IndexedList<Habitacion> getHabitaciones() {
+    return this.habitaciones;
+  }
+
+  public void setHabitaciones(IndexedList<Habitacion> habitaciones) {
+    this.habitaciones = habitaciones;
+  }
 
   /**
    * Crea una instancia del hotel.
@@ -23,8 +27,8 @@ public class MiHotel implements Hotel {
 
   @Override
   public void anadirHabitacion(Habitacion habitacion) throws IllegalArgumentException {
-    if (buscarHabitacion(habitacion, habitaciones) != -1) {
-      throw new IllegalArgumentException();
+    if (busquedaBinaria(habitacion, habitaciones, new CompNHabitacion()) != -1) {
+      throw new IllegalArgumentException("La habitacion existe");
     } else {
       insertar(habitacion, habitaciones, new CompNHabitacion());
     }
@@ -32,20 +36,33 @@ public class MiHotel implements Hotel {
 
   @Override
   public boolean reservaHabitacion(Reserva reserva) throws IllegalArgumentException {
-    Habitacion habitacion = new Habitacion(reserva.getHabitacion(), 0);
+    Habitacion habitacionAux = new Habitacion(reserva.getHabitacion(), 0);
     boolean reservada = false;
 
+
+    //compES
+    CompES cmpES = new CompES();
+    
     // Compruebo que la habitacion existe en MiHotel
-    if (buscarHabitacion(habitacion, habitaciones) == -1) {
+    if (busquedaBinaria(habitacionAux, habitaciones, new CompNHabitacion()) == -1) {
       throw new IllegalArgumentException();
     } else {
+      Habitacion habitacion = habitaciones.get(busquedaBinaria(habitacionAux, habitaciones, new CompNHabitacion()));
       // Antes de reservarla, compruebo que esta disponible en las fechas
       if (habitacionDisponible(habitacion, reserva.getDiaEntrada(), reserva.getDiaSalida())) { // funcion auxiliar que
                                                                                                // comprueba si esta
                                                                                                // disponible
-        insertar(reserva, habitacion.getReservas(), new CompFEntrada()); // cmp no se que poner
+        insertar(reserva, habitacion.getReservas(), new CompFEntrada());
         reservada = true;
       }
+
+      //Comprobamos si no entran en conflicto con las reservas ya existentes
+      /* for(int i = 0; i < habitacion.getReservas().size() && !reservada; i++) {
+        if(cmpES.compare(habitacion.getReservas().get(i), reserva) >= 0 || cmpES.compare(reserva, habitacion.getReservas().get(i)) >= 0){
+          insertar(reserva, habitacion.getReservas(), new CompFEntrada());
+          reservada = true;
+        }
+      } */
     }
 
     return reservada;
@@ -55,47 +72,39 @@ public class MiHotel implements Hotel {
     // Compruebo si la hab que quiero esta disponible en diaEntrada y diaSalida
     // incluido
     // buscar(hab,disponibilidadHabitaciones(diaEntrada, diaSalida),cmp);
-    IndexedList<Habitacion> listaHabDisponibles = new ArrayIndexedList<Habitacion>();
-    listaHabDisponibles = disponibilidadHabitaciones(diaEntrada, diaSalida);
+    IndexedList<Habitacion> listaHabDisponibles = disponibilidadHabitaciones(diaEntrada, diaSalida);
+   // listaHabDisponibles = disponibilidadHabitaciones(diaEntrada, diaSalida);
     boolean encontrada = false;
     // Busco en la lista mi habitacion, para ver si esta disponible entre esas
     // fechas inclusive
     for (int i = 0; i < listaHabDisponibles.size() && !encontrada; i++) {
-      if (listaHabDisponibles.get(i).getNombre() == (hab.getNombre())) {
+      if (listaHabDisponibles.get(i).getNombre().equals(hab.getNombre())) {
         encontrada = true;
       }
     }
     return encontrada;
-
-    // habitacion.getReserva() que es una lista con reserva que es concreta
-    // Tenemos que buscar en la lista de reservas la reserva con la fecha de E/S mas
-    // proxima a la de @param reserva
-
-    /*
-     * if(reserva.compareTo(habitacion.getReservas(). get(i)) < 0){
-     * 
-     * }
-     */
   }
 
   @Override
   public boolean cancelarReserva(Reserva reserva) {
-    Habitacion habitacion = new Habitacion(reserva.getHabitacion(),0);
-    boolean cancelable= false;
+	  Habitacion hab = new Habitacion(reserva.getHabitacion(),0);
+	  int indice = busquedaBinaria(hab, habitaciones, new CompNHabitacion());
+    
+    boolean cancelable = false;
 
     // Compruebo que la habitacion existe en MiHotel
-    if(buscarHabitacion(habitacion, habitaciones) == -1){
-      throw new IllegalArgumentException();
+    if(indice == -1){
+      throw new IllegalArgumentException("La habitacion no existe en el hotel");
     } else {
-
-      for (int i = 0; i < habitacion.getReservas().size() && !cancelable; i++) {
-        cancelable = habitacion.getReservas().get(i).hashCode() == reserva.hashCode();
-
+    	 hab = habitaciones.get(indice);
+      for (int i = 0; i < hab.getReservas().size() && !cancelable; i++) {
+        cancelable = hab.getReservas().get(i).equals(reserva);
         if (cancelable) {
-          // borro elemento
-          habitacion.getReservas().removeElementAt(i);
-        }
+            // borro elemento
+            hab.getReservas().removeElementAt(i);
+          }
       }   
+      
     }
     return cancelable;
   }
@@ -104,9 +113,7 @@ public class MiHotel implements Hotel {
   public IndexedList<Habitacion> disponibilidadHabitaciones(String diaEntrada, String diaSalida) {
 
     Reserva posibleReserva = new Reserva("", "", diaEntrada, diaSalida);
-    Reserva punteroReserva = new Reserva("", diaSalida, diaSalida, diaSalida);
-    Habitacion punteroHabitacion = new Habitacion("", 0);
-
+    
     // Comparadores usados
     CompES cmpES = new CompES();
     CompPrecio cmpPrecio = new CompPrecio();
@@ -115,17 +122,22 @@ public class MiHotel implements Hotel {
 
     for (int i = 0; i < habitaciones.size(); i++) {
 
-      punteroHabitacion = habitaciones.get(i);
+      Habitacion punteroHabitacion = habitaciones.get(i);
 
-      for (int j = 0; j < habitaciones.get(i).getReservas().size(); j++) {
-
-        punteroReserva = punteroHabitacion.getReservas().get(j);
-
-        if (cmpES.compare(punteroReserva, posibleReserva) >= 0) {
-          insertar(punteroHabitacion, habitacionesLibres, cmpPrecio);
+      if(punteroHabitacion.getReservas().size() != 0){
+        
+        for (int j = 0; j < punteroHabitacion.getReservas().size(); j++) {
+  
+          if (cmpES.compare(punteroHabitacion.getReservas().get(j), posibleReserva) >= 0 || cmpES.compare(posibleReserva, punteroHabitacion.getReservas().get(j)) >= 0) {
+            try{
+              insertar(punteroHabitacion, habitacionesLibres, cmpPrecio);
+            } catch (IllegalArgumentException e) {}
+          }
         }
-
+      } else {
+        insertar(punteroHabitacion, habitacionesLibres, cmpPrecio);
       }
+
     }
     return habitacionesLibres;
   }
@@ -136,14 +148,13 @@ public class MiHotel implements Hotel {
 
     for (int i = 0; i < habitaciones.size(); i++) {
       for (int j = 0; i < habitaciones.get(i).getReservas().size(); j++) {
-        Reserva punteroReserva = habitaciones.get(i).getReservas().get(j);
-        if (punteroReserva.getDniPasaporte().hashCode() == dniPasaporte.hashCode()) {
-          insertar(punteroReserva, reservas, new CompFEntrada());
+        //Reserva punteroReserva = habitaciones.get(i).getReservas().get(j);
+        if (habitaciones.get(i).getReservas().get(j).getDniPasaporte().hashCode() == dniPasaporte.hashCode()) {
+          insertar(habitaciones.get(i).getReservas().get(j), reservas, new CompFEntrada());
         }
       }
     }
-
-    return null;
+    return reservas;
   }
 
   @Override
@@ -171,7 +182,6 @@ public class MiHotel implements Hotel {
         }
       }
     }
-
     return aLimpiar;
   }
 
@@ -181,7 +191,7 @@ public class MiHotel implements Hotel {
     Habitacion habitacion = new Habitacion(nombreHabitacion, 0);
 
     // Compruebo que la habitacion existe en MiHotel
-    if (buscarHabitacion(habitacion, habitaciones) == -1) {
+    if (busquedaBinaria(habitacion, habitaciones, new CompNHabitacion()) == -1) {
 
       throw new IllegalArgumentException("Habitacion inexistente");
 
@@ -213,7 +223,9 @@ public class MiHotel implements Hotel {
     boolean stop = false;
     if (l.size() == 0) {
       l.add(0, e);
-    } else {
+    } else if(busquedaBinaria(e, l, cmp) != -1){
+      throw new IllegalArgumentException("Ya existe esta habitacion");
+    }else {
       while (!stop) {
         if ((pos != 0 /* && pos != l.size() */ && cmp.compare(l.get(pos - 1), e) <= 0)
             && cmp.compare(l.get(pos), e) >= 0) {
@@ -242,56 +254,25 @@ public class MiHotel implements Hotel {
     }
 
   }
+  // otro buscar
+  private static <E> int busquedaBinaria(E h, IndexedList<E> l, Comparator <E> cmp){
+    int min = 0;
+    int max = l.size() - 1;
+    int medio;
 
-  private static int buscarHabitacion(Habitacion h, IndexedList<Habitacion> l) {
-
-    if (l.isEmpty()) {
-      return -1;
-    } else {
-
-      int min = 0;
-      int max = l.size() - 1;
-      int medio = (int) ((min + max) / 2);
-      boolean encontrado = false;
-
-      Comparator<Habitacion> cmp = new CompNHabitacion();
-
-      while (!encontrado && (min != max)) {
-        // Caso para cuando la posicion del medio es la que buscamos
-        if (cmp.compare(h, l.get(medio)) == 0) {
-          encontrado = true;
-          return medio;
-        }
-        if (cmp.compare(h, l.get(medio)) < 0) { // e < medio
-          max = medio - 1;
-        } else { // e > medio
-          min = medio + 1;
-        }
-        medio = (int) ((min + max) / 2);
-
-        if (h.hashCode() == l.get(medio).hashCode()) {
-          encontrado = true;
-          return medio;
-        }
-
+    while (min <= max) {
+      medio = (int) ((min + max) / 2);
+      if (cmp.compare(h, l.get(medio)) == 0) {
+        return medio;
+      } else if (cmp.compare(l.get(medio), h) > 0){ // si nombreHab es mayor que nombreHabdePosicionMedio
+        max = medio - 1;
+      } else {
+        min = medio + 1;
       }
-      return -1; // no encontrado
     }
-    // 0 1 5 6 8 10 15 78 7
+    return -1;
+	}
 
-    /*
-     * mid = (low + high)/2
-     * if (x == arr[mid])
-     * return mid
-     * 
-     * else if (x > arr[mid]) // x is on the right side
-     * low = mid + 1
-     * 
-     * else // x is on the left side
-     * high = mid - 1
-     */
-
-  }
   // --------------------------------------------------------------------------------------------
   /*
    * Dentro de la clase MiHotel creamos una clase static comparator que nos va a
@@ -308,7 +289,6 @@ public class MiHotel implements Hotel {
     public int compare(Reserva o1, Reserva o2) {
       return o1.getDiaEntrada().compareTo(o2.getDiaEntrada());
     }
-
   }
 
   static class CompFSalida implements Comparator<Reserva> {
@@ -319,7 +299,6 @@ public class MiHotel implements Hotel {
     public int compare(Reserva o1, Reserva o2) {
       return o1.getDiaSalida().compareTo(o2.getDiaSalida());
     }
-
   }
 
   static class CompES implements Comparator<Reserva> {
@@ -330,7 +309,6 @@ public class MiHotel implements Hotel {
     public int compare(Reserva o1, Reserva o2) {
       return o1.getDiaEntrada().compareTo(o2.getDiaSalida());
     }
-
   }
 
   static class CompNHabitacion implements Comparator<Habitacion> {
@@ -347,7 +325,6 @@ public class MiHotel implements Hotel {
         return 0;
       }
     }
-
   }
 
   static class CompPrecio implements Comparator<Habitacion> {
@@ -356,58 +333,72 @@ public class MiHotel implements Hotel {
 
     @Override
     public int compare(Habitacion o1, Habitacion o2) {
-      if (o1.getPrecio() > o2.getPrecio()) {
-        return 1;
-      } else if (o1.getPrecio() < o2.getPrecio()) {
-        return -1;
-      } else {
-        return 0;
-      }
+      return o1.getPrecio() - o2.getPrecio();
     }
-
   }
 
   // Mini tester para insertar
-  public static void main(String[] args) {
-    // Test insertar method
-    IndexedList<Habitacion> l = new ArrayIndexedList<Habitacion>();
-    l.add(0, new Habitacion("0", 5));
-    l.add(1, new Habitacion("1", 5));
+  public static void main(String[] args){
 
-    insertar(new Habitacion("5", 5), l, new CompNHabitacion());
-    insertar(new Habitacion("6", 5), l, new CompNHabitacion());
+    MiHotel h = new   MiHotel();
+    
+    //Crear habitaciones
+    Habitacion h1 = new Habitacion("0", 1);
+    Habitacion h2 = new Habitacion("1", 2);
+    Habitacion h3 = new Habitacion("2", 3);
+    Habitacion h4 = new Habitacion("3", 4);
+    Habitacion h5 = new Habitacion("4", 5);
+    Habitacion h6 = new Habitacion("5", 6);
+    Habitacion h7 = new Habitacion("6", 7);
+    Habitacion h8 = new Habitacion("7", 8);
+    Habitacion h9 = new Habitacion("8", 9);
+    Habitacion h10 = new Habitacion("9", 10);
+    
+    //Crear fechas
+    String fecha1 = "2022-01-11";
+    String fecha2 = "2022-01-04";
+    String fecha3 = "2022-01-21";
+    String fecha4 = "2022-03-17";
+    String fecha5 = "2022-04-22";
+    String fecha6 = "2022-07-05";
+    String fecha7 = "2022-08-13";
+    String fecha8 = "2022-09-06";
 
-    insertar(new Habitacion("15", 5), l, new CompNHabitacion());
-    insertar(new Habitacion("10", 5), l, new CompNHabitacion());
+    //Fechas para comparar conflictos
+    String fecha9 = fecha6;
+    String fecha10 = "2022-12-25";
+    
 
-    insertar(new Habitacion("8", 5), l, new CompNHabitacion());
+    //Crear reservas
+    Reserva r1 = new Reserva("0", "0", fecha5, fecha6);
+    Reserva r2 = new Reserva("0", "1", fecha1, fecha2);
+    Reserva r5 = new Reserva("0", "1", fecha3, fecha4);
+    Reserva r3 = new Reserva("1", "2", "2", "2");
+    Reserva r4 = new Reserva("2", "3", "3", "3");
 
-    insertar(new Habitacion("78", 5), l, new CompNHabitacion());
+    
+    h.anadirHabitacion(h1);
+    h.anadirHabitacion(h2);
+    h.anadirHabitacion(h3);
+    h.anadirHabitacion(h4);
+    h.anadirHabitacion(h5);
+    h.anadirHabitacion(h6);
+    h.anadirHabitacion(h7);
+    h.anadirHabitacion(h8);
+    h.anadirHabitacion(h9);
+    h.anadirHabitacion(h10);
 
-    // print list
-    /*
-     * for (int i = 0; i < l.size(); i++) {
-     * System.out.print(l.get(i).getNombre() + " ");
-     * }
-     * System.out.println();
-     * 
-     * // Test buscar method
-     * System.out.println(buscarHabitacion(new Habitacion("5", 5), l));
-     * System.out.println(buscarHabitacion(new Habitacion("0", 5), l));
-     * System.out.println(buscarHabitacion(new Habitacion("78", 5), l));
-     * System.out.println(buscarHabitacion(new Habitacion("100", 5), l));
-     */
-    MiHotel h = new MiHotel();
+    h.getHabitaciones().get(0).getReservas().add(0, r1);
+    h.getHabitaciones().get(0).getReservas().add(1, r2);
+    h.getHabitaciones().get(0).getReservas().add(2, r5);
 
-    h.anadirHabitacion(new Habitacion("1", 5));
-    h.anadirHabitacion(new Habitacion("2", 5));
-    h.anadirHabitacion(new Habitacion("3", 5));
-    h.anadirHabitacion(new Habitacion("4", 5));
-    // print list
-    for (int i = 0; i < h.habitaciones.size(); i++) {
-      System.out.println(h.habitaciones.get(i).getNombre() + " ");
-    }
-    h.anadirHabitacion(new Habitacion("3", 10));
+  IndexedList<Habitacion> j = h.disponibilidadHabitaciones(fecha7,fecha8);
+   for(int i = 0; i < j.size(); i++){
+    System.out.println(j.get(i).getNombre());
+  }
+
+  System.out.println(h.habitacionDisponible(h1, fecha9,fecha10)); //true
+  System.out.println(h.habitacionDisponible(h1, fecha1,fecha2)); //false
 
   }
 }
