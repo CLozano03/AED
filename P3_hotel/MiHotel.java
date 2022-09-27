@@ -149,7 +149,7 @@ public class MiHotel implements Hotel {
     for (int i = 0; i < habitaciones.size(); i++) {
       for (int j = 0; i < habitaciones.get(i).getReservas().size(); j++) {
         //Reserva punteroReserva = habitaciones.get(i).getReservas().get(j);
-        if (habitaciones.get(i).getReservas().get(j).getDniPasaporte().hashCode() == dniPasaporte.hashCode()) {
+        if (habitaciones.get(i).getReservas().get(j).getDniPasaporte().equals(dniPasaporte)) {
           insertar(habitaciones.get(i).getReservas().get(j), reservas, new CompFEntrada());
         }
       }
@@ -188,21 +188,24 @@ public class MiHotel implements Hotel {
   @Override
   public Reserva reservaDeHabitacion(String nombreHabitacion, String dia) throws IllegalArgumentException {
 
-    Habitacion habitacion = new Habitacion(nombreHabitacion, 0);
+    boolean cancelable = false;
+    Habitacion habitacion = new Habitacion(nombreHabitacion,0);
+    int indice = busquedaBinaria(habitacion, habitaciones, new CompNHabitacion());
 
     // Compruebo que la habitacion existe en MiHotel
-    if (busquedaBinaria(habitacion, habitaciones, new CompNHabitacion()) == -1) {
+    if (indice == -1) {
 
       throw new IllegalArgumentException("Habitacion inexistente");
 
     } else {
-
-      Reserva reserva = new Reserva(nombreHabitacion, "", dia, "");
+      habitacion = habitaciones.get(indice);
+      Reserva reserva  = new Reserva("","", "", "");
       boolean encontrado = false;
 
       for (int i = 0; i < habitacion.getReservas().size() && !encontrado; i++) {
+        reserva = habitacion.getReservas().get(i);
+
         if (habitacion.getReservas().get(i).compareTo(reserva) <= 0) {
-          reserva = habitacion.getReservas().get(i);
           encontrado = true;
         }
       }
