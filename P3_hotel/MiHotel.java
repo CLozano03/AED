@@ -1,5 +1,10 @@
 package aed.hotel;
 
+/**
+ * @author Victoria Fernandez Alegria
+ * @author Cesar Lozano Argueso
+ */
+
 import es.upm.aedlib.indexedlist.*;
 import java.util.Comparator;
 
@@ -46,9 +51,7 @@ public class MiHotel implements Hotel {
       Habitacion habitacion = habitaciones.get(busquedaBinaria(habitacionAux, habitaciones, new CompNHabitacion()));
 
       // Antes de reservarla, compruebo que esta disponible en las fechas
-      if (habitacionDisponible(habitacion, reserva.getDiaEntrada(), reserva.getDiaSalida())) { // funcion auxiliar que
-                                                                                               // comprueba si esta
-                                                                                               // disponible
+      if (habitacionDisponible(habitacion, reserva.getDiaEntrada(), reserva.getDiaSalida())){
         insertar(reserva, habitacion.getReservas(), new CompFEntrada());
         reservada = true;
       }
@@ -80,7 +83,7 @@ public class MiHotel implements Hotel {
     boolean cancelable = false;
     // Compruebo que la habitacion existe en MiHotel
     if (indice == -1) {
-      throw new IllegalArgumentException("La habitacion no existe en el hotel");
+      throw new IllegalArgumentException("La habitacion no existe");
     } else {
       hab = habitaciones.get(indice);
 
@@ -206,7 +209,7 @@ public class MiHotel implements Hotel {
 
     Reserva reservaAux = new Reserva("", "", dia, "");
 
-    // CmpES para ver que la fecha dada esta dentro de la reserva
+    //CmpES para ver que la fecha dada esta dentro de la reserva
     CompES cmpES = new CompES();
 
     // Compruebo que la habitacion existe en MiHotel
@@ -241,10 +244,11 @@ public class MiHotel implements Hotel {
     if (l.size() == 0) {
       l.add(0, e);
     } else if (busquedaBinaria(e, l, cmp) != -1) {
-      throw new IllegalArgumentException("Ya existe esta habitacion");
+      throw new IllegalArgumentException("Ya existe este elemento");
     } else {
       while (!stop) {
-        if ((pos != 0 /* && pos != l.size() */ && cmp.compare(l.get(pos - 1), e) <= 0)
+      
+        if ((pos != 0 && cmp.compare(l.get(pos - 1), e) <= 0)
             && cmp.compare(l.get(pos), e) >= 0) {
           //annado el elemento
           stop = true;
@@ -265,7 +269,6 @@ public class MiHotel implements Hotel {
           } else {
             pos = l.size() - (int) (l.size() - pos) / 2;
           }
-
         }
       }
     }
