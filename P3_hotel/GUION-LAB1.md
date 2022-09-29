@@ -64,5 +64,6 @@ IndexedList<Habitacion> habitacionesParaLimpiar(String hoyDia);
 ---
 ## A tener en cuenta
   - **Dos reservas no estan en conflicto** --> Cuando la fecha de salida de salida de r1 es menor o igual que la fecha de entrada de r2, o viceversa (la fecha de salida de r2 es menor o igual que la fecha de entrada de r1).  
-  
-> En construccion
+  - Las habitaciones dentro el atributo habitaciones estarán ordenadas según sus nombres y las operaciones de añadir una habitación nueva, o buscar una habitación deberían ser implementadas mediante un algoritmo de  **búsqueda binaria**.
+  - Las **reservas** estarán ordenadas según  la fecha de entrada.
+  - Esta permitido hacer búsquedas lineales para, por ejemplo, detectar reservas en conflicto, o implementar otras operaciones sobre reservas.
