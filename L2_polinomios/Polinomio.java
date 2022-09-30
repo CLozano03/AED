@@ -5,6 +5,7 @@ import java.util.function.BiFunction;
 
 import es.upm.aedlib.Position;
 import es.upm.aedlib.positionlist.*;
+import es.upm.aedlib.*;
  
 //ctrl k --> z
 /**
@@ -57,7 +58,20 @@ public class Polinomio {
    * @param polinomio - una secuencia de monomios separados por '+'
    */
   public Polinomio(String polinomio) {
-    throw new RuntimeException("no esta implementado todavia");
+    String[] monomios = polinomio.split("\\+"); // separa por monomios
+    String[] par = new String[2];
+    Monomio m; 
+
+    terms = new NodePositionList<>();
+
+    for (String monomio : monomios) { 
+      par = monomio.trim().split("\\^"); // 3x^3 --> ["3x", "3"]
+      m = new Monomio(Integer.parseInt(par[0]), Integer.parseInt(par[1]));
+      /* Puede dar errores */
+      if (m.getCoeficiente() != 0) {
+        terms.addLast(m);
+      }
+    }
   }
 
   // No se si voy a usarlas pero por si acaso
@@ -140,35 +154,13 @@ public class Polinomio {
    */
   public static Polinomio multiplica(Polinomio p1, Polinomio p2) {
     Polinomio res = new Polinomio();
-    Monomio cursor1 = p1.terms.first().element();
-    while(cursor1 != null){
-      /* res.addFirst(multiplicaMonomio(cursor1, p2));
-      cursor1 = p1.terms.next(cursor1); */
-    }
-    // Multiplicamos coeficientes, sumamor exponentes y sumamos al final todo resultado
-    /* for (int i = 0; i < p1.grado(); i++) {
-      coef1 = p1.coefDeGrado(p1, i);
 
-      for (int j = 0; j < p2.grado(); j++) {
-        // Calculo coeficientes
-        coef2 = p2.coefDeGrado(p2, j);
-        if (coef1 != 0 && coef2 == 0) {
-          coefRes = coef1;
-          expoRes = p1.terms.first().element().getExponente();
-        } else if (coef1 == 0 && coef2 != 0){
-          coefRes = coef2;
-          expoRes = p2.terms.first().element().getExponente();
-        } else  {
-          coefRes = coef1 * coef2;
-          expoRes = p1.terms.first().element().getExponente() 
-                  + p2.terms.first().element().getExponente();
-          // Hacer tema next cursor!!!!
-          
-        }
-        //res.getTerms().addLast(new Monomio (coefRes), indice)); //Lista position, no nodeposition
-        indice++;
-      } 
-    } */
+    Position<Monomio> cursor1 = p1.getTerms().first();
+    
+    while(cursor1 != null){
+      res = suma(res, multiplica(cursor1.element(), p2));
+      cursor1 = p1.terms.next(cursor1);
+    }
     return res;
   }  
   
@@ -295,8 +287,8 @@ public class Polinomio {
     /* System.out.println(m1); */
 
     //To string
-    System.out.println(p1.toString());
-    System.out.println(p2.toString());
+    /* System.out.println(p1.toString());
+    System.out.println(p2.toString()); */
     //System.out.println(p3.toString());
   
     // Testeando funcion grado
@@ -312,12 +304,17 @@ public class Polinomio {
     System.out.println(p2.equals(p3));//true
     System.out.println(p2.equals(m1));//false */
 
-    System.out.println(suma(p1,p2).toString());
+    /* System.out.println(suma(p1,p2).toString());
     System.out.println(resta(p1,p2).toString());
-
+ */
     /* System.out.println(p1.coefDeGrado(p1,3));////)
     System.out.println(p1.coefDeGrado(p1,2)); 
     System.out.println(p1.coefDeGrado(p1,0));  */
+
+    //Testeando constructor polinomio a partir de un string
+    Polinomio p4 = new Polinomio("4x^4 + 5x^2 + 3x^0");
+    System.out.println(p4.toString());
+
 
   }
 }
