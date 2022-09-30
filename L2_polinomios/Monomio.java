@@ -34,7 +34,7 @@ public class Monomio extends Pair<Integer,Integer> {
     buf.append(getCoeficiente());
     buf.append("x");
     buf.append("^");
-    buf.append(new Integer(getExponente()).toString());
+    buf.append(getExponente());
     return buf.toString();
   }
 }

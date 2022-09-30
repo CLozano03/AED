@@ -133,21 +133,20 @@ public class Polinomio {
   }
     
   /**
-   * Calcula el producto de un monomio y un polinomio.
-   * @param m el monomio
-   * @param p el polinomio
-   * @return el producto del monomio y el polinomio
+   * Calcula el producto de dos polinomios.
+   * @param p1 primer polinomio.
+   * @param p2 segundo polinomio.
+   * @return el producto de los polinomios.
    */
   public static Polinomio multiplica(Polinomio p1, Polinomio p2) {
     Polinomio res = new Polinomio();
-    int coef1 = 0;
-    int coef2 = 0;
-    int coefRes;
-    int expoRes;
-    int indice = 0;
-    
+    Monomio cursor1 = p1.terms.first().element();
+    while(cursor1 != null){
+      /* res.addFirst(multiplicaMonomio(cursor1, p2));
+      cursor1 = p1.terms.next(cursor1); */
+    }
     // Multiplicamos coeficientes, sumamor exponentes y sumamos al final todo resultado
-    for (int i = 0; i < p1.grado(); i++) {
+    /* for (int i = 0; i < p1.grado(); i++) {
       coef1 = p1.coefDeGrado(p1, i);
 
       for (int j = 0; j < p2.grado(); j++) {
@@ -164,54 +163,31 @@ public class Polinomio {
           expoRes = p1.terms.first().element().getExponente() 
                   + p2.terms.first().element().getExponente();
           // Hacer tema next cursor!!!!
-
+          
         }
         //res.getTerms().addLast(new Monomio (coefRes), indice)); //Lista position, no nodeposition
         indice++;
-        } 
-      }
-      return res;
-    }  
-
+      } 
+    } */
+    return res;
+  }  
+  
   /**
-   * Calcula el producto de dos polinomios.
-   * @param p1 primer polinomio.
-   * @param p2 segundo polinomio.
-   * @return el producto de los polinomios.
+   * Calcula el producto de un monomio y un polinomio.
+   * @param m el monomio
+   * @param p el polinomio
+   * @return el producto del monomio y el polinomio
    */
   public static Polinomio multiplica(Monomio t, Polinomio p) { //copiado el de arriba, hay que modificar
     Polinomio res = new Polinomio();
-  
-    int coefRes;
-    int expoRes;
-    int indice = 0;
-    // Multiplicamos coeficientes, sumamor exponentes y sumamos al final todo resultado
-    /* for (int i = 0; i < p.grado(); i++) {
-      
 
-      for (int j = 0; j < p2.grado(); j++) {
-        // Calculo coeficientes
-        coef2 = p2.coefDeGrado(p2, j);
-        if (coef1 != 0 && coef2 == 0) {
-          coefRes = coef1;
-          expoRes = p1.terms.first().element().getExponente();
-        } else if (coef1 == 0 && coef2 != 0){
-          coefRes = coef2;
-          expoRes = p2.terms.first().element().getExponente();
-        } else  {
-          coefRes = coef1 * coef2;
-          expoRes = p1.terms.first().element().getExponente() 
-                  + p2.terms.first().element().getExponente();
-          // Hacer tema next cursor!!!!
-
-        }
-        res.getTerms().addLast(new Monomio (coefRes), indice));
-        indice++;
-        }
-      }*/
-      return res; 
+    for (int i = 0; i < p.grado(); i++){
+      if(existeExp(p, i)){ 
+        res.getTerms().addFirst(new Monomio (coefDeGrado(p, i) * t.getExponente(), i + t.getExponente())); 
+      }
     }
-        
+    return res; 
+  }     
     
   /**
    * Devuelve el valor del polinomio cuando su variable es sustiuida por un valor concreto.
@@ -221,7 +197,7 @@ public class Polinomio {
    * @return el valor del polinomio para ese valor de la variable.
    */
   public long evaluar(int valor) {
-    int imagen  = 0;
+    int imagen  = -1;
     Position<Monomio> puntero = terms.first();
     Monomio aux;
 
@@ -242,15 +218,7 @@ public class Polinomio {
    * @return el grado del polinomio
    */
   public int grado() {
-    Monomio puntero = new Monomio(0,0);
-    int grado = 0;
-    if (terms.isEmpty()) {
-      return 0;
-    } else {
-      puntero = terms.first().element();
-      grado = puntero.getExponente();
-      return grado;
-    }
+    return terms.isEmpty()? -1 : terms.first().element().getExponente();
   }
 
   @Override
