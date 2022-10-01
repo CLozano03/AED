@@ -82,7 +82,7 @@ public class Polinomio {
           mon.setLeft(1);
           mon.setRight(1);
         } else {
-          mon.setLeft(par[0] == ""? 1 : Integer.parseInt(par[0]));
+          mon.setLeft(par[0].equals("")? 1 : Integer.parseInt(par[0]));
           mon.setRight(par.length == 1? 1: Integer.parseInt(par[1].split("\\^")[1]));
         }
       }
