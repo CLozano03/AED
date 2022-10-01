@@ -1,12 +1,13 @@
 package aed.polinomios;
 
-
-
+/**
+ * @author Cesar Lozano Argueso
+ * @author Victoria Fernandez Alegria
+ */
+ 
 import es.upm.aedlib.Position;
 import es.upm.aedlib.positionlist.*;
-//import es.upm.aedlib.Pair;
- 
-//ctrl k --> z
+
 /**
  * Operaciones sobre polinomios de una variable con coeficientes enteros.
  */
@@ -58,11 +59,10 @@ public class Polinomio {
    */
   public Polinomio(String polinomio) {
     String[] monomios = polinomio.split("\\+"); // separa por monomios
-    
     String[] par = new String[2];
 
     terms = new NodePositionList<>();
-
+    
     for (String monomio : monomios) { 
       monomio = monomio.trim();
       Monomio mon = new Monomio(0, 0); 
@@ -71,13 +71,13 @@ public class Polinomio {
        * "xA".split("x") => ["", "A"]
        * "Ax".split("x") => ["A"]
        * "x".split("x") => []
-       * "abc".split("x") => ["abc"]
+       * "abc".split("x") => ["abc"] 
       */
-      if(!monomio.contains("x")){
+      if (!monomio.contains("x")){
         mon.setLeft(Integer.parseInt(monomio));
         mon.setRight(0);
-      } else{
-        par = monomio.split("x"); // "x".split("x") => []
+      } else {
+        par = monomio.split("x"); 
         if(par.length == 0){
           mon.setLeft(1);
           mon.setRight(1);
@@ -92,7 +92,7 @@ public class Polinomio {
     }
   }
   
-  //Devuelve el coefciente de grado i del polinomio. Devuelve 0 si no existe
+  //Devuelve el coeficiente de grado i del polinomio p1. Devuelve 0 si no existe
   private static int coefDeGrado (Polinomio p1,int deGrado) {
     Position<Monomio> cursor = p1.getTerms().first();
   
@@ -107,9 +107,11 @@ public class Polinomio {
     return 0;
   }
 
+  // Devuelve si existe un monomio de grado deGrado en p1
   private static boolean existeExp (Polinomio p1,int deGrado) {
     return coefDeGrado(p1, deGrado) != 0;
   }
+
   /**
    * Suma dos polinomios.
    * @param p1 primer polinomio.
@@ -118,9 +120,8 @@ public class Polinomio {
    */
   public static Polinomio suma(Polinomio p1, Polinomio p2) {
     Polinomio res = new Polinomio();
-
     Monomio m1;
-    
+  
     // Recorro ambos polinomios (ordenados en orden decreciente de Grado)
     for(int i = 0; i <= Math.max(p1.grado(), p2.grado()); i++) {
       if(existeExp(p1, i) || existeExp(p2, i)) {
@@ -129,7 +130,7 @@ public class Polinomio {
       }
     }
     return res;
-  }
+  } 
     
 /*   *
    * Substraccion de dos polinomios.
@@ -139,18 +140,17 @@ public class Polinomio {
    */
   public static Polinomio resta(Polinomio p1, Polinomio p2) {
     Polinomio res = new Polinomio();
-
-    Monomio m1 = p1.terms.first().element();
+    Monomio m1;
     
     // Recorro ambos polinomios (ordenados en orden decreciente de Grado)
     for(int i = 0; i <= Math.max(p1.grado(), p2.grado()); i++) {
       if(existeExp(p1, i) || existeExp(p2, i)) {
         m1 = new Monomio(coefDeGrado(p1, i) - coefDeGrado(p2, i), i);
-        res.getTerms().addFirst(m1);
+        if(m1.getCoeficiente() != 0) {
+          res.getTerms().addFirst(m1);
+        }
       }
-      
     }
-    
     return res;
   }
     
@@ -162,10 +162,10 @@ public class Polinomio {
    */
   public static Polinomio multiplica(Polinomio p1, Polinomio p2) {
     Polinomio res = new Polinomio();
-
     Position<Monomio> cursor1 = p1.getTerms().first();
     
     while(cursor1 != null){
+      // Multiplicamos los monomios de p1 por p2 y luego los sumamos para simplificar
       res = suma(res, multiplica(cursor1.element(), p2));
       cursor1 = p1.terms.next(cursor1);
     }
@@ -183,7 +183,9 @@ public class Polinomio {
     Monomio m;
     Position<Monomio> cursor = p.getTerms().first();
     while(cursor != null) {
+        // Multiplicamos t por el monomio al que apunta cursor (los exponentes se suman)
         m = new Monomio (cursor.element().getCoeficiente()* t.getCoeficiente(), cursor.element().getExponente() + t.getExponente()); 
+        // Cuando no es 0 lo annadimos a polinomio
         if(m.getCoeficiente() != 0 ){
           res.getTerms().addLast(m);
         }
@@ -207,6 +209,7 @@ public class Polinomio {
     // Recorro la lista de monomios hasta que no haya mas
     while(puntero != null){
       aux = puntero.element();
+      // Voy sumando al resultado el monomio sustituido por valor
       imagen += aux.getCoeficiente() * Math.pow(valor, aux.getExponente());
       puntero = terms.next(puntero);
     }
@@ -249,84 +252,28 @@ public class Polinomio {
   public boolean equals(Object o) {
     if (!(o instanceof Polinomio)) return false;
     else {
-      Position<Monomio> cursor = terms.first();
-
-      Monomio aux1;
-      Monomio aux2;
       Polinomio pol = (Polinomio) o;
+
+      Position<Monomio> cursor = terms.first();
       Position<Monomio> cursor2 = pol.getTerms().first();
-      boolean iguales = true;
+
+      boolean iguales = true; 
+      
+      // Comprobamos el tamanno
       if (terms.size() == pol.getTerms().size()) {
+        
         while(cursor != null && iguales) {
-          aux1 = cursor.element();
-          aux2 = cursor2.element();
-  
+          // Comprobamos si los monomomios son iguales
+          iguales = cursor.element().equals(cursor2.element());
+
+          // Seguimos iterando por la lista
           cursor = terms.next(cursor);
-          cursor2 = ((Polinomio)o).getTerms().next(cursor2);
-  
-          iguales = aux1.equals(aux2);
-        } 
+          cursor2 = pol.getTerms().next(cursor2);
+        }
       } else {
-          iguales = false;
+        iguales = false;
       }
       return iguales;      
     }
-  }
-
-  
-  public static void main(String[] args) {
-    Polinomio p1 = new Polinomio();  // 4x^3 + x^2 + 3x^0  ---> evaluar 2 --> 4*2^3 + 1*2^2 + 3*2^1 = 39
-    Polinomio p2 = new Polinomio();//  5x ^2 + 2x^1
-    Polinomio p3 = new Polinomio();
-
-    Monomio m1 = new Monomio(3,0); //3x^0
-    Monomio m2 = new Monomio(2,1); //2x^1
-    Monomio m3 = new Monomio(1,2); //1x^2
-    Monomio m4 = new Monomio(5,2); //5x^2
-    Monomio m5 = new Monomio(4,3); //4x^3
-
-    p1.getTerms().addLast(m5);
-    p1.getTerms().addLast(m3);
-    p1.getTerms().addLast(m1);
-    p2.getTerms().addLast(m4);
-    p2.getTerms().addLast(m2);
-    p3.getTerms().addLast(m4);
-    p3.getTerms().addLast(m2);
-
-    /* System.out.println(m1); */
-
-    //To string
-    /* System.out.println(p1.toString());
-    System.out.println(p2.toString()); */
-    //System.out.println(p3.toString());
-  
-    // Testeando funcion grado
-   /*  System.out.println("Grado de p1: " + p1.grado());
-    System.out.println("Grado de p2: " + p2.grado()); */
-
-    // Testeando funcion evaluar
-    //System.out.println("Evaluando p1 en -1: " + p1.evaluar(-1));
-    //System.out.println("Evaluando p2 en 2: " + p2.evaluar(2));
-
-    //Testeando equals
-    /* System.out.println(p1.equals(p2));//false
-    System.out.println(p2.equals(p3));//true
-    System.out.println(p2.equals(m1));//false */
-
-    /* System.out.println(suma(p1,p2).toString());
-    System.out.println(resta(p1,p2).toString());
- */
-    /* System.out.println(p1.coefDeGrado(p1,3));////)
-    System.out.println(p1.coefDeGrado(p1,2)); 
-    System.out.println(p1.coefDeGrado(p1,0));  */
-
-    //Testeando constructor polinomio a partir de un string
-    Polinomio p4 = new Polinomio("0");
-    System.out.println(p4.toString());
-    
-    
-    //System.out.println(multiplica(p2, p1).toString());
-
-
   }
 }
