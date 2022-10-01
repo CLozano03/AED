@@ -12,8 +12,8 @@
 
 //////////////////////////////////////////////////////////////////////
 //
-// File generated at: 2022/9/28 -- 19:48:14
-// Seed: {1664,387293,19776}
+// File generated at: 2022/9/30 -- 12:14:41
+// Seed: {1664,532879,954251}
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -139,7 +139,7 @@ TestData.testName = new String("test_002") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_002")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(4,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -180,7 +180,7 @@ TestData.testName = new String("test_003") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_003")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(3,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(4,2),new Monomio(1,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(4,2),new Monomio(1,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -221,7 +221,7 @@ TestData.testName = new String("test_004") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_004")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(5,2) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(5,2),new Monomio(1,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(3,2),new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(3,2),new Monomio(4,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -262,7 +262,7 @@ TestData.testName = new String("test_005") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_005")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(2,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(2,1),new Monomio(1,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(4,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(4,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -303,7 +303,7 @@ TestData.testName = new String("test_006") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_006")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(1,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(1,1),new Monomio(1,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(3,3),new Monomio(2,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(3,3),new Monomio(2,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -344,7 +344,7 @@ TestData.testName = new String("test_007") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_007")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(5,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(5,1),new Monomio(4,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -385,7 +385,7 @@ TestData.testName = new String("test_008") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_008")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(4,2),new Monomio(2,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(4,2),new Monomio(3,1),new Monomio(3,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(9,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -426,7 +426,7 @@ TestData.testName = new String("test_009") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_009")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(3,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(2,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(6,1),new Monomio(7,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -467,7 +467,7 @@ TestData.testName = new String("test_010") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_010")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(1,3),new Monomio(1,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(1,3),new Monomio(2,1),new Monomio(3,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(5,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(5,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -508,7 +508,7 @@ TestData.testName = new String("test_011") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_011")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(1,2),new Monomio(3,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(1,2),new Monomio(4,1),new Monomio(5,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(3,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,1),new Monomio(9,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -549,7 +549,7 @@ TestData.testName = new String("test_012") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_012")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(8,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(2,2),new Monomio(2,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(3,2),new Monomio(6,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -590,7 +590,7 @@ TestData.testName = new String("test_013") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_013")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(2,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(1,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(3,1),new Monomio(8,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(4,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(8,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -631,7 +631,7 @@ TestData.testName = new String("test_014") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_014")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(6,2),new Monomio(8,1),new Monomio(5,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(1,2),new Monomio(4,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(6,2),new Monomio(4,1),new Monomio(8,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -672,7 +672,7 @@ TestData.testName = new String("test_015") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_015")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(5,1),new Monomio(5,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(2,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(2,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -713,7 +713,7 @@ TestData.testName = new String("test_016") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_016")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(2,2),new Monomio(2,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(3,2),new Monomio(6,1),new Monomio(7,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(2,2),new Monomio(1,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(5,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(5,2),new Monomio(6,1),new Monomio(6,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -754,7 +754,7 @@ TestData.testName = new String("test_017") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_017")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(5,2),new Monomio(4,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(5,2),new Monomio(4,1),new Monomio(5,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(3,2),new Monomio(5,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(3,2),new Monomio(5,1),new Monomio(8,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -795,7 +795,7 @@ TestData.testName = new String("test_018") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_018")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(1,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(3,1),new Monomio(1,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(4,2),new Monomio(5,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(4,2),new Monomio(8,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -836,7 +836,7 @@ TestData.testName = new String("test_019") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_019")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(1,3),new Monomio(1,2),new Monomio(1,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(1,3),new Monomio(1,2),new Monomio(3,1),new Monomio(3,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(5,3),new Monomio(3,2),new Monomio(4,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(5,3),new Monomio(3,2),new Monomio(6,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -877,7 +877,7 @@ TestData.testName = new String("test_020") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_020")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(2,3),new Monomio(3,2),new Monomio(5,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(4,3),new Monomio(4,2),new Monomio(3,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(6,3),new Monomio(7,2),new Monomio(8,1),new Monomio(4,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(6,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -918,7 +918,7 @@ TestData.testName = new String("test_021") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_021")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(4,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(9,1),new Monomio(6,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(4,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(6,1),new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -959,7 +959,7 @@ TestData.testName = new String("test_022") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_022")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(5,2),new Monomio(5,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(5,2),new Monomio(10,1),new Monomio(9,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(2,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(2,1),new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1000,7 +1000,7 @@ TestData.testName = new String("test_023") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_023")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(3,3),new Monomio(1,2),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(3,3),new Monomio(1,2),new Monomio(7,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1041,7 +1041,7 @@ TestData.testName = new String("test_024") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_024")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(4,2),new Monomio(4,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(4,2),new Monomio(4,1),new Monomio(6,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(5,2),new Monomio(1,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(3,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(9,2),new Monomio(4,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1082,7 +1082,7 @@ TestData.testName = new String("test_025") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_025")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(8,1),new Monomio(3,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(5,3),new Monomio(4,2),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(5,3),new Monomio(4,2),new Monomio(3,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1123,7 +1123,7 @@ TestData.testName = new String("test_026") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_026")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(1,3),new Monomio(2,2),new Monomio(1,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(1,3),new Monomio(2,2),new Monomio(4,1),new Monomio(5,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(5,2),new Monomio(3,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(5,2),new Monomio(6,1),new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1164,7 +1164,7 @@ TestData.testName = new String("test_027") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_027")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(4,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(4,1),new Monomio(4,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(8,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1205,7 +1205,7 @@ TestData.testName = new String("test_028") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_028")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(3,2),new Monomio(5,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(5,2),new Monomio(1,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(8,3),new Monomio(8,2),new Monomio(6,1),new Monomio(6,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1246,7 +1246,7 @@ TestData.testName = new String("test_029") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_029")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,1),new Monomio(9,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(1,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(1,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1287,7 +1287,7 @@ TestData.testName = new String("test_030") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_030")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(2,2),new Monomio(1,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(2,2),new Monomio(1,1),new Monomio(8,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(3,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(3,2),new Monomio(5,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(6,2),new Monomio(8,1),new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1328,7 +1328,7 @@ TestData.testName = new String("test_031") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_031")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(5,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(5,1),new Monomio(4,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(2,2),new Monomio(1,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(2,2),new Monomio(1,1),new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1369,7 +1369,7 @@ TestData.testName = new String("test_032") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_032")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(4,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1410,7 +1410,7 @@ TestData.testName = new String("test_033") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_033")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(8,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(3,3),new Monomio(4,2),new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(3,3),new Monomio(4,2),new Monomio(9,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1451,7 +1451,7 @@ TestData.testName = new String("test_034") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_034")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(2,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(6,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1492,7 +1492,7 @@ TestData.testName = new String("test_035") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_035")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(2,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(3,2),new Monomio(4,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(7,2),new Monomio(6,1),new Monomio(10,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(3,2),new Monomio(3,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(3,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(9,3),new Monomio(4,2),new Monomio(6,1),new Monomio(9,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1533,7 +1533,7 @@ TestData.testName = new String("test_036") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_036")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(3,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(5,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(9,2),new Monomio(8,1),new Monomio(1,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(4,2),new Monomio(2,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(4,3),new Monomio(5,2),new Monomio(1,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(8,3),new Monomio(9,2),new Monomio(3,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1574,7 +1574,7 @@ TestData.testName = new String("test_037") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_037")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(3,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(3,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(8,2),new Monomio(6,1),new Monomio(7,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(1,3),new Monomio(4,2),new Monomio(3,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(1,3),new Monomio(4,2),new Monomio(3,1),new Monomio(7,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1615,7 +1615,7 @@ TestData.testName = new String("test_038") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_038")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(4,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(7,1),new Monomio(6,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(5,2),new Monomio(3,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(1,2),new Monomio(3,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(4,3),new Monomio(6,2),new Monomio(6,1),new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1656,7 +1656,7 @@ TestData.testName = new String("test_039") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_039")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(4,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(4,1),new Monomio(6,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(6,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1697,7 +1697,7 @@ TestData.testName = new String("test_040") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_040")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(5,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(3,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(6,2),new Monomio(8,1),new Monomio(4,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(3,2),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(3,2),new Monomio(8,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1738,7 +1738,7 @@ TestData.testName = new String("test_041") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_041")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(5,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(4,2),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(9,3),new Monomio(4,2),new Monomio(5,1),new Monomio(5,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(7,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1779,7 +1779,7 @@ TestData.testName = new String("test_042") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_042")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(5,2),new Monomio(1,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(5,2),new Monomio(1,1),new Monomio(6,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(1,2),new Monomio(1,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(1,2),new Monomio(1,1),new Monomio(9,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1820,7 +1820,7 @@ TestData.testName = new String("test_043") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_043")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(4,3),new Monomio(2,2),new Monomio(3,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(4,3),new Monomio(5,2),new Monomio(8,1),new Monomio(6,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(5,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1861,7 +1861,7 @@ TestData.testName = new String("test_044") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_044")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(6,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(3,3),new Monomio(5,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(3,3),new Monomio(10,1),new Monomio(7,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1902,7 +1902,7 @@ TestData.testName = new String("test_045") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_045")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(2,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(2,1),new Monomio(10,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(2,2),new Monomio(4,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(2,2),new Monomio(9,1),new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1943,7 +1943,7 @@ TestData.testName = new String("test_046") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_046")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(3,2),new Monomio(3,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(3,2),new Monomio(3,1),new Monomio(5,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(2,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(2,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -1984,7 +1984,7 @@ TestData.testName = new String("test_047") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_047")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(5,2),new Monomio(1,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(5,2),new Monomio(1,1),new Monomio(10,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(4,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(4,2),new Monomio(4,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(10,3),new Monomio(5,2),new Monomio(8,1),new Monomio(7,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2025,7 +2025,7 @@ TestData.testName = new String("test_048") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_048")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(3,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(2,3),new Monomio(2,2),new Monomio(2,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(2,3),new Monomio(2,2),new Monomio(2,1),new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2066,7 +2066,7 @@ TestData.testName = new String("test_049") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_049")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(6,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(2,3),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(2,3),new Monomio(4,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2107,7 +2107,7 @@ TestData.testName = new String("test_050") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_050")) ;
 if (ok_sofar)
-  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(4,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(9,1),new Monomio(5,0) }))) ;
+  ok_sofar = new Suma(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(4,3),new Monomio(5,2),new Monomio(1,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(4,3),new Monomio(5,2),new Monomio(1,1),new Monomio(10,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2187,7 +2187,7 @@ TestData.testName = new String("test_052") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_052")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-1,1),new Monomio(-3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2228,7 +2228,7 @@ TestData.testName = new String("test_053") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_053")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-4,1),new Monomio(1,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(1,2),new Monomio(3,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-2,3),new Monomio(-1,2),new Monomio(-3,1),new Monomio(-5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2269,7 +2269,7 @@ TestData.testName = new String("test_054") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_054")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(1,2),new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-2,3),new Monomio(-1,2),new Monomio(-4,1),new Monomio(2,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-3,1),new Monomio(-2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2310,7 +2310,7 @@ TestData.testName = new String("test_055") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_055")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-4,1),new Monomio(-1,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2351,7 +2351,7 @@ TestData.testName = new String("test_056") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_056")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(1,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(2,2),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-1,3),new Monomio(-1,2),new Monomio(1,1) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-3,2),new Monomio(-1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2392,7 +2392,7 @@ TestData.testName = new String("test_057") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_057")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(2,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(2,1),new Monomio(2,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(2,2),new Monomio(4,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-4,4),new Monomio(-2,2),new Monomio(-3,1),new Monomio(-4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2433,7 +2433,7 @@ TestData.testName = new String("test_058") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_058")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(3,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(1,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-3,2),new Monomio(2,1),new Monomio(2,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(5,3),new Monomio(3,2),new Monomio(3,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-3,4),new Monomio(-5,3),new Monomio(-3,2),new Monomio(-2,1),new Monomio(-1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2474,7 +2474,7 @@ TestData.testName = new String("test_059") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_059")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(5,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(5,1),new Monomio(-2,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(1,2),new Monomio(3,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-1,4),new Monomio(-1,2),new Monomio(-2,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2515,7 +2515,7 @@ TestData.testName = new String("test_060") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_060")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(5,2),new Monomio(3,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(5,2),new Monomio(3,1),new Monomio(-1,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(-5,1) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2556,7 +2556,7 @@ TestData.testName = new String("test_061") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_061")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(4,3),new Monomio(5,2),new Monomio(2,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(4,3),new Monomio(5,2),new Monomio(2,1),new Monomio(-2,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(3,1),new Monomio(-1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2597,7 +2597,7 @@ TestData.testName = new String("test_062") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_062")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(5,3),new Monomio(4,2),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(1,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(2,3),new Monomio(4,2),new Monomio(-1,1),new Monomio(4,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(3,2),new Monomio(2,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-2,3),new Monomio(-2,2),new Monomio(2,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2638,7 +2638,7 @@ TestData.testName = new String("test_063") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_063")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-4,1),new Monomio(-2,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(2,2),new Monomio(2,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(2,2),new Monomio(2,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2679,7 +2679,7 @@ TestData.testName = new String("test_064") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_064")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(1,3),new Monomio(4,2),new Monomio(5,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-4,4),new Monomio(-1,3),new Monomio(-4,2),new Monomio(-5,1),new Monomio(-3,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(1,3),new Monomio(4,2),new Monomio(2,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-4,4),new Monomio(-4,2),new Monomio(-2,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2720,7 +2720,7 @@ TestData.testName = new String("test_065") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_065")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-3,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(1,3),new Monomio(3,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(4,3),new Monomio(3,2),new Monomio(3,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-4,4),new Monomio(-3,3),new Monomio(-3,2),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2761,7 +2761,7 @@ TestData.testName = new String("test_066") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_066")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-5,1),new Monomio(-2,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(2,3),new Monomio(1,2),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(3,3),new Monomio(4,2),new Monomio(1,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-4,4),new Monomio(-1,3),new Monomio(-3,2),new Monomio(-1,1),new Monomio(-3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2802,7 +2802,7 @@ TestData.testName = new String("test_067") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_067")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(-2,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(5,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-5,3),new Monomio(-1,2),new Monomio(-5,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2843,7 +2843,7 @@ TestData.testName = new String("test_068") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_068")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-1,1) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(-3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2884,7 +2884,7 @@ TestData.testName = new String("test_069") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_069")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(3,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(2,3),new Monomio(2,2),new Monomio(2,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-1,4),new Monomio(-2,3),new Monomio(1,1),new Monomio(3,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-3,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2925,7 +2925,7 @@ TestData.testName = new String("test_070") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_070")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(5,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(5,1),new Monomio(-1,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(1,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(2,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(-1,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -2966,7 +2966,7 @@ TestData.testName = new String("test_071") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_071")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(1,2),new Monomio(5,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(1,2),new Monomio(5,1) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(3,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(-3,2),new Monomio(-3,1),new Monomio(-2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3007,7 +3007,7 @@ TestData.testName = new String("test_072") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_072")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(3,2),new Monomio(3,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(3,2),new Monomio(3,1),new Monomio(-3,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(3,3),new Monomio(5,2),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(2,2),new Monomio(4,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(2,3),new Monomio(3,2),new Monomio(-4,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3048,7 +3048,7 @@ TestData.testName = new String("test_073") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_073")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(2,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(3,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(-3,2),new Monomio(-1,1) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(4,3),new Monomio(1,2),new Monomio(1,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(1,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(4,3),new Monomio(-3,2),new Monomio(-2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3089,7 +3089,7 @@ TestData.testName = new String("test_074") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_074")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(4,2),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-1,3),new Monomio(-4,2),new Monomio(2,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-2,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3130,7 +3130,7 @@ TestData.testName = new String("test_075") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_075")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(2,2),new Monomio(5,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(2,2),new Monomio(5,1),new Monomio(-1,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-4,1),new Monomio(-1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3171,7 +3171,7 @@ TestData.testName = new String("test_076") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_076")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(3,2),new Monomio(1,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(5,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(-4,1),new Monomio(1,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(2,3),new Monomio(1,2),new Monomio(5,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-1,4),new Monomio(-2,3),new Monomio(-1,2),new Monomio(-2,1) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3212,7 +3212,7 @@ TestData.testName = new String("test_077") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_077")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(4,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(1,2),new Monomio(4,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(-1,2) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3253,7 +3253,7 @@ TestData.testName = new String("test_078") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_078")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(4,2),new Monomio(2,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(4,2),new Monomio(2,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(1,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(-3,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3294,7 +3294,7 @@ TestData.testName = new String("test_079") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_079")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(1,3),new Monomio(4,2),new Monomio(3,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(1,3),new Monomio(4,2),new Monomio(2,1) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(1,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(-4,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3335,7 +3335,7 @@ TestData.testName = new String("test_080") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_080")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(3,3),new Monomio(3,2),new Monomio(1,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(3,3),new Monomio(3,2),new Monomio(-2,1),new Monomio(5,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(3,2),new Monomio(2,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(3,2),new Monomio(2,1),new Monomio(-3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3376,7 +3376,7 @@ TestData.testName = new String("test_081") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_081")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(3,3),new Monomio(3,2),new Monomio(1,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(3,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(3,3),new Monomio(-2,1),new Monomio(-3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3417,7 +3417,7 @@ TestData.testName = new String("test_082") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_082")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(4,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-4,2),new Monomio(-4,1),new Monomio(2,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(5,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-2,2),new Monomio(-5,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3458,7 +3458,7 @@ TestData.testName = new String("test_083") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_083")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(1,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(3,3),new Monomio(5,2),new Monomio(2,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-5,4),new Monomio(-3,3),new Monomio(-1,2),new Monomio(-1,1),new Monomio(-3,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(4,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-5,2),new Monomio(-4,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3499,7 +3499,7 @@ TestData.testName = new String("test_084") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_084")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(4,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(2,3),new Monomio(5,2),new Monomio(3,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-4,4),new Monomio(-2,3),new Monomio(-1,2),new Monomio(1,1),new Monomio(1,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(5,2),new Monomio(2,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-5,3),new Monomio(-5,2),new Monomio(-2,1),new Monomio(-1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3540,7 +3540,7 @@ TestData.testName = new String("test_085") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_085")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(5,2),new Monomio(4,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(5,2),new Monomio(4,1),new Monomio(-2,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(1,3),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-4,4),new Monomio(-1,3),new Monomio(4,1),new Monomio(-4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3581,7 +3581,7 @@ TestData.testName = new String("test_086") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_086")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(1,3),new Monomio(1,2),new Monomio(5,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(1,2),new Monomio(4,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(1,3),new Monomio(1,1),new Monomio(4,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(4,2),new Monomio(3,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-5,3),new Monomio(-4,2),new Monomio(1,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3622,7 +3622,7 @@ TestData.testName = new String("test_087") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_087")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(4,3),new Monomio(3,2),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(4,3),new Monomio(-2,2) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(-1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3663,7 +3663,7 @@ TestData.testName = new String("test_088") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_088")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(4,3),new Monomio(2,2),new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-3,4),new Monomio(-4,3),new Monomio(-2,2),new Monomio(-4,1),new Monomio(4,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(1,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(4,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-2,3),new Monomio(4,2),new Monomio(-3,1),new Monomio(-2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3704,7 +3704,7 @@ TestData.testName = new String("test_089") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_089")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(1,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-5,3),new Monomio(-1,2),new Monomio(-1,1),new Monomio(1,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(1,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(1,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3745,7 +3745,7 @@ TestData.testName = new String("test_090") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_090")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(2,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(3,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(-1,1) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3786,7 +3786,7 @@ TestData.testName = new String("test_091") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_091")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(4,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(2,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(2,2),new Monomio(4,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-5,4),new Monomio(2,2),new Monomio(-2,1),new Monomio(-2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3827,7 +3827,7 @@ TestData.testName = new String("test_092") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_092")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(1,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(2,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(-1,1),new Monomio(-2,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(3,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(-1,1),new Monomio(-5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3868,7 +3868,7 @@ TestData.testName = new String("test_093") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_093")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(2,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(1,2),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-4,3),new Monomio(4,2),new Monomio(2,1),new Monomio(1,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(2,2),new Monomio(5,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(3,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(-3,3),new Monomio(2,2),new Monomio(2,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3909,7 +3909,7 @@ TestData.testName = new String("test_094") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_094")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(5,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(2,1),new Monomio(2,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(4,3),new Monomio(3,2) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(4,3),new Monomio(-1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3950,7 +3950,7 @@ TestData.testName = new String("test_095") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_095")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(2,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(2,1) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(5,2),new Monomio(4,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-4,3),new Monomio(-5,2),new Monomio(-4,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -3991,7 +3991,7 @@ TestData.testName = new String("test_096") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_096")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(2,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(2,1),new Monomio(2,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(-1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4032,7 +4032,7 @@ TestData.testName = new String("test_097") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_097")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(3,2),new Monomio(2,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(3,2),new Monomio(-1,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(5,2),new Monomio(4,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-4,3),new Monomio(-5,2),new Monomio(1,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4073,7 +4073,7 @@ TestData.testName = new String("test_098") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_098")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(3,2),new Monomio(4,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(3,3),new Monomio(3,2),new Monomio(2,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-5,4),new Monomio(2,3),new Monomio(2,1) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(1,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(5,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(-4,1),new Monomio(-4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4114,7 +4114,7 @@ TestData.testName = new String("test_099") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_099")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(4,2),new Monomio(1,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(4,2),new Monomio(1,1),new Monomio(-1,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(5,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(3,3),new Monomio(1,2),new Monomio(2,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(-4,4),new Monomio(-3,3),new Monomio(4,2),new Monomio(3,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4155,7 +4155,7 @@ TestData.testName = new String("test_100") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_100")) ;
 if (ok_sofar)
-  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(5,2),new Monomio(5,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(1,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(4,1),new Monomio(-1,0) }))) ;
+  ok_sofar = new Resta(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(5,2),new Monomio(1,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(5,2),new Monomio(-2,1) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4235,7 +4235,7 @@ TestData.testName = new String("test_102") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_102")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(1,2),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(5,2),new Monomio(5,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4276,7 +4276,7 @@ TestData.testName = new String("test_103") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_103")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(4,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(3,2),new Monomio(5,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(3,2),new Monomio(5,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4317,7 +4317,7 @@ TestData.testName = new String("test_104") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_104")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(4,2),new Monomio(3,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(4,2),new Monomio(3,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4358,7 +4358,7 @@ TestData.testName = new String("test_105") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_105")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(4,3),new Monomio(2,2),new Monomio(1,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,6),new Monomio(8,5),new Monomio(21,4),new Monomio(21,3),new Monomio(15,2),new Monomio(23,1),new Monomio(15,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(4,1) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4399,7 +4399,7 @@ TestData.testName = new String("test_106") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_106")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(5,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(20,1),new Monomio(20,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(3,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4440,7 +4440,7 @@ TestData.testName = new String("test_107") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_107")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(7,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4481,7 +4481,7 @@ TestData.testName = new String("test_108") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_108")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(2,2),new Monomio(1,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(2,2),new Monomio(1,1),new Monomio(2,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4522,7 +4522,7 @@ TestData.testName = new String("test_109") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_109")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(2,2),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,5),new Monomio(8,4),new Monomio(4,3),new Monomio(28,2),new Monomio(20,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(5,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(15,1),new Monomio(9,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4563,7 +4563,7 @@ TestData.testName = new String("test_110") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_110")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(2,2),new Monomio(2,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(1,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(3,2),new Monomio(2,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,6),new Monomio(3,5),new Monomio(6,4),new Monomio(15,3),new Monomio(8,2),new Monomio(8,1),new Monomio(8,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4604,7 +4604,7 @@ TestData.testName = new String("test_111") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_111")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(2,2),new Monomio(4,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(4,2),new Monomio(8,1),new Monomio(8,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(1,2),new Monomio(5,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,5),new Monomio(1,4),new Monomio(1,3),new Monomio(6,2),new Monomio(8,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4645,7 +4645,7 @@ TestData.testName = new String("test_112") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_112")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(2,3),new Monomio(1,2),new Monomio(3,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(4,3),new Monomio(2,2),new Monomio(6,1),new Monomio(10,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(1,3),new Monomio(3,2),new Monomio(4,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(4,3),new Monomio(12,2),new Monomio(16,1),new Monomio(20,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4686,7 +4686,7 @@ TestData.testName = new String("test_113") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_113")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(1,2),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(8,3),new Monomio(2,2),new Monomio(4,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(1,2),new Monomio(1,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(2,2),new Monomio(2,1) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4727,7 +4727,7 @@ TestData.testName = new String("test_114") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_114")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(10,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(5,3),new Monomio(5,2),new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(10,3),new Monomio(10,2),new Monomio(8,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4768,7 +4768,7 @@ TestData.testName = new String("test_115") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_115")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(4,2),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(10,3),new Monomio(8,2),new Monomio(6,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(5,2),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(8,4),new Monomio(22,3),new Monomio(15,2),new Monomio(4,1),new Monomio(6,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4809,7 +4809,7 @@ TestData.testName = new String("test_116") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_116")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(1,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(2,1),new Monomio(10,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(1,2),new Monomio(5,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(7,3),new Monomio(15,2),new Monomio(31,1),new Monomio(15,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4850,7 +4850,7 @@ TestData.testName = new String("test_117") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_117")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(8,2),new Monomio(8,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(1,2),new Monomio(4,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(6,6),new Monomio(8,4),new Monomio(8,3),new Monomio(6,2),new Monomio(8,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4891,7 +4891,7 @@ TestData.testName = new String("test_118") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_118")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(5,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(6,3),new Monomio(17,2),new Monomio(14,1),new Monomio(3,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(3,2),new Monomio(1,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(5,3),new Monomio(5,2),new Monomio(5,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(10,7),new Monomio(25,6),new Monomio(30,5),new Monomio(40,4),new Monomio(36,3),new Monomio(24,2),new Monomio(13,1),new Monomio(6,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4932,7 +4932,7 @@ TestData.testName = new String("test_119") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_119")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(1,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(1,1),new Monomio(1,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(5,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(3,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(8,5),new Monomio(6,4),new Monomio(26,3),new Monomio(15,2),new Monomio(15,1) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -4973,7 +4973,7 @@ TestData.testName = new String("test_120") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_120")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(4,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(8,4),new Monomio(8,3),new Monomio(16,2),new Monomio(24,1),new Monomio(8,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5014,7 +5014,7 @@ TestData.testName = new String("test_121") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_121")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(4,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(8,4),new Monomio(2,3),new Monomio(16,2),new Monomio(24,1),new Monomio(5,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(4,2),new Monomio(5,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(12,4),new Monomio(12,2),new Monomio(15,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5055,7 +5055,7 @@ TestData.testName = new String("test_122") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_122")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(4,3),new Monomio(1,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,5),new Monomio(10,4),new Monomio(12,3),new Monomio(1,2),new Monomio(8,1),new Monomio(15,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(4,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(15,2),new Monomio(12,1),new Monomio(9,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5096,7 +5096,7 @@ TestData.testName = new String("test_123") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_123")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(1,2),new Monomio(2,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(3,2),new Monomio(6,1),new Monomio(15,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(9,2),new Monomio(12,1) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5137,7 +5137,7 @@ TestData.testName = new String("test_124") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_124")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(15,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(1,1) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5178,7 +5178,7 @@ TestData.testName = new String("test_125") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_125")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(4,2),new Monomio(5,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(15,3),new Monomio(12,2),new Monomio(15,1),new Monomio(9,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(1,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(15,2),new Monomio(5,1),new Monomio(25,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5219,7 +5219,7 @@ TestData.testName = new String("test_126") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_126")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(3,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(15,3),new Monomio(9,2),new Monomio(12,1) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(2,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(6,3),new Monomio(4,2) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5260,7 +5260,7 @@ TestData.testName = new String("test_127") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_127")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(4,3),new Monomio(2,2),new Monomio(1,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(15,6),new Monomio(12,5),new Monomio(16,4),new Monomio(11,3),new Monomio(7,2),new Monomio(2,1),new Monomio(2,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(3,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(6,3),new Monomio(6,1),new Monomio(10,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5301,7 +5301,7 @@ TestData.testName = new String("test_128") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_128")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(12,3),new Monomio(3,2),new Monomio(12,1),new Monomio(3,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(3,2),new Monomio(3,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(3,3),new Monomio(4,2),new Monomio(1,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(6,7),new Monomio(15,6),new Monomio(27,5),new Monomio(32,4),new Monomio(42,3),new Monomio(34,2),new Monomio(19,1),new Monomio(20,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5342,7 +5342,7 @@ TestData.testName = new String("test_129") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_129")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(3,2),new Monomio(3,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(2,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(15,6),new Monomio(18,5),new Monomio(24,4),new Monomio(36,3),new Monomio(21,2),new Monomio(18,1),new Monomio(12,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(1,3),new Monomio(1,2),new Monomio(1,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(4,3),new Monomio(3,2) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(15,8),new Monomio(17,7),new Monomio(18,6),new Monomio(12,5),new Monomio(17,4),new Monomio(11,3),new Monomio(6,2) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5383,7 +5383,7 @@ TestData.testName = new String("test_130") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_130")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(3,2),new Monomio(4,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(4,2),new Monomio(5,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(15,6),new Monomio(27,5),new Monomio(47,4),new Monomio(31,3),new Monomio(20,2) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(1,3),new Monomio(3,2),new Monomio(1,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(5,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(6,6),new Monomio(17,5),new Monomio(11,4),new Monomio(17,3),new Monomio(7,2),new Monomio(5,1) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5424,7 +5424,7 @@ TestData.testName = new String("test_131") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_131")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(1,3),new Monomio(1,2),new Monomio(3,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(5,2),new Monomio(1,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(15,7),new Monomio(20,6),new Monomio(13,5),new Monomio(30,4),new Monomio(44,3),new Monomio(31,2),new Monomio(14,1),new Monomio(15,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(2,3),new Monomio(2,2),new Monomio(3,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(5,2),new Monomio(3,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(15,8),new Monomio(10,7),new Monomio(25,6),new Monomio(34,5),new Monomio(31,4),new Monomio(21,3),new Monomio(24,2),new Monomio(9,1) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5465,7 +5465,7 @@ TestData.testName = new String("test_132") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_132")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(3,3),new Monomio(1,2) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(5,3),new Monomio(3,2),new Monomio(2,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(12,8),new Monomio(27,7),new Monomio(28,6),new Monomio(20,5),new Monomio(15,4),new Monomio(8,3),new Monomio(2,2) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(4,3),new Monomio(2,2),new Monomio(1,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(12,4),new Monomio(16,3),new Monomio(8,2),new Monomio(4,1),new Monomio(16,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5506,7 +5506,7 @@ TestData.testName = new String("test_133") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_133")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(16,1),new Monomio(4,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(4,3),new Monomio(3,2),new Monomio(4,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(4,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(15,6),new Monomio(32,5),new Monomio(40,4),new Monomio(44,3),new Monomio(30,2),new Monomio(16,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5547,7 +5547,7 @@ TestData.testName = new String("test_134") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_134")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(2,2),new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(8,2),new Monomio(20,1),new Monomio(8,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5588,7 +5588,7 @@ TestData.testName = new String("test_135") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_135")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(8,4),new Monomio(8,3),new Monomio(20,1),new Monomio(20,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(8,2),new Monomio(22,1),new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5629,7 +5629,7 @@ TestData.testName = new String("test_136") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_136")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(5,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(1,2),new Monomio(4,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(8,5),new Monomio(14,4),new Monomio(25,3),new Monomio(38,2),new Monomio(28,1),new Monomio(8,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(3,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(1,2),new Monomio(5,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(8,5),new Monomio(10,4),new Monomio(33,3),new Monomio(32,2),new Monomio(34,1),new Monomio(15,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5670,7 +5670,7 @@ TestData.testName = new String("test_137") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_137")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(2,2),new Monomio(3,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(20,4),new Monomio(10,3),new Monomio(15,2) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(1,2),new Monomio(1,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(1,3),new Monomio(1,2),new Monomio(5,1) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5711,7 +5711,7 @@ TestData.testName = new String("test_138") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_138")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(3,2),new Monomio(1,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(2,2),new Monomio(4,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(12,6),new Monomio(17,5),new Monomio(25,4),new Monomio(29,3),new Monomio(15,2),new Monomio(7,1),new Monomio(3,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(3,2),new Monomio(2,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(1,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(16,6),new Monomio(12,5),new Monomio(12,4),new Monomio(23,3),new Monomio(5,2),new Monomio(6,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5752,7 +5752,7 @@ TestData.testName = new String("test_139") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_139")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5793,7 +5793,7 @@ TestData.testName = new String("test_140") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_140")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(5,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(20,2),new Monomio(25,1) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(10,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5834,7 +5834,7 @@ TestData.testName = new String("test_141") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_141")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(4,2),new Monomio(3,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(20,3),new Monomio(20,2),new Monomio(15,1),new Monomio(20,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(20,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5875,7 +5875,7 @@ TestData.testName = new String("test_142") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_142")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(2,2),new Monomio(1,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(25,3),new Monomio(10,2),new Monomio(5,1),new Monomio(25,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(20,1),new Monomio(25,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5916,7 +5916,7 @@ TestData.testName = new String("test_143") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_143")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(5,2),new Monomio(1,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(10,4),new Monomio(27,3),new Monomio(10,2),new Monomio(11,1),new Monomio(2,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(5,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(10,3),new Monomio(27,2),new Monomio(20,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5957,7 +5957,7 @@ TestData.testName = new String("test_144") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_144")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(25,2),new Monomio(35,1),new Monomio(12,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -5998,7 +5998,7 @@ TestData.testName = new String("test_145") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_145")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(5,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(5,3),new Monomio(4,2),new Monomio(4,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(25,6),new Monomio(50,5),new Monomio(55,4),new Monomio(50,3),new Monomio(28,2),new Monomio(8,1) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(3,2),new Monomio(2,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(20,3),new Monomio(12,2),new Monomio(8,1),new Monomio(16,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -6039,7 +6039,7 @@ TestData.testName = new String("test_146") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_146")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(5,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(25,3),new Monomio(35,2),new Monomio(30,1),new Monomio(8,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(4,2),new Monomio(2,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(5,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(15,4),new Monomio(37,3),new Monomio(26,2),new Monomio(19,1),new Monomio(15,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -6080,7 +6080,7 @@ TestData.testName = new String("test_147") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_147")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(5,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(25,6),new Monomio(50,4),new Monomio(10,3),new Monomio(25,2),new Monomio(10,1) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(4,2),new Monomio(3,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(2,3),new Monomio(3,2),new Monomio(5,1),new Monomio(4,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(10,7),new Monomio(18,6),new Monomio(29,5),new Monomio(51,4),new Monomio(57,3),new Monomio(43,2),new Monomio(32,1),new Monomio(16,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -6121,7 +6121,7 @@ TestData.testName = new String("test_148") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_148")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(1,3),new Monomio(4,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(10,4),new Monomio(2,3),new Monomio(8,1) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(1,3),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -6162,7 +6162,7 @@ TestData.testName = new String("test_149") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_149")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(1,3),new Monomio(5,2),new Monomio(4,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(2,2),new Monomio(4,1),new Monomio(3,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(20,7),new Monomio(14,6),new Monomio(42,5),new Monomio(45,4),new Monomio(31,3),new Monomio(31,2),new Monomio(12,1) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(2,3),new Monomio(2,2),new Monomio(3,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(25,5),new Monomio(20,4),new Monomio(14,3),new Monomio(19,2),new Monomio(26,1),new Monomio(8,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -6203,7 +6203,7 @@ TestData.testName = new String("test_150") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_150")) ;
 if (ok_sofar)
-  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(5,3),new Monomio(5,2),new Monomio(4,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(25,6),new Monomio(45,5),new Monomio(50,4),new Monomio(45,3),new Monomio(46,2),new Monomio(24,1),new Monomio(5,0) }))) ;
+  ok_sofar = new Multiplica(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(4,3),new Monomio(3,2),new Monomio(2,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1) }))).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(10,5),new Monomio(8,4),new Monomio(6,3),new Monomio(4,2) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -6365,7 +6365,7 @@ TestData.testName = new String("test_154") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_154")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(1)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1) }))).doCall().checkResult(new Integer(1)) ;
 return ok_sofar ;
 }
 ) ;
@@ -6406,7 +6406,7 @@ TestData.testName = new String("test_155") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_155")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(2,0) }))).doCall().checkResult(new Integer(1)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(5,0) }))).doCall().checkResult(new Integer(1)) ;
 return ok_sofar ;
 }
 ) ;
@@ -6447,7 +6447,7 @@ TestData.testName = new String("test_156") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_156")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(4,0) }))).doCall().checkResult(new Integer(1)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(1,1) }))).doCall().checkResult(new Integer(2)) ;
 return ok_sofar ;
 }
 ) ;
@@ -6488,7 +6488,7 @@ TestData.testName = new String("test_157") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_157")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(1,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(2)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(2,0) }))).doCall().checkResult(new Integer(2)) ;
 return ok_sofar ;
 }
 ) ;
@@ -6529,7 +6529,7 @@ TestData.testName = new String("test_158") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_158")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(3,1),new Monomio(5,0) }))).doCall().checkResult(new Integer(2)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(5,1),new Monomio(4,0) }))).doCall().checkResult(new Integer(2)) ;
 return ok_sofar ;
 }
 ) ;
@@ -6570,7 +6570,7 @@ TestData.testName = new String("test_159") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_159")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,0) }))).doCall().checkResult(new Integer(2)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(1,1) }))).doCall().checkResult(new Integer(3)) ;
 return ok_sofar ;
 }
 ) ;
@@ -6611,7 +6611,7 @@ TestData.testName = new String("test_160") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_160")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(3,2),new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(3)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(2,2),new Monomio(2,1),new Monomio(2,0) }))).doCall().checkResult(new Integer(3)) ;
 return ok_sofar ;
 }
 ) ;
@@ -6652,7 +6652,7 @@ TestData.testName = new String("test_161") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_161")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(4,1),new Monomio(3,0) }))).doCall().checkResult(new Integer(3)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(3,2),new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(3)) ;
 return ok_sofar ;
 }
 ) ;
@@ -6693,7 +6693,7 @@ TestData.testName = new String("test_162") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_162")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(1,3),new Monomio(2,2),new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(4)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(4,2),new Monomio(4,0) }))).doCall().checkResult(new Integer(3)) ;
 return ok_sofar ;
 }
 ) ;
@@ -6734,7 +6734,7 @@ TestData.testName = new String("test_163") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_163")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(2,3),new Monomio(1,1) }))).doCall().checkResult(new Integer(4)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(5,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(3)) ;
 return ok_sofar ;
 }
 ) ;
@@ -6775,7 +6775,7 @@ TestData.testName = new String("test_164") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_164")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(4,2),new Monomio(3,1) }))).doCall().checkResult(new Integer(4)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(5,2),new Monomio(5,0) }))).doCall().checkResult(new Integer(3)) ;
 return ok_sofar ;
 }
 ) ;
@@ -6816,7 +6816,7 @@ TestData.testName = new String("test_165") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_165")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(5,3),new Monomio(2,1) }))).doCall().checkResult(new Integer(4)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(2,3),new Monomio(1,2),new Monomio(4,1) }))).doCall().checkResult(new Integer(4)) ;
 return ok_sofar ;
 }
 ) ;
@@ -6857,7 +6857,7 @@ TestData.testName = new String("test_166") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_166")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))).doCall().checkResult(new Integer(0)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(3,3),new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Integer(4)) ;
 return ok_sofar ;
 }
 ) ;
@@ -6898,7 +6898,7 @@ TestData.testName = new String("test_167") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_167")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1) }))).doCall().checkResult(new Integer(1)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))).doCall().checkResult(new Integer(0)) ;
 return ok_sofar ;
 }
 ) ;
@@ -6939,7 +6939,7 @@ TestData.testName = new String("test_168") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_168")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(2,0) }))).doCall().checkResult(new Integer(1)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1) }))).doCall().checkResult(new Integer(1)) ;
 return ok_sofar ;
 }
 ) ;
@@ -6980,7 +6980,7 @@ TestData.testName = new String("test_169") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_169")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(5,1),new Monomio(4,0) }))).doCall().checkResult(new Integer(2)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(1)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7021,7 +7021,7 @@ TestData.testName = new String("test_170") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_170")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(1,2),new Monomio(4,1),new Monomio(4,0) }))).doCall().checkResult(new Integer(3)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(5,0) }))).doCall().checkResult(new Integer(1)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7062,7 +7062,7 @@ TestData.testName = new String("test_171") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_171")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(5,2),new Monomio(2,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(3)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(2,0) }))).doCall().checkResult(new Integer(2)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7103,7 +7103,7 @@ TestData.testName = new String("test_172") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_172")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(5,2),new Monomio(1,1),new Monomio(4,0) }))).doCall().checkResult(new Integer(4)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(4,1),new Monomio(2,0) }))).doCall().checkResult(new Integer(2)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7144,7 +7144,7 @@ TestData.testName = new String("test_173") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_173")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))).doCall().checkResult(new Integer(0)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(2,2),new Monomio(4,1),new Monomio(4,0) }))).doCall().checkResult(new Integer(3)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7185,7 +7185,7 @@ TestData.testName = new String("test_174") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_174")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(1)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(4,3),new Monomio(2,2),new Monomio(4,1) }))).doCall().checkResult(new Integer(4)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7226,7 +7226,7 @@ TestData.testName = new String("test_175") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_175")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(4,0) }))).doCall().checkResult(new Integer(1)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(3,0) }))).doCall().checkResult(new Integer(1)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7267,7 +7267,7 @@ TestData.testName = new String("test_176") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_176")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(5,0) }))).doCall().checkResult(new Integer(1)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2) }))).doCall().checkResult(new Integer(2)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7308,7 +7308,7 @@ TestData.testName = new String("test_177") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_177")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(1,1),new Monomio(4,0) }))).doCall().checkResult(new Integer(2)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(4,1),new Monomio(2,0) }))).doCall().checkResult(new Integer(2)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7349,7 +7349,7 @@ TestData.testName = new String("test_178") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_178")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(2,1),new Monomio(3,0) }))).doCall().checkResult(new Integer(2)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(3,2) }))).doCall().checkResult(new Integer(3)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7390,7 +7390,7 @@ TestData.testName = new String("test_179") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_179")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(4,0) }))).doCall().checkResult(new Integer(2)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(5,2),new Monomio(3,1) }))).doCall().checkResult(new Integer(3)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7431,7 +7431,7 @@ TestData.testName = new String("test_180") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_180")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(4,1),new Monomio(2,0) }))).doCall().checkResult(new Integer(2)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(1,3),new Monomio(1,2),new Monomio(1,1),new Monomio(3,0) }))).doCall().checkResult(new Integer(4)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7472,7 +7472,7 @@ TestData.testName = new String("test_181") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_181")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(4,2),new Monomio(3,0) }))).doCall().checkResult(new Integer(3)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(2,3),new Monomio(3,2),new Monomio(3,1) }))).doCall().checkResult(new Integer(4)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7513,7 +7513,7 @@ TestData.testName = new String("test_182") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_182")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(4,2),new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Integer(3)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(4,3),new Monomio(5,2),new Monomio(2,0) }))).doCall().checkResult(new Integer(4)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7636,7 +7636,7 @@ TestData.testName = new String("test_185") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_185")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(4,1),new Monomio(5,0) }))).doCall().checkResult(new Integer(2)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(3,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(2)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7677,7 +7677,7 @@ TestData.testName = new String("test_186") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_186")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(2,2),new Monomio(5,1),new Monomio(5,0) }))).doCall().checkResult(new Integer(3)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(4,0) }))).doCall().checkResult(new Integer(2)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7718,7 +7718,7 @@ TestData.testName = new String("test_187") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_187")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(4,2),new Monomio(2,1) }))).doCall().checkResult(new Integer(3)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Integer(2)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7759,7 +7759,7 @@ TestData.testName = new String("test_188") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_188")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(2,3),new Monomio(4,2),new Monomio(1,1) }))).doCall().checkResult(new Integer(4)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(2,2),new Monomio(2,0) }))).doCall().checkResult(new Integer(3)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7800,7 +7800,7 @@ TestData.testName = new String("test_189") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_189")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))).doCall().checkResult(new Integer(0)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(1,3),new Monomio(3,2),new Monomio(3,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(4)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7841,7 +7841,7 @@ TestData.testName = new String("test_190") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_190")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1) }))).doCall().checkResult(new Integer(1)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))).doCall().checkResult(new Integer(0)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7882,7 +7882,7 @@ TestData.testName = new String("test_191") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_191")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(1)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(2,1) }))).doCall().checkResult(new Integer(2)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7923,7 +7923,7 @@ TestData.testName = new String("test_192") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_192")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Integer(1)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(2,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(2)) ;
 return ok_sofar ;
 }
 ) ;
@@ -7964,7 +7964,7 @@ TestData.testName = new String("test_193") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_193")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(4,0) }))).doCall().checkResult(new Integer(1)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(5,1) }))).doCall().checkResult(new Integer(2)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8005,7 +8005,7 @@ TestData.testName = new String("test_194") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_194")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(5,0) }))).doCall().checkResult(new Integer(1)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(2,1),new Monomio(4,0) }))).doCall().checkResult(new Integer(3)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8046,7 +8046,7 @@ TestData.testName = new String("test_195") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_195")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(2,1) }))).doCall().checkResult(new Integer(2)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(3,1),new Monomio(2,0) }))).doCall().checkResult(new Integer(3)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8087,7 +8087,7 @@ TestData.testName = new String("test_196") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_196")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(2,1),new Monomio(5,0) }))).doCall().checkResult(new Integer(2)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(4,2),new Monomio(1,1),new Monomio(4,0) }))).doCall().checkResult(new Integer(3)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8128,7 +8128,7 @@ TestData.testName = new String("test_197") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_197")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(3)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(4,2),new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(3)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8169,7 +8169,7 @@ TestData.testName = new String("test_198") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_198")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(1,1),new Monomio(5,0) }))).doCall().checkResult(new Integer(3)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(5,2),new Monomio(1,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(3)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8210,7 +8210,7 @@ TestData.testName = new String("test_199") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_199")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(5,2),new Monomio(4,1),new Monomio(5,0) }))).doCall().checkResult(new Integer(3)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(3,3),new Monomio(4,2),new Monomio(1,1),new Monomio(2,0) }))).doCall().checkResult(new Integer(4)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8251,7 +8251,7 @@ TestData.testName = new String("test_200") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_200")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(1,3),new Monomio(1,2),new Monomio(3,1),new Monomio(5,0) }))).doCall().checkResult(new Integer(4)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(4,2) }))).doCall().checkResult(new Integer(4)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8292,7 +8292,7 @@ TestData.testName = new String("test_201") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_201")) ;
 if (ok_sofar)
-  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(5,3),new Monomio(2,1) }))).doCall().checkResult(new Integer(4)) ;
+  ok_sofar = new Grado(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(4,3),new Monomio(1,1),new Monomio(1,0) }))).doCall().checkResult(new Integer(4)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8372,7 +8372,7 @@ TestData.testName = new String("test_203") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_203")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(2,0) })),6).doCall().checkResult(new Long(8L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),0).doCall().checkResult(new Long(0L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8413,7 +8413,7 @@ TestData.testName = new String("test_204") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_204")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(3,0) })),7).doCall().checkResult(new Long(10L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),3).doCall().checkResult(new Long(0L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8454,7 +8454,7 @@ TestData.testName = new String("test_205") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_205")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(4,0) })),9).doCall().checkResult(new Long(13L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),-4).doCall().checkResult(new Long(1L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8495,7 +8495,7 @@ TestData.testName = new String("test_206") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_206")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(1,1),new Monomio(4,0) })),5).doCall().checkResult(new Long(34L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),11).doCall().checkResult(new Long(1L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8536,7 +8536,7 @@ TestData.testName = new String("test_207") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_207")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(1,1),new Monomio(5,0) })),8).doCall().checkResult(new Long(77L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1) })),-1).doCall().checkResult(new Long(-1L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8577,7 +8577,7 @@ TestData.testName = new String("test_208") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_208")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(3,1),new Monomio(1,0) })),-1).doCall().checkResult(new Long(-1L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(1,0) })),-5).doCall().checkResult(new Long(-4L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8618,7 +8618,7 @@ TestData.testName = new String("test_209") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_209")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(3,1),new Monomio(2,0) })),-3).doCall().checkResult(new Long(2L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(1,0) })),0).doCall().checkResult(new Long(1L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8659,7 +8659,7 @@ TestData.testName = new String("test_210") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_210")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,1),new Monomio(1,0) })),-2).doCall().checkResult(new Long(-3L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(2,0) })),-5).doCall().checkResult(new Long(-3L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8700,7 +8700,7 @@ TestData.testName = new String("test_211") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_211")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(1,2),new Monomio(1,0) })),2).doCall().checkResult(new Long(13L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(2,1) })),3).doCall().checkResult(new Long(15L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8741,7 +8741,7 @@ TestData.testName = new String("test_212") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_212")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(5,2),new Monomio(2,1) })),-5).doCall().checkResult(new Long(-10L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,0) })),0).doCall().checkResult(new Long(4L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8782,7 +8782,7 @@ TestData.testName = new String("test_213") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_213")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(5,3),new Monomio(5,2) })),0).doCall().checkResult(new Long(0L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,1),new Monomio(1,0) })),-2).doCall().checkResult(new Long(-3L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8823,7 +8823,7 @@ TestData.testName = new String("test_214") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_214")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),2).doCall().checkResult(new Long(2L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(4,2),new Monomio(4,1) })),-1).doCall().checkResult(new Long(-1L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8864,7 +8864,7 @@ TestData.testName = new String("test_215") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_215")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),6).doCall().checkResult(new Long(2L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(1,2),new Monomio(3,1),new Monomio(3,0) })),-1).doCall().checkResult(new Long(2L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8905,7 +8905,7 @@ TestData.testName = new String("test_216") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_216")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(5,0) })),-1).doCall().checkResult(new Long(3L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(1,0) })),9).doCall().checkResult(new Long(19L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8946,7 +8946,7 @@ TestData.testName = new String("test_217") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_217")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(1,1),new Monomio(5,0) })),-9).doCall().checkResult(new Long(158L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(4,0) })),0).doCall().checkResult(new Long(4L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -8987,7 +8987,7 @@ TestData.testName = new String("test_218") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_218")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(3,0) })),-7).doCall().checkResult(new Long(101L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(4,1),new Monomio(5,0) })),0).doCall().checkResult(new Long(5L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9028,7 +9028,7 @@ TestData.testName = new String("test_219") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_219")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(5,1),new Monomio(5,0) })),0).doCall().checkResult(new Long(5L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(1,2),new Monomio(4,1),new Monomio(3,0) })),2).doCall().checkResult(new Long(31L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9069,7 +9069,7 @@ TestData.testName = new String("test_220") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_220")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(2,2),new Monomio(3,1),new Monomio(3,0) })),-1).doCall().checkResult(new Long(0L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(4,2),new Monomio(5,0) })),2).doCall().checkResult(new Long(37L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9110,7 +9110,7 @@ TestData.testName = new String("test_221") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_221")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(3,3),new Monomio(3,2) })),0).doCall().checkResult(new Long(0L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(1,3),new Monomio(2,2),new Monomio(1,1),new Monomio(5,0) })),10).doCall().checkResult(new Long(21215L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9151,7 +9151,7 @@ TestData.testName = new String("test_222") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_222")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),-5).doCall().checkResult(new Long(3L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(4,3),new Monomio(1,2),new Monomio(1,1),new Monomio(2,0) })),-9).doCall().checkResult(new Long(10280L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9192,7 +9192,7 @@ TestData.testName = new String("test_223") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_223")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),-2).doCall().checkResult(new Long(3L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(5,3),new Monomio(4,2),new Monomio(3,1),new Monomio(4,0) })),2).doCall().checkResult(new Long(98L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9233,7 +9233,7 @@ TestData.testName = new String("test_224") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_224")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),1).doCall().checkResult(new Long(3L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(5,3),new Monomio(4,2),new Monomio(4,0) })),6).doCall().checkResult(new Long(3820L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9274,7 +9274,7 @@ TestData.testName = new String("test_225") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_225")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(1,0) })),-6).doCall().checkResult(new Long(-17L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),0).doCall().checkResult(new Long(3L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9315,7 +9315,7 @@ TestData.testName = new String("test_226") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_226")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(2,0) })),-1).doCall().checkResult(new Long(-1L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1) })),1).doCall().checkResult(new Long(3L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9356,7 +9356,7 @@ TestData.testName = new String("test_227") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_227")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(3,0) })),7).doCall().checkResult(new Long(24L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(1,0) })),-3).doCall().checkResult(new Long(28L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9397,7 +9397,7 @@ TestData.testName = new String("test_228") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_228")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(5,1) })),-4).doCall().checkResult(new Long(28L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(1,1),new Monomio(2,0) })),0).doCall().checkResult(new Long(2L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9438,7 +9438,7 @@ TestData.testName = new String("test_229") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_229")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(1,2),new Monomio(2,1),new Monomio(5,0) })),4).doCall().checkResult(new Long(221L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(3,1),new Monomio(4,0) })),-12).doCall().checkResult(new Long(400L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9479,7 +9479,7 @@ TestData.testName = new String("test_230") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_230")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(3,2),new Monomio(1,1),new Monomio(2,0) })),-4).doCall().checkResult(new Long(-146L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(1,2),new Monomio(3,0) })),-1).doCall().checkResult(new Long(1L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9520,7 +9520,7 @@ TestData.testName = new String("test_231") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_231")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),-5).doCall().checkResult(new Long(4L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(1,2),new Monomio(4,0) })),-3).doCall().checkResult(new Long(-68L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9561,7 +9561,7 @@ TestData.testName = new String("test_232") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_232")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),-1).doCall().checkResult(new Long(4L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(2,2),new Monomio(4,1),new Monomio(3,0) })),-19).doCall().checkResult(new Long(-19928L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9602,7 +9602,7 @@ TestData.testName = new String("test_233") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_233")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(1,1),new Monomio(3,0) })),-13).doCall().checkResult(new Long(666L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(5,2),new Monomio(4,1),new Monomio(2,0) })),4).doCall().checkResult(new Long(290L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9643,7 +9643,7 @@ TestData.testName = new String("test_234") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_234")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(2,1),new Monomio(1,0) })),-3).doCall().checkResult(new Long(31L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(5,3),new Monomio(1,2),new Monomio(5,1) })),-2).doCall().checkResult(new Long(2L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9684,7 +9684,7 @@ TestData.testName = new String("test_235") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_235")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(3,0) })),1).doCall().checkResult(new Long(7L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),9).doCall().checkResult(new Long(4L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9725,7 +9725,7 @@ TestData.testName = new String("test_236") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_236")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(5,1),new Monomio(4,0) })),-14).doCall().checkResult(new Long(718L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(1,0) })),5).doCall().checkResult(new Long(21L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9766,7 +9766,7 @@ TestData.testName = new String("test_237") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_237")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(1,2),new Monomio(5,1),new Monomio(5,0) })),16).doCall().checkResult(new Long(16725L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(2,0) })),9).doCall().checkResult(new Long(38L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9807,7 +9807,7 @@ TestData.testName = new String("test_238") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_238")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(2,1),new Monomio(2,0) })),-8).doCall().checkResult(new Long(-2062L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(3,0) })),-1).doCall().checkResult(new Long(-1L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9848,7 +9848,7 @@ TestData.testName = new String("test_239") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_239")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(2,2),new Monomio(2,1) })),-9).doCall().checkResult(new Long(-2772L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(4,0) })),-10).doCall().checkResult(new Long(-36L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9889,7 +9889,7 @@ TestData.testName = new String("test_240") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_240")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(3,3),new Monomio(1,2),new Monomio(4,1),new Monomio(3,0) })),9).doCall().checkResult(new Long(28551L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(4,0) })),7).doCall().checkResult(new Long(32L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9930,7 +9930,7 @@ TestData.testName = new String("test_241") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_241")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(4,3),new Monomio(4,2),new Monomio(4,1),new Monomio(1,0) })),9).doCall().checkResult(new Long(29521L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2) })),-4).doCall().checkResult(new Long(64L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -9971,7 +9971,7 @@ TestData.testName = new String("test_242") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_242")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),-9).doCall().checkResult(new Long(5L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(5,0) })),-10).doCall().checkResult(new Long(405L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10012,7 +10012,7 @@ TestData.testName = new String("test_243") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_243")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),0).doCall().checkResult(new Long(5L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(5,0) })),8).doCall().checkResult(new Long(261L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10053,7 +10053,7 @@ TestData.testName = new String("test_244") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_244")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),1).doCall().checkResult(new Long(5L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(5,1),new Monomio(4,0) })),14).doCall().checkResult(new Long(858L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10094,7 +10094,7 @@ TestData.testName = new String("test_245") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_245")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),9).doCall().checkResult(new Long(5L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3) })),0).doCall().checkResult(new Long(0L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10135,7 +10135,7 @@ TestData.testName = new String("test_246") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_246")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(1,0) })),0).doCall().checkResult(new Long(1L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(4,3),new Monomio(3,2),new Monomio(1,1),new Monomio(3,0) })),-10).doCall().checkResult(new Long(36293L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10176,7 +10176,7 @@ TestData.testName = new String("test_247") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_247")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(5,1),new Monomio(5,0) })),1).doCall().checkResult(new Long(15L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(3,0) })),0).doCall().checkResult(new Long(3L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10217,7 +10217,7 @@ TestData.testName = new String("test_248") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_248")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(5,2),new Monomio(4,1),new Monomio(3,0) })),0).doCall().checkResult(new Long(3L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(2,1),new Monomio(2,0) })),5).doCall().checkResult(new Long(137L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10258,7 +10258,7 @@ TestData.testName = new String("test_249") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_249")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(2,2),new Monomio(3,1),new Monomio(4,0) })),7).doCall().checkResult(new Long(12128L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(3,1),new Monomio(3,0) })),-3).doCall().checkResult(new Long(39L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10299,7 +10299,7 @@ TestData.testName = new String("test_250") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_250")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(3,3),new Monomio(4,2),new Monomio(4,1),new Monomio(1,0) })),-9).doCall().checkResult(new Long(30907L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(3,2),new Monomio(3,1),new Monomio(1,0) })),-3).doCall().checkResult(new Long(-116L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10340,7 +10340,7 @@ TestData.testName = new String("test_251") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_251")) ;
 if (ok_sofar)
-  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(5,1),new Monomio(4,0) })),0).doCall().checkResult(new Long(4L)) ;
+  ok_sofar = new Evaluar(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(3,3),new Monomio(1,2),new Monomio(2,1),new Monomio(5,0) })),1).doCall().checkResult(new Long(16L)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10420,7 +10420,7 @@ TestData.testName = new String("test_253") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_253")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10461,7 +10461,7 @@ TestData.testName = new String("test_254") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_254")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10502,7 +10502,7 @@ TestData.testName = new String("test_255") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_255")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(1,3),new Monomio(4,2),new Monomio(1,1),new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(4,3),new Monomio(5,1),new Monomio(4,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10543,7 +10543,7 @@ TestData.testName = new String("test_256") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_256")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(2,1),new Monomio(5,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(4,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10584,7 +10584,7 @@ TestData.testName = new String("test_257") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_257")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(5,2),new Monomio(1,1),new Monomio(5,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10625,7 +10625,7 @@ TestData.testName = new String("test_258") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_258")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(1,3),new Monomio(1,2),new Monomio(3,1),new Monomio(2,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(4,1),new Monomio(4,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10666,7 +10666,7 @@ TestData.testName = new String("test_259") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_259")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(4,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(1,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10707,7 +10707,7 @@ TestData.testName = new String("test_260") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_260")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(4,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(1,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(1,1),new Monomio(1,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10748,7 +10748,7 @@ TestData.testName = new String("test_261") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_261")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(1,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(3,2),new Monomio(4,1),new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(3,2),new Monomio(3,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(2,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10789,7 +10789,7 @@ TestData.testName = new String("test_262") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_262")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(2,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(5,3),new Monomio(5,2),new Monomio(3,1) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(3,2),new Monomio(4,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(5,1),new Monomio(5,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10830,7 +10830,7 @@ TestData.testName = new String("test_263") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_263")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(3,2),new Monomio(4,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(3,2),new Monomio(5,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(2,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10871,7 +10871,7 @@ TestData.testName = new String("test_264") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_264")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(1,3),new Monomio(2,2) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(1,3),new Monomio(1,2),new Monomio(2,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(3,1),new Monomio(2,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10912,7 +10912,7 @@ TestData.testName = new String("test_265") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_265")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(2,3),new Monomio(4,2),new Monomio(1,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(4,2),new Monomio(1,1),new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(5,3),new Monomio(2,2),new Monomio(4,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(2,3),new Monomio(5,2),new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10953,7 +10953,7 @@ TestData.testName = new String("test_266") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_266")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(5,2),new Monomio(4,1) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(1,3),new Monomio(5,1),new Monomio(1,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -10994,7 +10994,7 @@ TestData.testName = new String("test_267") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_267")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))).doCall().checkResult(new Boolean(true)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(2,3),new Monomio(5,2),new Monomio(5,1),new Monomio(5,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11035,7 +11035,7 @@ TestData.testName = new String("test_268") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_268")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(5,3),new Monomio(5,2),new Monomio(4,1),new Monomio(2,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(4,3),new Monomio(1,2),new Monomio(1,1),new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11076,7 +11076,7 @@ TestData.testName = new String("test_269") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_269")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(1,1),new Monomio(4,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(2,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11117,7 +11117,7 @@ TestData.testName = new String("test_270") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_270")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(1,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(3,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(5,1),new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11158,7 +11158,7 @@ TestData.testName = new String("test_271") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_271")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(2,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(1,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(4,3),new Monomio(4,2),new Monomio(4,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(1,2),new Monomio(2,1),new Monomio(4,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11199,7 +11199,7 @@ TestData.testName = new String("test_272") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_272")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(3,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11240,7 +11240,7 @@ TestData.testName = new String("test_273") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_273")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(1,2),new Monomio(1,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(5,2),new Monomio(5,1),new Monomio(5,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11281,7 +11281,7 @@ TestData.testName = new String("test_274") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_274")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(5,2),new Monomio(1,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(5,2),new Monomio(1,1),new Monomio(1,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(4,1),new Monomio(5,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11322,7 +11322,7 @@ TestData.testName = new String("test_275") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_275")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(2,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(5,1),new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11363,7 +11363,7 @@ TestData.testName = new String("test_276") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_276")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(4,2),new Monomio(1,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(3,1),new Monomio(1,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11404,7 +11404,7 @@ TestData.testName = new String("test_277") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_277")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11445,7 +11445,7 @@ TestData.testName = new String("test_278") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_278")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(3,3),new Monomio(1,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11486,7 +11486,7 @@ TestData.testName = new String("test_279") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_279")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11527,7 +11527,7 @@ TestData.testName = new String("test_280") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_280")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(1,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,1),new Monomio(4,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(3,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11568,7 +11568,7 @@ TestData.testName = new String("test_281") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_281")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(4,3),new Monomio(2,2),new Monomio(2,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(4,3),new Monomio(5,1),new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(4,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(2,1),new Monomio(2,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11609,7 +11609,7 @@ TestData.testName = new String("test_282") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_282")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(4,3),new Monomio(4,2),new Monomio(2,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(5,2),new Monomio(2,1) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(3,2),new Monomio(5,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(4,3),new Monomio(2,2),new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11650,7 +11650,7 @@ TestData.testName = new String("test_283") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_283")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(4,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(4,3),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11691,7 +11691,7 @@ TestData.testName = new String("test_284") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_284")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(1,1) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(5,3),new Monomio(4,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(3,3),new Monomio(3,1),new Monomio(4,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11732,7 +11732,7 @@ TestData.testName = new String("test_285") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_285")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(1,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(5,1),new Monomio(4,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11773,7 +11773,7 @@ TestData.testName = new String("test_286") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_286")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(2,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(1,3),new Monomio(2,2) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11814,7 +11814,7 @@ TestData.testName = new String("test_287") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_287")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(2,1) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,4),new Monomio(1,2),new Monomio(4,1),new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11855,7 +11855,7 @@ TestData.testName = new String("test_288") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_288")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(3,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(3,3),new Monomio(1,2),new Monomio(2,1),new Monomio(2,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(5,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(5,2),new Monomio(5,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11896,7 +11896,7 @@ TestData.testName = new String("test_289") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_289")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(3,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(5,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(5,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11937,7 +11937,7 @@ TestData.testName = new String("test_290") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_290")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(3,2),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(3,1),new Monomio(1,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(3,2),new Monomio(2,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(1,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -11978,7 +11978,7 @@ TestData.testName = new String("test_291") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_291")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(2,3),new Monomio(2,2),new Monomio(1,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -12019,7 +12019,7 @@ TestData.testName = new String("test_292") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_292")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(3,3),new Monomio(3,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(2,1),new Monomio(2,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(1,3),new Monomio(3,2),new Monomio(4,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(2,2),new Monomio(5,1),new Monomio(5,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -12060,7 +12060,7 @@ TestData.testName = new String("test_293") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_293")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,1) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(4,3),new Monomio(3,2),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(4,2),new Monomio(2,1) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -12101,7 +12101,7 @@ TestData.testName = new String("test_294") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_294")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(5,3),new Monomio(5,2),new Monomio(1,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -12142,7 +12142,7 @@ TestData.testName = new String("test_295") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_295")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(4,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -12183,7 +12183,7 @@ TestData.testName = new String("test_296") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_296")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(2,1),new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(4,3),new Monomio(1,2),new Monomio(3,1),new Monomio(5,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -12224,7 +12224,7 @@ TestData.testName = new String("test_297") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_297")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(3,2),new Monomio(2,1) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(1,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -12265,7 +12265,7 @@ TestData.testName = new String("test_298") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_298")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(3,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(5,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -12306,7 +12306,7 @@ TestData.testName = new String("test_299") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_299")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(1,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(5,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -12347,7 +12347,7 @@ TestData.testName = new String("test_300") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_300")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(2,2),new Monomio(3,1),new Monomio(3,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(1,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(5,1) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(3,2),new Monomio(3,0) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -12388,7 +12388,7 @@ TestData.testName = new String("test_301") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_301")) ;
 if (ok_sofar)
-  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(5,3),new Monomio(4,1),new Monomio(2,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(2,0) }))).doCall().checkResult(new Boolean(false)) ;
+  ok_sofar = new Equals(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(2,3),new Monomio(2,2),new Monomio(2,1),new Monomio(4,0) })),new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(2,2),new Monomio(4,1) }))).doCall().checkResult(new Boolean(false)) ;
 return ok_sofar ;
 }
 ) ;
@@ -12550,7 +12550,7 @@ TestData.testName = new String("test_305") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_305")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))) ;
+  ok_sofar = new Constructor(new String("0")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] {  }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -12591,7 +12591,7 @@ TestData.testName = new String("test_306") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_306")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" x")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1) }))) ;
+  ok_sofar = new Constructor(new String(" 1x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -12632,7 +12632,7 @@ TestData.testName = new String("test_307") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_307")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" x^1")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1) }))) ;
+  ok_sofar = new Constructor(new String(" x^2+ 2x^1+ 1 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(2,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -12673,7 +12673,7 @@ TestData.testName = new String("test_308") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_308")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" x^1 +2")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,1),new Monomio(2,0) }))) ;
+  ok_sofar = new Constructor(new String(" 1x^2 +4x+ 4 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(4,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -12714,7 +12714,7 @@ TestData.testName = new String("test_309") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_309")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("1x^2 +1x")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,2),new Monomio(1,1) }))) ;
+  ok_sofar = new Constructor(new String(" 1x^3 + 5x +4x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(5,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -12755,7 +12755,7 @@ TestData.testName = new String("test_310") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_310")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 1x^3 +1")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(1,0) }))) ;
+  ok_sofar = new Constructor(new String("1x^4+ 1x^3 + 3x^2+2x^1")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(1,3),new Monomio(3,2),new Monomio(2,1) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -12796,7 +12796,7 @@ TestData.testName = new String("test_311") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_311")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("1x^3+3x^2+2x^1+ 3x^0")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(3,2),new Monomio(2,1),new Monomio(3,0) }))) ;
+  ok_sofar = new Constructor(new String("2 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -12837,7 +12837,7 @@ TestData.testName = new String("test_312") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_312")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" x^3 + 5x^2+1x^0")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(5,2),new Monomio(1,0) }))) ;
+  ok_sofar = new Constructor(new String(" 2x + 2")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -12878,7 +12878,7 @@ TestData.testName = new String("test_313") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_313")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("1x^3+5x^2 +1x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(5,2),new Monomio(1,0) }))) ;
+  ok_sofar = new Constructor(new String("2x^2+5")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -12919,7 +12919,7 @@ TestData.testName = new String("test_314") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_314")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("1x^3 + 5x^2 +2x^1 + 3x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(5,2),new Monomio(2,1),new Monomio(3,0) }))) ;
+  ok_sofar = new Constructor(new String("2x^2+5x^1 + 4x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(5,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -12960,7 +12960,7 @@ TestData.testName = new String("test_315") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_315")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("x^3 +5x^2+5x +5")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,3),new Monomio(5,2),new Monomio(5,1),new Monomio(5,0) }))) ;
+  ok_sofar = new Constructor(new String("2x^3 +2x^0")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13001,7 +13001,7 @@ TestData.testName = new String("test_316") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_316")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" x^4 +3x^3+3x^2 +2x+2x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(3,3),new Monomio(3,2),new Monomio(2,1),new Monomio(2,0) }))) ;
+  ok_sofar = new Constructor(new String(" 2x^3 +4x^2 +3x^1+ 1 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(4,2),new Monomio(3,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13042,7 +13042,7 @@ TestData.testName = new String("test_317") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_317")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("x^4+5x^3+ 4x^1 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(1,4),new Monomio(5,3),new Monomio(4,1) }))) ;
+  ok_sofar = new Constructor(new String(" 3")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13083,7 +13083,7 @@ TestData.testName = new String("test_318") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_318")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 2x +4x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(4,0) }))) ;
+  ok_sofar = new Constructor(new String("3 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13124,7 +13124,7 @@ TestData.testName = new String("test_319") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_319")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("2x +5 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(5,0) }))) ;
+  ok_sofar = new Constructor(new String("3x^1 +2")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13165,7 +13165,7 @@ TestData.testName = new String("test_320") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_320")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("2x^1 +5 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,1),new Monomio(5,0) }))) ;
+  ok_sofar = new Constructor(new String(" 3x^2+ 1x+ 2 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(1,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13206,7 +13206,7 @@ TestData.testName = new String("test_321") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_321")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 2x^2 +2 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(2,0) }))) ;
+  ok_sofar = new Constructor(new String("3x^2+2x +1x^0")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(2,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13247,7 +13247,7 @@ TestData.testName = new String("test_322") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_322")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("2x^2+ 4x^1 + 5x^0")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(4,1),new Monomio(5,0) }))) ;
+  ok_sofar = new Constructor(new String(" 3x^3+4x^1+ 5 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(4,1),new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13288,7 +13288,7 @@ TestData.testName = new String("test_323") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_323")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 2x^2 +5x+1")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,2),new Monomio(5,1),new Monomio(1,0) }))) ;
+  ok_sofar = new Constructor(new String("3x^3 + 4x^2+ 4x + 3x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(4,2),new Monomio(4,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13329,7 +13329,7 @@ TestData.testName = new String("test_324") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_324")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 2x^3 + x^2+3x+4x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(2,3),new Monomio(1,2),new Monomio(3,1),new Monomio(4,0) }))) ;
+  ok_sofar = new Constructor(new String(" 3x^3+ 5x^2 +3x^1+ 4x^0")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,3),new Monomio(5,2),new Monomio(3,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13370,7 +13370,7 @@ TestData.testName = new String("test_325") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_325")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 3")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))) ;
+  ok_sofar = new Constructor(new String("3x^4+3x^2 +5x +3x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(3,2),new Monomio(5,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13411,7 +13411,7 @@ TestData.testName = new String("test_326") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_326")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 3x^0")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))) ;
+  ok_sofar = new Constructor(new String("3x^4+ 3x^3 + 1x^1+ 3 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(3,3),new Monomio(1,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13452,7 +13452,7 @@ TestData.testName = new String("test_327") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_327")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 3x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))) ;
+  ok_sofar = new Constructor(new String("3x^4 +3x^3 + 2x^2+x+5x^0")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(3,3),new Monomio(2,2),new Monomio(1,1),new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13493,7 +13493,7 @@ TestData.testName = new String("test_328") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_328")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("3x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,0) }))) ;
+  ok_sofar = new Constructor(new String(" 3x^4 +5x^3+3x^2 +3x+5x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(5,3),new Monomio(3,2),new Monomio(3,1),new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13534,7 +13534,7 @@ TestData.testName = new String("test_329") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_329")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 3x+ 2x^0")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,1),new Monomio(2,0) }))) ;
+  ok_sofar = new Constructor(new String(" 3x^4 +5x^3 +5x^2+ 2x +1 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(5,3),new Monomio(5,2),new Monomio(2,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13575,7 +13575,7 @@ TestData.testName = new String("test_330") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_330")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("3x^2+ 1x + 1")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(1,1),new Monomio(1,0) }))) ;
+  ok_sofar = new Constructor(new String(" 4")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13616,7 +13616,7 @@ TestData.testName = new String("test_331") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_331")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 3x^2+2x +2 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(2,1),new Monomio(2,0) }))) ;
+  ok_sofar = new Constructor(new String("4")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13657,7 +13657,7 @@ TestData.testName = new String("test_332") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_332")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("3x^2 + 4x^1 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(4,1) }))) ;
+  ok_sofar = new Constructor(new String("4 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13698,7 +13698,7 @@ TestData.testName = new String("test_333") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_333")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("3x^2+ 4x^1+ 1 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(4,1),new Monomio(1,0) }))) ;
+  ok_sofar = new Constructor(new String("4x^1+ 2 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13739,7 +13739,7 @@ TestData.testName = new String("test_334") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_334")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("3x^2 +5x^1 + 1 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,2),new Monomio(5,1),new Monomio(1,0) }))) ;
+  ok_sofar = new Constructor(new String("4x^1+ 4 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13780,7 +13780,7 @@ TestData.testName = new String("test_335") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_335")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("3x^4 +1x^2+5 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(1,2),new Monomio(5,0) }))) ;
+  ok_sofar = new Constructor(new String(" 4x^2 +1x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13821,7 +13821,7 @@ TestData.testName = new String("test_336") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_336")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 3x^4 +2x^3 +x^2 +2x^1")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(2,3),new Monomio(1,2),new Monomio(2,1) }))) ;
+  ok_sofar = new Constructor(new String("4x^3 + 1x^2+2x^1 + 2x^0")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(1,2),new Monomio(2,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13862,7 +13862,7 @@ TestData.testName = new String("test_337") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_337")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("3x^4+4x^3 + 4x^2+ 3x^1+2x^0")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(3,4),new Monomio(4,3),new Monomio(4,2),new Monomio(3,1),new Monomio(2,0) }))) ;
+  ok_sofar = new Constructor(new String("4x^4 + 2x^3 + 2x^2+3x^1+ 5")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(2,3),new Monomio(2,2),new Monomio(3,1),new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13903,7 +13903,7 @@ TestData.testName = new String("test_338") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_338")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 4")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,0) }))) ;
+  ok_sofar = new Constructor(new String(" 5")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13944,7 +13944,7 @@ TestData.testName = new String("test_339") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_339")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("4x^2+ 4x")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,2),new Monomio(4,1) }))) ;
+  ok_sofar = new Constructor(new String(" 5x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -13985,7 +13985,7 @@ TestData.testName = new String("test_340") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_340")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("4x^3+ 1x^2+ 1")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,3),new Monomio(1,2),new Monomio(1,0) }))) ;
+  ok_sofar = new Constructor(new String("5")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -14026,7 +14026,7 @@ TestData.testName = new String("test_341") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_341")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("4x^4 +2x^2 + 3x+1")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(4,4),new Monomio(2,2),new Monomio(3,1),new Monomio(1,0) }))) ;
+  ok_sofar = new Constructor(new String("5 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -14067,7 +14067,7 @@ TestData.testName = new String("test_342") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_342")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 5x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))) ;
+  ok_sofar = new Constructor(new String("5x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -14108,7 +14108,7 @@ TestData.testName = new String("test_343") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_343")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("5")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,0) }))) ;
+  ok_sofar = new Constructor(new String("5x")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -14149,7 +14149,7 @@ TestData.testName = new String("test_344") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_344")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("5x + 2x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(2,0) }))) ;
+  ok_sofar = new Constructor(new String(" 5x^1+1x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -14190,7 +14190,7 @@ TestData.testName = new String("test_345") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_345")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 5x+3 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(3,0) }))) ;
+  ok_sofar = new Constructor(new String("5x+1 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(1,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -14231,7 +14231,7 @@ TestData.testName = new String("test_346") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_346")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 5x^1 +3x^0")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(3,0) }))) ;
+  ok_sofar = new Constructor(new String(" 5x +3x^0")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -14272,7 +14272,7 @@ TestData.testName = new String("test_347") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_347")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("5x^2+2x^1 +4x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(2,1),new Monomio(4,0) }))) ;
+  ok_sofar = new Constructor(new String(" 5x +4 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -14313,7 +14313,7 @@ TestData.testName = new String("test_348") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_348")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 5x^2 + 3x^1 +4x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(3,1),new Monomio(4,0) }))) ;
+  ok_sofar = new Constructor(new String("5x^2 +1x+5")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(1,1),new Monomio(5,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -14354,7 +14354,7 @@ TestData.testName = new String("test_349") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_349")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 5x^2+4x^1+2 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(4,1),new Monomio(2,0) }))) ;
+  ok_sofar = new Constructor(new String("5x^2+ 2 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -14395,7 +14395,7 @@ TestData.testName = new String("test_350") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_350")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String(" 5x^2+5x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(5,0) }))) ;
+  ok_sofar = new Constructor(new String(" 5x^2+4x +3 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,2),new Monomio(4,1),new Monomio(3,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -14436,7 +14436,7 @@ TestData.testName = new String("test_351") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_351")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("5x^3 +x^2+ x^1 + 1 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,3),new Monomio(1,2),new Monomio(1,1),new Monomio(1,0) }))) ;
+  ok_sofar = new Constructor(new String(" 5x^4 +2x^3+2x^2 + 1x^1+ 4")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(2,3),new Monomio(2,2),new Monomio(1,1),new Monomio(4,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -14477,7 +14477,7 @@ TestData.testName = new String("test_352") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_352")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("5x^4+x^3 +3x^2+ 3x^1+ 5 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(1,3),new Monomio(3,2),new Monomio(3,1),new Monomio(5,0) }))) ;
+  ok_sofar = new Constructor(new String("5x^4 +3x^3 +2x^2+ x^1 + 2x^0 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(3,3),new Monomio(2,2),new Monomio(1,1),new Monomio(2,0) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -14518,7 +14518,7 @@ TestData.testName = new String("test_353") ;
 boolean ok_sofar = true ;
 ResultsHandler.startTest(new String("test_353")) ;
 if (ok_sofar)
-  ok_sofar = new Constructor(new String("5x^4+ 2x^3+5x^2+ 1x + 3 ")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(2,3),new Monomio(5,2),new Monomio(1,1),new Monomio(3,0) }))) ;
+  ok_sofar = new Constructor(new String("5x^4+ 3x^3 + 4x^2+3x^1")).doCall().checkResult(new Polinomio(new NodePositionList<Monomio>(new Monomio[] { new Monomio(5,4),new Monomio(3,3),new Monomio(4,2),new Monomio(3,1) }))) ;
 return ok_sofar ;
 }
 ) ;
@@ -14571,7 +14571,7 @@ static class PolinomioUtils {
     if (!call.nonNull())
       return false;
 
-    return call.valuesMatch(expected);
+    return call.equalsExpected(tr.getValue().terms, expected.terms);
   }
 }
 
@@ -15932,33 +15932,35 @@ static abstract class TestCall<E,F> implements Call<E,F> {
     return value.equals(true);
   }
 
+  boolean equalsExpected(Object value, Object expected) {
+    if (value == null) {
+      if (expected != null) {
+	TestUtils.printError
+	  (TestUtils.ExecutionTime.LAST,
+	   "\nthe call to "+this+" returned null, "+
+	   "but should have returned "+TestUtils.print(expected));
+	return false;
+      }
+      else return true;
+    }
+
+    if (!equalsWithArrays(value,expected)) {
+      TestUtils.printError
+	(TestUtils.ExecutionTime.LAST,
+	 "\nthe call to "+this+" returned\n  "+TestUtils.print(value)+
+	 "\n\nbut should have returned\n  "+TestUtils.print(expected));
+      return false;
+    } else return true;
+  }
+
   boolean valuesMatch(Object expected) {
     if (result.isException()) {
       noException();
       return false;
     } else {
       E value = result.getValue();
-      
-      if (value == null) {
-        if (expected != null) {
-          TestUtils.printError
-            (TestUtils.ExecutionTime.LAST,
-             "\nthe call to "+this+" returned null, "+
-             "but should have returned "+TestUtils.print(expected));
-          return false;
-        }
-        else return true;
-      }
-      
-      if (!equalsWithArrays(value,expected)) {
-        TestUtils.printError
-          (TestUtils.ExecutionTime.LAST,
-           "\nthe call to "+this+" returned\n  "+TestUtils.print(value)+
-           "\n\nbut should have returned\n  "+TestUtils.print(expected));
-        return false;
-      }
-      return true;
-    }
+      return equalsExpected(value, expected);
+    }      
   }
 
   private static boolean equalsWithArrays(Object a, Object b) {
@@ -16566,12 +16568,11 @@ static class TesterCode
   
   public static void resetPrinter () 
   {
-    PolinomioUtils.resetPrinter() ;
   }
   
   public static String printer (Object obj) 
   {
-    return PolinomioUtils.printer(obj) ;
+    return TestUtils.standardPrinter(obj) ;
   }
   
 }
