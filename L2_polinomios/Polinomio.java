@@ -58,17 +58,36 @@ public class Polinomio {
    */
   public Polinomio(String polinomio) {
     String[] monomios = polinomio.split("\\+"); // separa por monomios
+    
     String[] par = new String[2];
-    Monomio m; 
 
     terms = new NodePositionList<>();
 
     for (String monomio : monomios) { 
-      par = monomio.trim().split("\\^"); // 3x^3 --> ["3x", "3"]
-      m = new Monomio(Integer.parseInt(par[0].split("x")[0]), Integer.parseInt(par[1]));
-      /* Puede dar errores */
-      if (m.getCoeficiente() != 0) {
-        terms.addLast(m);
+      monomio = monomio.trim();
+      Monomio mon = new Monomio(0, 0); 
+      /*
+       * Casos especiales que hay que cubrir:
+       * "xA".split("x") => ["", "A"]
+       * "Ax".split("x") => ["A"]
+       * "x".split("x") => []
+       * "abc".split("x") => ["abc"]
+      */
+      if(!monomio.contains("x")){
+        mon.setLeft(Integer.parseInt(monomio));
+        mon.setRight(0);
+      } else{
+        par = monomio.split("x"); // "x".split("x") => []
+        if(par.length == 0){
+          mon.setLeft(1);
+          mon.setRight(1);
+        } else {
+          mon.setLeft(par[0] == ""? 1 : Integer.parseInt(par[0]));
+          mon.setRight(par.length == 1? 1: Integer.parseInt(par[1].split("\\^")[1]));
+        }
+      }
+      if(mon.getCoeficiente() != 0){
+        terms.addLast(mon); 
       }
     }
   }
@@ -161,9 +180,13 @@ public class Polinomio {
    */
   public static Polinomio multiplica(Monomio t, Polinomio p) {
     Polinomio res = new Polinomio();
+    Monomio m;
     Position<Monomio> cursor = p.getTerms().first();
     while(cursor != null) {
-        res.getTerms().addLast(new Monomio (cursor.element().getCoeficiente()* t.getCoeficiente(), cursor.element().getExponente() + t.getExponente())); 
+        m = new Monomio (cursor.element().getCoeficiente()* t.getCoeficiente(), cursor.element().getExponente() + t.getExponente()); 
+        if(m.getCoeficiente() != 0 ){
+          res.getTerms().addLast(m);
+        }
         cursor = p.getTerms().next(cursor);
       }
     return res; 
@@ -172,7 +195,7 @@ public class Polinomio {
   /**
    * Devuelve el valor del polinomio cuando su variable es sustiuida por un valor concreto.
    * Si el polinomio es vacio (la representacion del polinomio "0") entonces
-   * el valor devuelto debe ser -1.
+   * el valor devuelto debe ser 0.
    * @param valor el valor asignado a la variable del polinomio
    * @return el valor del polinomio para ese valor de la variable.
    */
@@ -182,14 +205,10 @@ public class Polinomio {
     Monomio aux;
 
     // Recorro la lista de monomios hasta que no haya mas
-    if(terms.isEmpty()){
-      return -1;
-    }else {
-      while(puntero != null){
-        aux = puntero.element();
-        imagen += aux.getCoeficiente() * Math.pow(valor, aux.getExponente());
-        puntero = terms.next(puntero);
-      }
+    while(puntero != null){
+      aux = puntero.element();
+      imagen += aux.getCoeficiente() * Math.pow(valor, aux.getExponente());
+      puntero = terms.next(puntero);
     }
     return imagen;
   }
@@ -286,7 +305,7 @@ public class Polinomio {
     System.out.println("Grado de p2: " + p2.grado()); */
 
     // Testeando funcion evaluar
-    System.out.println("Evaluando p1 en -1: " + p1.evaluar(-1));
+    //System.out.println("Evaluando p1 en -1: " + p1.evaluar(-1));
     //System.out.println("Evaluando p2 en 2: " + p2.evaluar(2));
 
     //Testeando equals
@@ -302,7 +321,8 @@ public class Polinomio {
     System.out.println(p1.coefDeGrado(p1,0));  */
 
     //Testeando constructor polinomio a partir de un string
-    //System.out.println(new Polinomio("4x^4 + 5x^2 + 3x^0").toString());
+    Polinomio p4 = new Polinomio("0");
+    System.out.println(p4.toString());
     
     
     //System.out.println(multiplica(p2, p1).toString());
