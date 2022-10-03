@@ -126,7 +126,8 @@ public class Polinomio {
     for(int i = 0; i <= Math.max(p1.grado(), p2.grado()); i++) {
       if(existeExp(p1, i) || existeExp(p2, i)) {
         m1 = new Monomio(coefDeGrado(p1, i) + coefDeGrado(p2, i), i);
-        res.getTerms().addFirst(m1);
+        if(m1.getCoeficiente() != 0)
+          res.getTerms().addFirst(m1);
       }
     }
     return res;
@@ -139,19 +140,7 @@ public class Polinomio {
    * @return la resta de los polinomios.
    */
   public static Polinomio resta(Polinomio p1, Polinomio p2) {
-    Polinomio res = new Polinomio();
-    Monomio m1;
-    
-    // Recorro ambos polinomios (ordenados en orden decreciente de Grado)
-    for(int i = 0; i <= Math.max(p1.grado(), p2.grado()); i++) {
-      if(existeExp(p1, i) || existeExp(p2, i)) {
-        m1 = new Monomio(coefDeGrado(p1, i) - coefDeGrado(p2, i), i);
-        if(m1.getCoeficiente() != 0) {
-          res.getTerms().addFirst(m1);
-        }
-      }
-    }
-    return res;
+    return suma(p1, multiplica(new Monomio(-1,0),p2));
   }
     
   /**
