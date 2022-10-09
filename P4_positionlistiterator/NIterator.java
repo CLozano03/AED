@@ -12,49 +12,68 @@ public class NIterator<E> implements Iterator<E> {
   private PositionList<E> list;
   private int n;
   private Position<E> cursor;
+  boolean haDevuelto;
 
   public NIterator(PositionList<E> list, int n) {
     this.list = list;
     this.n = n;
+    haDevuelto = false;
     cursor = list.first();
   }
 
   @Override
   public boolean hasNext() {
-    boolean hasNext = true; 
-    Position<E> cursor1 = cursor;
+    if (!haDevuelto && cursor != null) {
+      return true;
+    }else if(cursor == null){
+      return false;
+    } else {
 
-    for(int i = 0 ; i< n && hasNext; i++){
-      cursor1 = list.next(cursor1);
-      hasNext = cursor1 != null;
+      boolean hasNext = true; 
+      Position<E> cursor1 = cursor;
+  
+      /* for(int i = 0 ; i< n && hasNext; i++){
+        cursor1 = list.next(cursor1);
+        hasNext = cursor1 != null;
+      } */
+      int i = 0;
+      while(hasNext && i < n){
+        cursor1 = list.next(cursor1);
+        hasNext = cursor1 != null;
+        i++;
+      }
+  
+      return hasNext;
     }
-
-    return hasNext;
   }
 
   @Override
   public E next() {
     
-    if(!hasNext() || cursor == null){
+    if(this.cursor == null ) {
       throw new NoSuchElementException();
     } else if(cursor.element() == null){
-      int i = 0;
-      while(cursor.element() == null && i < n){
-        cursor = list.next(cursor);
-        i++;
-      }
+      cursor = list.next(cursor);
       return next();
+    } if(!haDevuelto){
+      //Es el primero que devuelve
+      haDevuelto = true;
+      return cursor.element();
     } else {
-      E e = cursor.element();
-  
+      
       //Muevo el cursor segun n 
       int i = 0;
-      while(cursor.element() == null && i < n){
+      while( cursor != null && (cursor.element() == null || i < n)) {
         cursor = list.next(cursor);
         i++;
       }
-  
-      return e;
+      if(cursor == null){
+        throw new NoSuchElementException();
+      } else {
+        E e = cursor.element();
+        haDevuelto = true;
+        return e;
+      }
 
     }
 
@@ -62,6 +81,6 @@ public class NIterator<E> implements Iterator<E> {
 
 
 }
-//  [1,2,null,3,4,null,null] //n=2
+//  [1,2, 6, null,3,4,null,null] //n=2
 
-//   ^         
+//             
