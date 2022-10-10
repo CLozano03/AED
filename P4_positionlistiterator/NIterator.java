@@ -31,11 +31,7 @@ public class NIterator<E> implements Iterator<E> {
 
       boolean hasNext = true; 
       Position<E> cursor1 = cursor;
-  
-      /* for(int i = 0 ; i< n && hasNext; i++){
-        cursor1 = list.next(cursor1);
-        hasNext = cursor1 != null;
-      } */
+ 
       int i = 0;
       while(hasNext && i < n){
         cursor1 = list.next(cursor1);
@@ -50,7 +46,7 @@ public class NIterator<E> implements Iterator<E> {
   @Override
   public E next() {
     
-    if(this.cursor == null ) {
+    if(!hasNext()) {
       throw new NoSuchElementException();
     } else if(cursor.element() == null){
       cursor = list.next(cursor);
@@ -67,20 +63,9 @@ public class NIterator<E> implements Iterator<E> {
         cursor = list.next(cursor);
         i++;
       }
-      if(cursor == null){
-        throw new NoSuchElementException();
-      } else {
         E e = cursor.element();
         haDevuelto = true;
         return e;
-      }
-
     }
-
   }
-
-
-}
-//  [1,2, 6, null,3,4,null,null] //n=2
-
-//             
+}          
