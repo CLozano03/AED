@@ -33,7 +33,9 @@ public class NIterator<E> implements Iterator<E> {
       Position<E> cursor1 = cursor;
  
       int i = 0;
-      while(hasNext && i < n){
+
+      //Pongo en la condicion del while todo lo que no puede devolver el next()
+      while(hasNext && i < n && cursor.element() != null){
         cursor1 = list.next(cursor1);
         hasNext = cursor1 != null;
         i++;
