@@ -63,7 +63,6 @@ public class HashTable<K,V> implements Map<K,V> {
   
   @Override
   public V get(K arg0) throws InvalidKeyException {
-    //Entry<K,V> o = new EntryImpl<K,V>(arg0, null);
     if (arg0 == null) {
       throw new InvalidKeyException();
     } else {
@@ -85,30 +84,33 @@ public class HashTable<K,V> implements Map<K,V> {
   public Iterable<K> keys() { //O(n)
     IndexedList<K> claves = new ArrayIndexedList<K>(); 
     for(Entry<K, V> e: buckets) {
-      claves.add(claves.size(), e.getKey());
+      if (e != null) {
+        claves.add(claves.size(), e.getKey());
+      }
     }
     return claves;
   }
   
   @Override
-  public V put(K arg0, V arg1) throws InvalidKeyException {
+  public V put(K arg0, V arg1) throws InvalidKeyException { // TERMINAR DE CORREGIR
     if(arg0 == null) {
       throw new InvalidKeyException();
     } else {
+      if (buckets.length == size()) {
+        rehash();
+      }
       V value = null;
-
       Entry<K,V> entrada = new EntryImpl<K,V>(arg0, arg1);
-    
       int indice = index(entrada);
-
-      if(buckets[indice] == null){
-        buckets[indice] = entrada;
-        size++;
-      } else {
-        value = buckets[indice].getValue(); 
-        buckets[indice] = entrada; 
-        size++;
-      } 
+  
+        if(buckets[indice] == null){
+          buckets[indice] = entrada;
+          size++;
+        } else {
+          value = buckets[indice].getValue(); 
+          buckets[indice] = entrada; 
+          size++;
+        }
       return value;
     }
   }
