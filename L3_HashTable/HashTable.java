@@ -37,18 +37,15 @@ public class HashTable<K,V> implements Map<K,V> {
       throw new InvalidKeyException();
       return false;
     
-    }
-    
+    } */
     boolean contiene = false;
-    K actual = (K) arg0;
+    Object actual = arg0; // arg0 siempre va a ser key, no otro objeto
     for (int i = 0; i < buckets.length && !contiene; i++) {
       if (buckets[i] != null) {
-        contiene = buckets[i].getKey() == actual;
+        contiene = buckets[i].getKey().equals(actual);
       }
     }
-    return contiene; */
-
-    return false;
+    return contiene;
   }
   
   @Override
