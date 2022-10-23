@@ -115,8 +115,24 @@ public class HashTable<K,V> implements Map<K,V> {
   
   @Override
   public V remove(K arg0) throws InvalidKeyException {
-    // TODO Auto-generated method stub
-    return null;
+    V res = null;
+    int posK = search(arg0); // search devuelve -1 si no esta y un int de la pos de buckets si si esta
+    if (posK != -1) { // si K esta en buckets, borramos esa entry
+      res = buckets[posK].getValue();
+      buckets[posK] = null;
+      // Una vez borrada, debemos colapsar huecos
+      // Comprobamos si los siguientes elem posK podemos recolocarlo
+      int contador = 0;
+      while (contador < size() && (buckets[posK++] != null)) {
+        int indicePreferido = index(buckets[posK++].getKey());
+        if (indicePreferido == posK) {
+          buckets[posK] = buckets[posK++];
+          buckets[posK++] = null;
+        }
+        posK++;
+      }
+    }
+    return res;
   }
   
   @Override
@@ -164,17 +180,27 @@ public class HashTable<K,V> implements Map<K,V> {
   // or if no such entry exists, the "next" bucket with no entry,
   // or if all buckets stores an entry, -1 is returned.
   private int search(Object obj) {
-    if (!(obj instanceof Entry)) return -1;
+    // if (!(obj instanceof Entry)) return -1; //Object es una key
     if (size == 0) return -1;
 
     int indicePreferido = index(obj);
     int contador = 0; // variable que me va a comprobar si todos los Entry almacenan un valor
+    boolean encontrado = false;
 
-    while(buckets[indicePreferido] != null && contador < size) {
-      indicePreferido = (indicePreferido + 1) % size();
-      contador++;
+    while (!encontrado && contador < size) {
+      if (buckets[indicePreferido] != null) {
+        encontrado = buckets[indicePreferido].getKey().equals(obj);
+        contador++;
+        indicePreferido = (indicePreferido + 1) % size();
+      } else { //cuando el siguiente hueco es null, devuelve -1 (transparencias)
+        indicePreferido = -1;
+        encontrado = true;
+      }
     }
-
+    /* while(buckets[indicePreferido] != null && contador < size) {
+      indicePreferido = (indicePreferido + 1) % size();
+      contador++; */
+    
     return contador == size? -1: indicePreferido;
   }
 
