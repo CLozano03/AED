@@ -54,25 +54,24 @@ public class HashTable<K,V> implements Map<K,V> {
     IndexedList<Entry<K, V>> entries = new ArrayIndexedList<Entry<K, V>>(); 
 
     for(Entry<K,V> bucket: buckets){
-      entries.add(entries.size(), bucket);
+      if (bucket != null) {
+        entries.add(entries.size(), bucket);
+      }
     }
     return entries;
   }
   
   @Override
   public V get(K arg0) throws InvalidKeyException {
-    Entry<K,V> o = new EntryImpl<K,V>(arg0, null);
-    if (arg0 == null || !containsKey(o)) throw new InvalidKeyException();
-    else {
+    //Entry<K,V> o = new EntryImpl<K,V>(arg0, null);
+    if (arg0 == null) {
+      throw new InvalidKeyException();
+    } else {
       V res = null;
-      int i = 0;
-      boolean done = false;
-      while (i < buckets.length && !done) {
-        if (buckets[i].getKey() == arg0) {
-          res = buckets[i].getValue();
-          done = true;
-        }
-      } 
+      if (containsKey(arg0)) {
+        int indiceLocalizado = search(arg0);
+        res = buckets[indiceLocalizado].getValue();
+      }
       return res;
     }
   }
@@ -99,6 +98,7 @@ public class HashTable<K,V> implements Map<K,V> {
       V value = null;
 
       Entry<K,V> entrada = new EntryImpl<K,V>(arg0, arg1);
+    
       int indice = index(entrada);
 
       if(buckets[indice] == null){
@@ -169,39 +169,38 @@ public class HashTable<K,V> implements Map<K,V> {
   }
   
   // Returns the bucket index of an object
-  private int index(Object obj) { // COMPROBAR SI HAY QUE HACER EL HASHCODE DIRECTO
-    if (!(obj instanceof Entry)) throw new IllegalArgumentException("No has metido un objeto de tipo Entry");
+  private int index(Object obj) { // object es un Key
+    //if (!(obj instanceof Entry)) throw new IllegalArgumentException("No has metido un objeto de tipo Entry");
     
-    Entry<K,V> e = (Entry<K, V>) obj;
-    return Math.abs(e.getKey().hashCode()) % size();
+    // Entry<K,V> e = (Entry<K, V>) obj;
+    //Object e = (Object)obj;
+    
+    return Math.abs(obj.hashCode()) % buckets.length;
 }
 
   // Returns the index where an entry with the key is located,
   // or if no such entry exists, the "next" bucket with no entry,
   // or if all buckets stores an entry, -1 is returned.
-  private int search(Object obj) {
-    // if (!(obj instanceof Entry)) return -1; //Object es una key
+  private int search(Object obj) { // Obj es una Key
     if (size == 0) return -1;
 
     int indicePreferido = index(obj);
-    int contador = 0; // variable que me va a comprobar si todos los Entry almacenan un valor
+    int contador = 0;
     boolean encontrado = false;
 
-    while (!encontrado && contador < size) {
+    int n = -1;
+    while (!encontrado && (contador < buckets.length)) { //buscamos posicion de key
+      if (buckets[indicePreferido] == null) { //hay algun bucket libre
+        n = indicePreferido;
+      }
       if (buckets[indicePreferido] != null) {
         encontrado = buckets[indicePreferido].getKey().equals(obj);
-        contador++;
-        indicePreferido = (indicePreferido + 1) % size();
-      } else { //cuando el siguiente hueco es null, devuelve -1 (transparencias)
-        indicePreferido = -1;
-        encontrado = true;
+        if (encontrado) n = indicePreferido;
       }
-    }
-    /* while(buckets[indicePreferido] != null && contador < size) {
-      indicePreferido = (indicePreferido + 1) % size();
-      contador++; */
-    
-    return contador == size? -1: indicePreferido;
+      contador++;
+      indicePreferido = (indicePreferido + 1) % buckets.length;
+    }    
+    return n;
   }
 
   // Doubles the size of the bucket array, and inserts all entries present
