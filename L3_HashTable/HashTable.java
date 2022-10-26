@@ -31,7 +31,7 @@ public class HashTable<K, V> implements Map<K, V> {
     if (arg0 == null) {
       throw new InvalidKeyException();
     } 
-    boolean contiene = false; // arg0 siempre va a ser key, no otro objeto
+    boolean contiene = false; // arg0 => key
     for (int i = 0; i < buckets.length && !contiene; i++) {
       if (buckets[i] != null) {
         contiene = buckets[i].getKey().equals(arg0);
@@ -83,36 +83,43 @@ public class HashTable<K, V> implements Map<K, V> {
   }
 
   @Override
-  public V put(K arg0, V arg1) throws InvalidKeyException { // TERMINAR DE CORREGIR
+  public V put(K arg0, V arg1) throws InvalidKeyException { //O(n)
     if (arg0 == null) {
       throw new InvalidKeyException();
     }
     if (buckets.length == size()) {
       rehash();
     }
-    
     Entry<K, V> nuevaEntrada = new EntryImpl<K, V>(arg0, arg1); // Entrada a insertar
     int indice = search(arg0);
     V value = null;
-
-    if (buckets[indice] == null) {
-      buckets[indice] = nuevaEntrada;
-      size++;
-    } else {
+    
+    if (buckets[indice] != null) {
       value = buckets[indice].getValue();
-      // hacemos busqueda circular para insertar la entry (es seguro que hay hueco)
-      buckets[indice] = nuevaEntrada;
-
-    }
+    } else size++;
+    buckets[indice] = nuevaEntrada;
     return value;
   }
 
   @Override
-  public V remove(K arg0) throws InvalidKeyException { //If contains la clave?????
-    V res = null;
-    if (containsKey(arg0)) { // si K esta en buckets, borramos esa entry
-      int posK = search(arg0); //seguro que no es -1
-      res = buckets[posK].getValue();
+  public V remove(K arg0) throws InvalidKeyException {
+    if(arg0 == null) throw new InvalidKeyException();
+    if (containsKey(arg0)) {
+      int posK = index(arg0);
+      
+      //busco el elemento
+      boolean encontrado = false;
+
+      while(!encontrado){
+
+        if((buckets[posK] != null) && arg0.equals(buckets[posK].getKey())){
+          encontrado = true;
+        } else {
+          posK = (posK +1) % buckets.length;
+        }
+      }
+
+      V res = buckets[posK].getValue();
       buckets[posK] = null;
       size--;
       // Una vez borrada, debemos colapsar huecos
@@ -126,65 +133,40 @@ public class HashTable<K, V> implements Map<K, V> {
         }
         posK++;
       }
+      return res;
     }
-    return res;
+    return null;
   }
 
   @Override
   public int size() { //O(1)
     return size;
   }
-  /*
-   * Debe tener en cuenta que podr´ıa estar en lugar diferente de su bucket
-   * \preferido": podr´ıa haber habido colisiones en la inserci´on.
-   * Algoritmo:
-   * I Calcular index, el bucket preferido de la clave.
-   * I Asignar un variable i = index.
-   * I Repetir:
-   * F Si buckets[i] est´a vac´ıo, la clave no est´e en la tabla.
-   * F Si la clave de buckets[i] es la que buscamos, hemos encontrado la
-   * Entry que necesitamos. Devolver su valor.
-   * F Si no, ir al siguiente i (circularmente).
-   * Si i = index termina la b´usqueda sin ´exito.
-   *  
-   * El procedimiento de colapsar huecos termina cuando encontramos un
-   * bucket vac´ıo no creado por el procedimiento mismo o cuando
-   * llegamos al principio (al bucket originalmente borrado).
-   */
-
-  // Examples of auxilliary methods: IT IS NOT REQUIRED TO IMPLEMENT THEM
+  
 
   @SuppressWarnings("unchecked")
-  private Entry<K, V>[] createArray(int size) {
+  private Entry<K, V>[] createArray(int size) { //O(1)
     Entry<K, V>[] buckets = (Entry<K, V>[]) new Entry[size];
     return buckets;
   }
 
-  // Returns the bucket index of an object
-  private int index(Object obj) { // object es un Key
+  /* Returns the bucket index of an object */
+  private int index(Object obj) { //O(1)
     return Math.abs(obj.hashCode()) % buckets.length;
   }
 
   /**
    *  Returns the index where an entry with the key is located 
    *  or if no such entry exists, the "next" bucket with no entry,
-   *  or if all buckets stores an entry, -1 is returned. */
-  /*
-   * El ´ındice donde reside una entrada con la clave key, si est´a en la tabla.
-I Si no hay entrada con la clave key en buckets, devuelve, si hay
-buckets libres, el ´ındice del siguiente \bucket" libre (con elemento
-null) dentro buckets
-I Si no hay entrada con clave key, ni existe un bucket libre, devuelve -1.
+   *  or if all buckets stores an entry, -1 is returned. 
    */
   private int search(Object obj) { //O(n)
-
-    //Obj es un key. buscamos primero si esta la key
     int indicePreferido = index(obj);
     int contador = 0;
 
     int n = -1;
-    while (contador < buckets.length) { // buscamos posicion de key
-      if (buckets[indicePreferido] == null || buckets[indicePreferido].getKey().equals(obj)) { // hay algun bucket libre
+    while (contador < buckets.length) {
+      if (buckets[indicePreferido] == null || buckets[indicePreferido].getKey().equals(obj)) {
         return indicePreferido;
       }
       indicePreferido = (indicePreferido + 1) % buckets.length;
@@ -193,11 +175,11 @@ I Si no hay entrada con clave key, ni existe un bucket libre, devuelve -1.
     return n;
   }
 
-  // Doubles the size of the bucket array, and inserts all entries present
-  // in the old bucket array into the new bucket array, in their correct
-  // places. Remember that the index of an entry will likely change in
-  // the new array, as the size of the array changes.
-
+  /* Doubles the size of the bucket array, and inserts all entries present
+  in the old bucket array into the new bucket array, in their correct
+  places. Remember that the index of an entry will likely change in
+  the new array, as the size of the array changes. 
+  */
   private void rehash() { //O(n^2)
     Entry<K, V>[] newBuckets = createArray(buckets.length * 2);
     Entry<K, V>[] oldBuckets = buckets;
@@ -209,14 +191,5 @@ I Si no hay entrada con clave key, ni existe un bucket libre, devuelve -1.
         buckets[search(bucket.getKey())] = bucket;
       }
     }
-  }
-
-  /*
-   * --------------------------------------------------
-   * TESTS
-   * --------------------------------------------------
-   */
-  public static void main(String[] args) {
-    System.out.println(new HashTable<Integer, Integer>(5).iterator());
   }
 }
