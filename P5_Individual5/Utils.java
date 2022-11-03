@@ -7,6 +7,10 @@ import es.upm.aedlib.positionlist.*;
 import es.upm.aedlib.map.*;
 
 public class Utils {
+
+  public static boolean eqNull(Object o1, Object o2){
+    return (o1 == o2) || (o1 != null && o1.equals(o2));
+  }
   
   public static <E> PositionList<E> deleteRepeated(PositionList<E> l) {
     PositionList<E> result = new NodePositionList<E>();
@@ -17,11 +21,7 @@ public class Utils {
       estaContenido = false;
       cursor = result.first();
       while(cursor != null && !estaContenido){
-        if(element == null){
-          estaContenido = element == cursor.element();
-        } else {
-          estaContenido = element.equals(cursor.element());
-        }
+        estaContenido = eqNull(element, cursor.element());
         cursor = result.next(cursor);
       }
       if(!estaContenido){
@@ -43,13 +43,8 @@ public class Utils {
     while(iterator.hasNext()) {
       element = iterator.next();
 
-      //Distingo comparaciones en funcion de si el elemento es null
-      if(element == null) {
-        if(element != elementoPrevio || result.size() == 0) {
-          result.addLast(element);
-          elementoPrevio = element;
-        }
-      } else if(!element.equals(elementoPrevio)) {
+      //añado el elemento si no es igual a su anterior
+      if(!eqNull(element, elementoPrevio) || result.size() == 0){
         result.addLast(element);
         elementoPrevio = element;
       }
