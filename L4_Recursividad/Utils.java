@@ -26,14 +26,18 @@ public class Utils {
   public static <E extends Comparable<E>> int findBottomAux(IndexedList<E> l, int start, int end) {
     if(start == end){
       return start; //ese elemento es un hoyo. Devuelvo el indice del hoyo
-    } else if (end- start == 1){
+    } else if (end - start == 1){
       return l.get(start).compareTo(l.get(end)) > 0? end : start;
     } else {
       int indice = (start + end)/2;
-      if(l.get(indice).compareTo(l.get(indice - 1)) <= 0 && l.get(indice).compareTo(l.get(indice + 1)) <= 0){
+      if(l.get(indice).compareTo(l.get(indice - 1)) < 0 && l.get(indice).compareTo(l.get(indice + 1)) < 0){
         return indice;
+      } else if(l.get(indice).compareTo(l.get(indice - 1)) > 0){
+        return findBottomAux(l, start, end = indice);
+      } else if (l.get(indice).compareTo(l.get(indice + 1)) > 0) {
+        return findBottomAux(l, start = indice, end);
       } else {
-        return findBottomAux(l, start, indice);
+        return -1;
       }
     }
   }
