@@ -33,9 +33,9 @@ public class Utils {
       if(l.get(indice).compareTo(l.get(indice - 1)) < 0 && l.get(indice).compareTo(l.get(indice + 1)) < 0){
         return indice;
       } else if(l.get(indice).compareTo(l.get(indice - 1)) > 0){
-        return findBottomAux(l, start, end = indice);
+        return findBottomAux(l, start, indice -1);
       } else if (l.get(indice).compareTo(l.get(indice + 1)) > 0) {
-        return findBottomAux(l, start = indice, end);
+        return findBottomAux(l,indice +1, end);
       } else {
         return -1;
       }
