@@ -65,7 +65,7 @@ public class DictImpl implements Dictionary {
       hijo = it.next();
       encontrado = hijo.element().getLeft().compareTo(pair.getLeft()) > 0;
     }
-    return tree.insertSiblingBefore(hijo, pair);
+    return encontrado? tree.insertSiblingBefore(hijo, pair): tree.insertSiblingAfter(hijo, pair);
   }
 
   /* ------------------------------------------------------------------------------ */
@@ -92,7 +92,6 @@ public class DictImpl implements Dictionary {
         addAux(letras, i + 1, hijo);
       }
     }
-    int a =0;
   }
 
   public void delete(String word) {
@@ -114,29 +113,29 @@ public class DictImpl implements Dictionary {
   
   public PositionList<String> wordsBeginningWithPrefix(String prefix) {
     char[] letras = prefix.toCharArray();
-    Position<Pair<Character, Boolean>> nodo = tree.root();
+    Position<Pair<Character, Boolean>>  P = tree.root();
     boolean existe = true;
 
-    for (int i = 0; i < letras.length - 1 && existe; i++) {
-      nodo = searchChildLabelledBy(letras[i], nodo);
-      existe = nodo != null;
+    for (int i = 0; i < letras.length && existe; i++) {
+      P = searchChildLabelledBy(letras[i], P);
+      existe = P != null;
     }
     if (!existe) {
       return null;
     }
-    Position<Pair<Character, Boolean>> P = nodo; 
 
-    if (P == null)
-      return null;
+    PositionList<String> result = new NodePositionList<String>();
       
-    return wordsBeginningWithPrefixAux(P, new NodePositionList<String>(), prefix);
+    wordsBeginningWithPrefixAux(P, result, prefix);
+    return result;
+
   }
-  public PositionList<String> wordsBeginningWithPrefixAux(Position<Pair<Character, Boolean>> P, PositionList<String> result, String actual){
+  public void wordsBeginningWithPrefixAux(Position<Pair<Character, Boolean>> P, PositionList<String> result, String actual){
     if(P.element().getRight()){
       result.addLast(actual);
-    } else {
-
+    } 
+    for(Position<Pair<Character, Boolean>> child: tree.children(P)){
+      wordsBeginningWithPrefixAux(child, result, actual + child.element().getLeft());
     }
-    return null;
   }
 }
