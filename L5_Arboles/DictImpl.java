@@ -25,12 +25,11 @@ public class DictImpl implements Dictionary {
   // Devuelve el nodo cuyo camino desde la raiz contiene
   // la palabra prefix. Si no existe, el metodo devuelve null.
   public Position<Pair<Character, Boolean>> findPos(String prefix) {
-    char[] letras = prefix.toCharArray();
     Position<Pair<Character, Boolean>> nodo = tree.root();
     boolean existe = true;
 
-    for (int i = 0; i < letras.length && existe; i++) {
-      nodo = searchChildLabelledBy(letras[i], nodo);
+    for (int i = 0; i < prefix.length() && existe; i++) {
+      nodo = searchChildLabelledBy(prefix.charAt(i), nodo);
       existe = nodo != null;
     }
     if (!existe) {
@@ -70,30 +69,32 @@ public class DictImpl implements Dictionary {
 
   /* ------------------------------------------------------------------------------ */
   /* ------------------------------------------------------------------------------ */
+  @Override
   public void add(String word) {
     if (word == null || word.isEmpty())
       throw new IllegalArgumentException();
-      addAux(word.toCharArray(), 0, tree.root());
+      addAux(word, 0, tree.root());
   }
 
-  public void addAux(char[] letras, int i, Position<Pair<Character, Boolean>> parent) {
-    Position<Pair<Character, Boolean>> hijo = searchChildLabelledBy(letras[i], parent);
+  public void addAux(String word, int i, Position<Pair<Character, Boolean>> parent) {
+    Position<Pair<Character, Boolean>> hijo = searchChildLabelledBy(word.charAt(i), parent);
     if (hijo == null) {
-      if (i == letras.length - 1) {
-        addChildAlphabetically(new Pair<Character, Boolean>(letras[i], true), parent);
+      if (i == word.length() - 1) {
+        addChildAlphabetically(new Pair<Character, Boolean>(word.charAt(i), true), parent);
       } else {
-        hijo = addChildAlphabetically(new Pair<Character, Boolean>(letras[i], false), parent);
-        addAux(letras, i + 1, hijo);
+        hijo = addChildAlphabetically(new Pair<Character, Boolean>(word.charAt(i), false), parent);
+        addAux(word, i + 1, hijo);
       }
     } else {
-      if (i == letras.length - 1 && !hijo.element().getRight()) {
+      if (i == word.length() - 1 && !hijo.element().getRight()) {
         hijo.element().setRight(true);
-      } else if (!(i == letras.length - 1 && hijo.element().getRight())){
-        addAux(letras, i + 1, hijo);
+      } else if (!(i == word.length() - 1 && hijo.element().getRight())){
+        addAux(word, i + 1, hijo);
       }
     }
   }
 
+  @Override
   public void delete(String word) {
     if (word == null || word.isEmpty())
       throw new IllegalArgumentException();
@@ -104,6 +105,7 @@ public class DictImpl implements Dictionary {
     }
   }
 
+  @Override
   public boolean isIncluded(String word) {
     if (word == null || word.isEmpty()) {
       throw new IllegalArgumentException();
@@ -111,13 +113,13 @@ public class DictImpl implements Dictionary {
     return findPos(word) != null;
   }
   
+  @Override
   public PositionList<String> wordsBeginningWithPrefix(String prefix) {
-    char[] letras = prefix.toCharArray();
     Position<Pair<Character, Boolean>>  P = tree.root();
     boolean existe = true;
 
-    for (int i = 0; i < letras.length && existe; i++) {
-      P = searchChildLabelledBy(letras[i], P);
+    for (int i = 0; i < prefix.length() && existe; i++) {
+      P = searchChildLabelledBy(prefix.charAt(i), P);
       existe = P != null;
     }
     if (!existe) {
@@ -130,6 +132,7 @@ public class DictImpl implements Dictionary {
     return result;
 
   }
+  
   public void wordsBeginningWithPrefixAux(Position<Pair<Character, Boolean>> P, PositionList<String> result, String actual){
     if(P.element().getRight()){
       result.addLast(actual);
