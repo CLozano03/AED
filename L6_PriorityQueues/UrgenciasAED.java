@@ -20,8 +20,12 @@ public class UrgenciasAED implements Urgencias {
     @Override
     public Paciente admitirPaciente(String DNI, int prioridad, int hora) throws PacienteExisteException {
         Paciente paciente = new Paciente(DNI, prioridad, hora, hora);
+        // compruebo si esta ya el paciente
+        if (lista.containsKey(DNI)) {
+            throw new PacienteExisteException();
+        }
         cola.enqueue(prioridad, paciente); // Insertamos el nuevo nodo en la ultima posicion libre
-        // ¿violamos la heap order property?--> cada padre tiene mayo prioridad que su hijos
+        // ¿violamos la heap order property?--> cada padre tiene mayor prioridad que su hijos
         Iterator<Entry<Integer, Paciente>> it = cola.iterator();
         while(it.hasNext()) {
             Entry<Integer, Paciente> entry = it.next();
@@ -72,8 +76,25 @@ public class UrgenciasAED implements Urgencias {
 
     @Override
     public Paciente cambiarPrioridad(String DNI, int nuevaPrioridad, int hora) throws PacienteNoExisteException {
-        // TODO Auto-generated method stub
-        return null;
+        // Compruebo que el paciente existe
+        Paciente buscoPac = new Paciente(DNI, 0,0,0);
+        if (!lista.containsKey(DNI)) {
+            throw new PacienteNoExisteException();
+        }
+        Iterator<Entry<Integer, Paciente>> it = cola.iterator();
+        boolean found = false;
+        while(it.hasNext() && !found) {
+            Entry<Integer, Paciente> entry = it.next();
+            if (buscoPac.equals(entry.getValue())) {
+                found = true;
+                lista.remove(buscoPac.getDNI());
+                buscoPac = entry.getValue();
+                buscoPac.setPrioridad(nuevaPrioridad);
+                buscoPac.setTiempoAdmisionEnPrioridad(hora);
+                lista.put(buscoPac.getDNI(), buscoPac); //lo annado de nuevo a la lista actualizado
+            }
+        }
+        return buscoPac;
     }
 
     @Override
