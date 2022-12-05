@@ -2,6 +2,7 @@ package aed.urgencias;
 
 import java.util.Iterator;
 import es.upm.aedlib.Entry;
+import es.upm.aedlib.EntryImpl;
 import es.upm.aedlib.Pair;
 import es.upm.aedlib.map.HashTableMap;
 import es.upm.aedlib.priorityqueue.HeapPriorityQueue;
@@ -30,21 +31,43 @@ public class UrgenciasAED implements Urgencias {
                 Integer clavePac = entry.getKey();
                 Paciente pacientePac = entry.getValue();
                 // Pongo en su lugar a paciente
-                replaceKey​(entry, prioridad);
-                replaceValue​(entry, paciente);
+                cola.replaceKey​(entry, prioridad);
+                cola.replaceValue​(entry, paciente);
                 paciente = pac;
             } else if (pac.compareTo(paciente) < 0) {
-                replaceKey​(entry,pac.getPrioridad());
-                replaceValue​(entry, pac);
+                cola.replaceKey​(entry,pac.getPrioridad());
+                cola.replaceValue​(entry, pac);
             }
         }
         return lista.put(DNI, paciente);
     }
 
     @Override
+    /* Paciente sale de las urgencias (sin ser atendido). 
+        El paciente se borra de la estructuras de datos de las urgencias */
     public Paciente salirPaciente(String DNI, int hora) throws PacienteNoExisteException {
-        
-        return null;
+        // Compruebo que Paciente existe en la cola
+        Paciente pacBus = new Paciente(DNI, 0, hora, hora);
+        Iterator<Entry<Integer, Paciente>> it = cola.iterator();
+        boolean found = false;
+        Entry<Integer, Paciente> entry;
+        while(it.hasNext() && !found) {
+            entry = it.next();
+            Paciente pac = entry.getValue();
+            if (pac.equals(pacBus)) {
+                found = true;
+                pacBus = new Paciente(pac.getDNI(), pac.getPrioridad(), pac.getTiempoAdmision(), pac.getTiempoAdmisionEnPrioridad());
+            }
+        }
+        if (!found) {
+            throw new PacienteNoExisteException();
+        }
+        Entry<Integer, Paciente> entryPac = new EntryImpl<Integer,Paciente>(pacBus.getPrioridad(), pacBus);
+        cola.remove(entryPac);
+
+        /* Lo borro del hashMap */
+        lista.remove(pacBus.getDNI());
+        return pacBus;
     }
 
     @Override
@@ -55,7 +78,7 @@ public class UrgenciasAED implements Urgencias {
 
     @Override
     public Paciente atenderPaciente(int hora) {
-        // TODO Auto-generated method stub
+        
         return null;
     }
 
