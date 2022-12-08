@@ -7,6 +7,7 @@ import es.upm.aedlib.Pair;
 import es.upm.aedlib.indexedlist.ArrayIndexedList;
 import es.upm.aedlib.indexedlist.IndexedList;
 import es.upm.aedlib.map.HashTableMap;
+import es.upm.aedlib.priorityqueue.EmptyPriorityQueueException;
 import es.upm.aedlib.priorityqueue.HeapPriorityQueue;
 
 public class UrgenciasAED implements Urgencias {
@@ -32,6 +33,21 @@ public class UrgenciasAED implements Urgencias {
         if (getPaciente(DNI) != null) {
             throw new PacienteExisteException();
         }
+
+        /*  intento de corrgeir el ultimo error que no funciona aun
+            if (cola.first().getValue().getPrioridad() == prioridad && (cola.first().getValue().getTiempoAdmision() < hora)) {
+            // me lo guardo
+            try {
+                Paciente pacGuardar = salirPaciente(cola.first().getValue().getDNI(), hora);
+            
+                lista.put(DNI, cola.enqueue(prioridad, paciente));
+                // lo vuelvo a meter
+                lista.put(pacGuardar.getDNI(), cola.enqueue(pacGuardar.getPrioridad(), pacGuardar));
+            } catch (PacienteNoExisteException e) {}
+        } else {
+            lista.put(DNI, cola.enqueue(prioridad, paciente));
+        } */
+    
         lista.put(DNI, cola.enqueue(prioridad, paciente));
         return lista.get(DNI).getValue();
     }
@@ -72,7 +88,8 @@ public class UrgenciasAED implements Urgencias {
             return null;
         }
         pacientesAtendidos++;
-        Paciente pacienteAtendido = cola.first().getValue();
+
+        Paciente pacienteAtendido = cola.first().getValue();        
         sumaTiemposAdmision += hora - pacienteAtendido.getTiempoAdmision(); 
         return lista.remove(cola.dequeue().getValue().getDNI()).getValue(); 
     }
@@ -83,7 +100,9 @@ public class UrgenciasAED implements Urgencias {
             Paciente paciente = entry.getValue().getValue();
             if(hora - paciente.getTiempoAdmision() > maxTiempoEspera ){
                 try {
-                    cambiarPrioridad(entry.getKey(), paciente.getPrioridad() -1, hora);
+                    if (paciente.getPrioridad() != 0) { // si la prioridad es 0 no puede ser menor
+                        cambiarPrioridad(entry.getKey(), paciente.getPrioridad() -1, hora);
+                    }
                 } catch (PacienteNoExisteException e) {}
             }
         }
@@ -123,13 +142,14 @@ public class UrgenciasAED implements Urgencias {
           l.add(0, e);
         }else {
           while (!stop) {
-          
-            if ((pos != 0 && e.compareTo(l.get(pos - 1)) <= 0)
-                && e.compareTo(l.get(pos)) >= 0) {
+            if ((pos != 0 && e.compareTo(l.get(pos - 1)) > 0)
+            && e.compareTo(l.get(pos)) < 0) {
+            /* if ((pos != 0 && e.compareTo(l.get(pos - 1)) <= 0)
+                && e.compareTo(l.get(pos)) >= 0) { */
               //annado el elemento
               stop = true;
               l.add(pos, e);
-            } else if (e.compareTo(l.get(pos)) > 0) {
+            } else if (e.compareTo(l.get(pos)) <= 0) {
               //ajuste cuando hay que annadir en primera pos
               if (pos == 0) {
                 l.add(pos, e);
