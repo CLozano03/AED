@@ -59,8 +59,8 @@ public class UrgenciasAED implements Urgencias {
     /* Paciente sale de las urgencias (sin ser atendido). 
         El paciente se borra de la estructuras de datos de las urgencias */
     public Paciente salirPaciente(String DNI, int hora) throws PacienteNoExisteException {
-        /* // Compruebo que Paciente existe en la cola
-        Paciente pacBus = new Paciente(DNI, 0, hora, hora);
+        // Compruebo que Paciente existe en la cola
+        /* Paciente pacBus = new Paciente(DNI, 0, hora, hora);
         Iterator<Entry<Integer, Paciente>> it = cola.iterator();
         boolean found = false;
         Entry<Integer, Paciente> entry;
@@ -76,13 +76,14 @@ public class UrgenciasAED implements Urgencias {
             throw new PacienteNoExisteException();
         }
         Entry<Integer, Paciente> entryPac = new EntryImpl<Integer,Paciente>(pacBus.getPrioridad(), pacBus);
+        cola.remove(entryPac);
         */
         Paciente paciente = lista.get(DNI);
         if (paciente == null) {
             throw new PacienteNoExisteException();
         }
         cola.remove(new EntryImpl<Integer, Paciente>(paciente.getPrioridad(), paciente));
-        /* Lo borro del hashMap y returneo*/
+        /* Lo borro del hashMap y returneo */
         return lista.remove(DNI);
     }
 
@@ -121,6 +122,7 @@ public class UrgenciasAED implements Urgencias {
 
     @Override
     public Paciente atenderPaciente(int hora) {
+        if (cola.isEmpty()) return null;
         pacientesAtendidos++;
         Paciente pacienteAtendido = cola.dequeue().getValue();
         sumaTiemposAdmision += hora - pacienteAtendido.getTiempoAdmision(); 
