@@ -88,11 +88,11 @@ public class Paciente implements Comparable<Paciente> {
   // (ve la descripcion en la guia)
   @Override
   public int compareTo(Paciente paciente) {
-    int compare = (this.prioridad - paciente.getPrioridad());
+    int compare = this.prioridad - paciente.getPrioridad();
     if (compare == 0) { // es mas prioritario el de mayor tiempo
-      compare = paciente.getTiempoAdmisionEnPrioridad() - this.tiempoAdmisionEnPrioridad;
+      compare = this.tiempoAdmisionEnPrioridad  - paciente.getTiempoAdmisionEnPrioridad();
       if  (compare == 0) {
-        compare = paciente.getTiempoAdmision() - this.tiempoAdmision;
+        compare = this.tiempoAdmision - paciente.getTiempoAdmision();
       }
     }
     return compare;
@@ -115,5 +115,12 @@ public class Paciente implements Comparable<Paciente> {
   public int hashCode() {
     return DNI.hashCode();
   }
+
+  public static void main(String[] args){
+    Paciente paciente1 = new Paciente("1", 3, 40, 60);
+    Paciente paciente2 = new Paciente("2", 3, 50, 50);
+
+    System.out.println(paciente1.compareTo(paciente2));
+    }
 
 }
