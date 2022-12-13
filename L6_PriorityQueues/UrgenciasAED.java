@@ -31,20 +31,6 @@ public class UrgenciasAED implements Urgencias {
         if (getPaciente(DNI) != null) {
             throw new PacienteExisteException();
         }
-
-        /*  intento de corrgeir el ultimo error que no funciona aun
-            if (cola.first().getValue().getPrioridad() == prioridad && (cola.first().getValue().getTiempoAdmision() < hora)) {
-            // me lo guardo
-            try {
-                Paciente pacGuardar = salirPaciente(cola.first().getValue().getDNI(), hora);
-            
-                lista.put(DNI, cola.enqueue(prioridad, paciente));
-                // lo vuelvo a meter
-                lista.put(pacGuardar.getDNI(), cola.enqueue(pacGuardar.getPrioridad(), pacGuardar));
-            } catch (PacienteNoExisteException e) {}
-        } else {
-            lista.put(DNI, cola.enqueue(prioridad, paciente));
-        } */
     
         lista.put(DNI, cola.enqueue(paciente, paciente));
         return lista.get(DNI).getValue();
@@ -96,7 +82,7 @@ public class UrgenciasAED implements Urgencias {
     public void aumentaPrioridad(int maxTiempoEspera, int hora) {
         for(Entry<String, Entry<Paciente, Paciente>> entry: lista){
             Paciente paciente = entry.getValue().getValue();
-            if(hora - paciente.getTiempoAdmision() > maxTiempoEspera && paciente.getPrioridad() != 0){
+            if(hora - paciente.getTiempoAdmisionEnPrioridad() > maxTiempoEspera && paciente.getPrioridad() != 0){
                 try {
                     cambiarPrioridad(entry.getKey(), paciente.getPrioridad() -1, hora);
                 } catch (PacienteNoExisteException e) {}
@@ -110,7 +96,7 @@ public class UrgenciasAED implements Urgencias {
         IndexedList<Paciente> listaOrdenada = new ArrayIndexedList<>();
         for(Entry<String, Entry<Paciente, Paciente>> entry: lista){
             paciente = entry.getValue().getValue();
-            insertarRec(paciente, listaOrdenada, (int)(listaOrdenada.size()/2));
+            addBinary(paciente, listaOrdenada);
         }
         return listaOrdenada;
     }
@@ -130,58 +116,33 @@ public class UrgenciasAED implements Urgencias {
     }
 
 
-    /*  */
-    /* private static void insertar(Paciente e, IndexedList<Paciente> l) {
-        int pos = (int) (l.size() / 2);
-        boolean stop = false;
-        if (l.size() == 0) {
-          l.add(0, e);
-          return;
-        }
-        while (!stop) {
-            if ((pos != 0 && l.get(pos - 1).compareTo(e) <= 0)
-                && l.get(pos).compareTo(e) >= 0) {
-                //annado el elemento
-                stop = true;
-                l.add(pos, e);
-            } else if (l.get(pos).compareTo(e) > 0) {
-                //ajuste cuando hay que annadir en primera pos
-                if (pos == 0) {
-                l.add(pos, e);
-                stop = true;
-                } else {
-                pos = (int) (pos / 2);
-                }
-            } else {
-                // ajuste cuando hay que aniadir en ultima
-                if (pos == l.size() - 1) {
-                l.add(pos + 1, e);
-                stop = true;
-                } else {
-                pos = l.size() - (int) (l.size() - pos) / 2;
-                }
-            }
-        }
-    } */
+    private static <E> void addBinary(Paciente e, IndexedList<Paciente> lista) {
 
-    private static void insertarRec(Paciente e, IndexedList<Paciente> l, int pos){
-        if(l.isEmpty()){
-            l.add(0, e);
-        } else if(pos == 0 && e.compareTo(l.get(pos)) < 0) {
-            l.add(pos, e);
-        } else if(pos == 0 && e.compareTo(l.get(pos)) > 0){
-            l.add(pos + 1, e);
-        } else if(pos == l.size() - 1 && e.compareTo(l.get(pos)) < 0){
-            l.add(pos, e);
-        } else if(pos == l.size() - 1){
-            l.add(pos + 1, e);
-        } else if(e.compareTo(l.get(pos)) <= 0 && e.compareTo(l.get(pos - 1)) >= 0){
-            l.add(pos,e);
-        } else if(e.compareTo(l.get(pos)) < 0){
-            insertarRec(e, l, (int)(pos/2));
-        } else if(e.compareTo(l.get(pos)) > 0){
-            insertarRec(e, l, (int)(l.size() - (l.size() - pos)/2));
-        }
-    }
+	    int inicio = 0;
+	    int fin = lista.size() - 1;
+	    int mitad = 0;
+	    boolean encontrado = false;
+
+	    while(inicio < fin && !encontrado) {
+	      mitad = (inicio + fin) / 2;
+	      if (e.compareTo(lista.get(mitad)) == 0) {
+	        lista.add(mitad,e);
+	        encontrado = true;
+	      }
+	      else if (e.compareTo(lista.get(mitad)) > 0) {
+	        inicio = mitad + 1;
+	      }
+	      else {
+	        fin = mitad - 1;
+	      }
+	    }
+
+	    if (!encontrado && (lista.isEmpty() || e.compareTo(lista.get(inicio)) <= 0)) {
+	      lista.add(inicio, e);
+	    }
+			else if (!encontrado) {
+				lista.add(inicio + 1, e);
+	    }
+	  }
 
 }
