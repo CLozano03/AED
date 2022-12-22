@@ -48,7 +48,8 @@ public class Delivery<V> {
   public PositionList <Vertex<V>> tour() {
     PositionList <Vertex<V>> camino; 
     for(Vertex<V> vertice: g.vertices()){
-      camino = tourAux(vertice, new NodePositionList<>(), new HashTableMapSet<>());
+      camino = new NodePositionList<Vertex<V>>();
+      tourAux(vertice, camino, new HashTableMapSet<>());
       if(camino.size() == g.numVertices()){
         return camino;
       }
@@ -56,8 +57,23 @@ public class Delivery<V> {
     return null;
   }
 
-  private PositionList <Vertex<V>> tourAux(Vertex<V> nodoVisitando, PositionList<Vertex<V>> path, Set<Vertex<V>> visitados){
-    return null;
+  private void tourAux(Vertex<V> nodoVisitando, PositionList<Vertex<V>> path, Set<Vertex<V>> visitados){
+    path.addLast(nodoVisitando);
+    if (!visitados.contains(nodoVisitando)) visitados.add(nodoVisitando);
+    if(path.size() == g.numVertices()){
+      return;
+    }
+
+    for(Edge<Integer> arista: g.outgoingEdges(nodoVisitando)){
+      if(!visitados.contains(g.endVertex(arista))){
+        tourAux(g.endVertex(arista), path, visitados);
+        if(path.size() == g.numVertices()){return;}
+      }
+    }
+    path.remove(path.last());
+    visitados.remove(nodoVisitando);
+
+    if(path.isEmpty()) return;
   }
 
   public int length(PositionList<Vertex<V>> path) {
