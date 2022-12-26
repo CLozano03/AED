@@ -12,7 +12,7 @@ Es obligatorio usar recursión en la implementación de esta práctica
 1. En la clase `Utils`: está prohibido usar bucles for, for-each, while, do-while, o iteradores.
 2. En la clase `Explorador`: sólo está permitido el uso de bucles para explorar los caminos que salen de un Lugar (ver después).
 3. NO está permitido añadir nuevos atributos a clases.
-4. NO está permitido crear nuevas estructuras de datos como pilas, colas, etc. Unicamente est´a permido crear nuevas NodePositionList para los resultados a devolver por el método joinMultiSets y/o sus métodos auxiliares.
+4. NO está permitido crear nuevas estructuras de datos como pilas, colas, etc. Unicamente está permido crear nuevas NodePositionList para los resultados a devolver por el método joinMultiSets y/o sus métodos auxiliares.
 ---
 ## Multiply
 
